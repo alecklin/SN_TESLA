@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="wf_element_activity">
+    <wf_element_activity action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <attributes/>
+        <base_provider display_value="REST Web Service">8817a25e37222100aa40cc9fbe41f106</base_provider>
+        <category>Tesla API</category>
+        <checked_out_by/>
+        <default_height/>
+        <default_width/>
+        <description/>
+        <image>images/heisenberg_icons/workflow_ie8/provider_rest.png</image>
+        <input_meta>{"name":"Input","type":"DATA_OBJECT","properties":[{"name":"token","type":"STRING","mandatory":false},{"name":"vehicle_id","type":"STRING","mandatory":false}]}</input_meta>
+        <input_process_script/>
+        <input_transform>{"web_service_message":"e7223dbc4f6ac7002f9ae4928110c77f","web_service_message_function":"d47271fc4f6ac7002f9ae4928110c7b9","web_service_endpoint":"","parameters":"[{\"name\":\"command\",\"value\":\"data_request/charge_state\",\"additional_attribute\":\"\"},{\"name\":\"version\",\"value\":\"1\",\"additional_attribute\":\"\"},{\"name\":\"vehicle_id\",\"value\":\"${activityInput.vehicle_id}\",\"additional_attribute\":\"\"},{\"name\":\"access_token\",\"value\":\"${activityInput.token}\",\"additional_attribute\":\"\"}]","headers":"[]","queryParameters":"[]","midCapabilities":"18409d8007482000dada43c0d1021e8f","use_mid_server":"false","time_out":"10","auth_type":"use_existing_credentials","credentials":"","protocol_profile":"","oauth_entity_profile":""}</input_transform>
+        <local_variables>{"name":"Local","type":"DATA_OBJECT","properties":[{"name":"localStatus_code","type":"INTEGER"},{"name":"localHeader","type":"DATA_OBJECT"},{"name":"localBody","type":"STRING"},{"name":"localError","type":"STRING"},{"name":"localOutput","type":"DATA_OBJECT","properties":[{"name":"response","type":"DATA_OBJECT","properties":[{"name":"battery_range","type":"INTEGER"},{"name":"scheduled_charging_pending","type":"BOOLEAN"},{"name":"charge_current_request","type":"INTEGER"},{"name":"charge_energy_added","type":"DECIMAL"},{"name":"charging_state","type":"STRING"},{"name":"max_range_charge_counter","type":"INTEGER"},{"name":"user_charge_enable_request","type":"STRING"},{"name":"managed_charging_active","type":"BOOLEAN"},{"name":"charge_current_request_max","type":"INTEGER"},{"name":"charge_port_door_open","type":"STRING"},{"name":"charge_miles_added_rated","type":"INTEGER"},{"name":"charger_phases","type":"STRING"},{"name":"charger_power","type":"STRING"},{"name":"scheduled_charging_start_time","type":"STRING"},{"name":"charge_limit_soc","type":"INTEGER"},{"name":"charge_port_latch","type":"STRING"},{"name":"est_battery_range","type":"DECIMAL"},{"name":"timestamp","type":"INTEGER"},{"name":"battery_level","type":"INTEGER"},{"name":"charge_miles_added_ideal","type":"INTEGER"},{"name":"charger_pilot_current","type":"STRING"},{"name":"charger_actual_current","type":"STRING"},{"name":"usable_battery_level","type":"INTEGER"},{"name":"fast_charger_present","type":"STRING"},{"name":"not_enough_power_to_heat","type":"STRING"},{"name":"fast_charger_type","type":"STRING"},{"name":"managed_charging_start_time","type":"STRING"},{"name":"trip_charging","type":"STRING"},{"name":"charge_rate","type":"INTEGER"},{"name":"fast_charger_brand","type":"STRING"},{"name":"charge_limit_soc_max","type":"INTEGER"},{"name":"ideal_battery_range","type":"DECIMAL"},{"name":"charge_limit_soc_std","type":"INTEGER"},{"name":"charger_voltage","type":"STRING"},{"name":"managed_charging_user_canceled","type":"BOOLEAN"},{"name":"time_to_full_charge","type":"INTEGER"},{"name":"charge_to_max_range","type":"BOOLEAN"},{"name":"charge_limit_soc_min","type":"INTEGER"},{"name":"battery_heater_on","type":"STRING"},{"name":"charge_enable_request","type":"BOOLEAN"}]}]}]}</local_variables>
+        <name>Get Charge State</name>
+        <output_meta>{"name":"Output","type":"DATA_OBJECT","properties":[{"name":"status_code","type":"INTEGER"},{"name":"header","type":"DATA_OBJECT"},{"name":"body","type":"STRING"},{"name":"error","type":"STRING"},{"name":"output","type":"DATA_OBJECT","properties":[{"name":"response","type":"DATA_OBJECT","properties":[{"name":"battery_range","type":"DECIMAL"},{"name":"scheduled_charging_pending","type":"BOOLEAN"},{"name":"charge_current_request","type":"INTEGER"},{"name":"charge_energy_added","type":"DECIMAL"},{"name":"charging_state","type":"STRING"},{"name":"max_range_charge_counter","type":"INTEGER"},{"name":"user_charge_enable_request","type":"STRING"},{"name":"managed_charging_active","type":"BOOLEAN"},{"name":"charge_current_request_max","type":"INTEGER"},{"name":"charge_port_door_open","type":"BOOLEAN"},{"name":"charge_miles_added_rated","type":"INTEGER"},{"name":"charger_phases","type":"STRING"},{"name":"charger_power","type":"INTEGER"},{"name":"scheduled_charging_start_time","type":"STRING"},{"name":"charge_limit_soc","type":"INTEGER"},{"name":"charge_port_latch","type":"STRING"},{"name":"est_battery_range","type":"DECIMAL"},{"name":"timestamp","type":"INTEGER"},{"name":"battery_level","type":"INTEGER"},{"name":"charge_miles_added_ideal","type":"INTEGER"},{"name":"charger_pilot_current","type":"STRING"},{"name":"charger_actual_current","type":"INTEGER"},{"name":"usable_battery_level","type":"INTEGER"},{"name":"fast_charger_present","type":"BOOLEAN"},{"name":"not_enough_power_to_heat","type":"STRING"},{"name":"fast_charger_type","type":"STRING"},{"name":"managed_charging_start_time","type":"STRING"},{"name":"trip_charging","type":"STRING"},{"name":"charge_rate","type":"INTEGER"},{"name":"fast_charger_brand","type":"STRING"},{"name":"charge_limit_soc_max","type":"INTEGER"},{"name":"ideal_battery_range","type":"DECIMAL"},{"name":"charge_limit_soc_std","type":"INTEGER"},{"name":"charger_voltage","type":"INTEGER"},{"name":"managed_charging_user_canceled","type":"BOOLEAN"},{"name":"time_to_full_charge","type":"INTEGER"},{"name":"charge_to_max_range","type":"BOOLEAN"},{"name":"charge_limit_soc_min","type":"INTEGER"},{"name":"battery_heater_on","type":"STRING"},{"name":"charge_enable_request","type":"BOOLEAN"}]}]}]}</output_meta>
+        <output_process_script/>
+        <output_transform>[{"toLink":"activityOutput.status_code","to":"status_code","toType":"string","toDestination":"activityOutput","sourceLabel":"executionResult.status_code","from":"${executionResult.status_code}","fromSource":"executionResult","type":"Direct","translation":"","description":"","children":[]},{"toLink":"activityOutput.header","to":"header","toType":"string","toDestination":"activityOutput","sourceLabel":"executionResult.header","from":"${executionResult.header}","fromSource":"executionResult","type":"JSON","translation":"$","description":"","children":[]},{"toLink":"activityOutput.body","to":"body","toType":"string","toDestination":"activityOutput","sourceLabel":"executionResult.body","from":"${executionResult.body}","fromSource":"executionResult","type":"Direct","translation":"","description":"","children":[]},{"toLink":"activityOutput.error","to":"error","toType":"string","toDestination":"activityOutput","sourceLabel":"executionResult.error","from":"${executionResult.error}","fromSource":"executionResult","type":"Direct","translation":"","description":"","children":[]},{"toLink":"activityOutput.output","to":"output","toType":"string","toDestination":"activityOutput","sourceLabel":"executionResult.body","from":"${executionResult.body}","fromSource":"executionResult","type":"JSON","translation":"$","description":"","children":[]}]</output_transform>
+        <processing_script/>
+        <sample_payloads>{"executionResult.status_code":{"payload":200,"type":"direct"},"executionResult.header":{"payload":"{\"Server\":\"nginx\",\"X-Request-Id\":\"e921b6c8-188f-429f-acf6-be6f1aa908d0\",\"X-Content-Type-Options\":\"nosniff\",\"X-Runtime\":\"0.829645\",\"Connection\":\"keep-alive\",\"Date\":\"Sat, 25 Nov 2017 21:00:58 GMT\",\"X-Frame-Options\":\"SAMEORIGIN\",\"Cache-Control\":\"max-age=0, private, must-revalidate\",\"ETag\":\"W/\\\"541093d1a47b56409ed9a9a16682fbbc\\\"\",\"X-TXID\":\"797ec958724979101dae43c0963e9d8c\",\"Content-Length\":\"1149\",\"X-XSS-Protection\":\"1; mode=block\",\"Content-Type\":\"application/json; charset=utf-8\"}","type":"direct"},"executionResult.body":{"payload":"{\"response\":{\"charging_state\":\"Disconnected\",\"fast_charger_type\":\"&lt;invalid&gt;\",\"fast_charger_brand\":\"&lt;invalid&gt;\",\"charge_limit_soc\":80,\"charge_limit_soc_std\":90,\"charge_limit_soc_min\":50,\"charge_limit_soc_max\":100,\"charge_to_max_range\":false,\"max_range_charge_counter\":0,\"fast_charger_present\":null,\"battery_range\":255.0,\"est_battery_range\":271.75,\"ideal_battery_range\":318.2,\"battery_level\":76,\"usable_battery_level\":76,\"charge_energy_added\":41.21,\"charge_miles_added_rated\":141.0,\"charge_miles_added_ideal\":176.0,\"charger_voltage\":null,\"charger_pilot_current\":null,\"charger_actual_current\":null,\"charger_power\":null,\"time_to_full_charge\":0.0,\"trip_charging\":null,\"charge_rate\":0.0,\"charge_port_door_open\":null,\"scheduled_charging_start_time\":null,\"scheduled_charging_pending\":false,\"user_charge_enable_request\":null,\"charge_enable_request\":false,\"charger_phases\":null,\"charge_port_latch\":\"&lt;invalid&gt;\",\"charge_current_request\":72,\"charge_current_request_max\":72,\"managed_charging_active\":false,\"managed_charging_user_canceled\":false,\"managed_charging_start_time\":null,\"battery_heater_on\":null,\"not_enough_power_to_heat\":null,\"timestamp\":1511643657924}}","type":"direct"},"executionResult.error":{"payload":"null","type":"direct"}}</sample_payloads>
+        <short_description/>
+        <style/>
+        <sys_class_name>wf_element_activity</sys_class_name>
+        <sys_created_by>aleck.lin</sys_created_by>
+        <sys_created_on>2017-11-27 00:06:54</sys_created_on>
+        <sys_id>ae2bf7e34f6283402f9ae4928110c78c</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Get Charge State</sys_name>
+        <sys_package display_value="Tesla" source="x_snc_tesla">7441c3a64f5a4f002f9ae4928110c771</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Tesla">7441c3a64f5a4f002f9ae4928110c771</sys_scope>
+        <sys_update_name>wf_element_activity_ae2bf7e34f6283402f9ae4928110c78c</sys_update_name>
+        <sys_updated_by>aleck.lin</sys_updated_by>
+        <sys_updated_on>2017-11-27 00:07:59</sys_updated_on>
+        <version_container_id>67960e1b4f2e03402f9ae4928110c7cb</version_container_id>
+    </wf_element_activity>
+    <sys_translated_text action="delete_multiple" query="documentkey=ae2bf7e34f6283402f9ae4928110c78c"/>
+    <wf_versionable action="INSERT_OR_UPDATE">
+        <checked_out/>
+        <checked_out_by/>
+        <published>true</published>
+        <sys_created_by>aleck.lin</sys_created_by>
+        <sys_created_on>2017-11-27 00:06:54</sys_created_on>
+        <sys_id>aa2bf7e34f6283402f9ae4928110c78d</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>aleck.lin</sys_updated_by>
+        <sys_updated_on>2017-11-27 00:07:59</sys_updated_on>
+        <valid_from>2017-11-27 00:07:59</valid_from>
+        <valid_to/>
+        <version>3</version>
+        <version_container_id>67960e1b4f2e03402f9ae4928110c7cb</version_container_id>
+        <wf_element_definition display_value="Get Charge State">ae2bf7e34f6283402f9ae4928110c78c</wf_element_definition>
+    </wf_versionable>
+    <wf_condition_default action="INSERT_OR_UPDATE">
+        <activity_definition display_value="Get Charge State">ae2bf7e34f6283402f9ae4928110c78c</activity_definition>
+        <condition/>
+        <derived_definition>76c8dfa34fee43402f9ae4928110c73c</derived_definition>
+        <else_flag>true</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <name>Failure</name>
+        <order>200</order>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>aleck.lin</sys_created_by>
+        <sys_created_on>2017-11-27 00:06:54</sys_created_on>
+        <sys_id>662bf7e34f6283402f9ae4928110c78e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>aleck.lin</sys_updated_by>
+        <sys_updated_on>2017-11-27 00:06:54</sys_updated_on>
+    </wf_condition_default>
+    <wf_condition_default action="INSERT_OR_UPDATE">
+        <activity_definition display_value="Get Charge State">ae2bf7e34f6283402f9ae4928110c78c</activity_definition>
+        <condition>activityOutput.status_code == 200</condition>
+        <derived_definition>b218c29b4f2e03402f9ae4928110c723</derived_definition>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <name>Success</name>
+        <order>100</order>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>aleck.lin</sys_created_by>
+        <sys_created_on>2017-11-27 00:06:54</sys_created_on>
+        <sys_id>ae2bf7e34f6283402f9ae4928110c78e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>aleck.lin</sys_updated_by>
+        <sys_updated_on>2017-11-27 00:06:54</sys_updated_on>
+    </wf_condition_default>
+    <wf_versionable action="update_multiple" query="version_container_id=67960e1b4f2e03402f9ae4928110c7cb^sys_id!=aa2bf7e34f6283402f9ae4928110c78d^version&lt;3">
+        <published>false</published>
+    </wf_versionable>
+    <wf_activity action="update_multiple" is_dot_walk_query="true" query="workflow_version.published=true^activity_definition.version_container_id=67960e1b4f2e03402f9ae4928110c7cb">
+        <new_activity_definition>ae2bf7e34f6283402f9ae4928110c78c</new_activity_definition>
+        <out_of_date>true</out_of_date>
+        <notes>There is a newer version of this activity.
+
+To update the activity, check out the workflow, select the activity, right click
+and select 'Update activity' to use the latest version, then publish the workflow</notes>
+    </wf_activity>
+</record_update>

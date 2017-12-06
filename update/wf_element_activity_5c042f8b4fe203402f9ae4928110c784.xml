@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="wf_element_activity">
+    <wf_element_activity action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <attributes/>
+        <base_provider display_value="Run Script">d0c7fe11eb013100fc5e8a7af106fee0</base_provider>
+        <category/>
+        <checked_out_by/>
+        <default_height/>
+        <default_width/>
+        <description/>
+        <image>images/heisenberg_icons/workflow_ie8/provider_runscript.png</image>
+        <input_meta>{"name":"Input","type":"DATA_OBJECT","properties":[{"name":"account","type":"STRING","mandatory":true}]}</input_meta>
+        <input_process_script/>
+        <input_transform/>
+        <local_variables/>
+        <name>Get account token</name>
+        <output_meta>{"name":"Output","type":"DATA_OBJECT","properties":[{"name":"token","type":"STRING"},{"name":"success","type":"STRING"},{"name":"failure","type":"STRING"}]}</output_meta>
+        <output_process_script/>
+        <output_transform/>
+        <processing_script><![CDATA[var account = activityInput.account;
+var gr = new GlideRecord("x_snc_tesla_tesla_account");
+if (!gr.get(account)) {
+	activityOutput.failure = true;
+} else {
+	activityOutput.token = gr.token.getDecryptedValue();
+	activityOutput.success = true;
+}
+]]></processing_script>
+        <sample_payloads>{}</sample_payloads>
+        <short_description/>
+        <style/>
+        <sys_class_name>wf_element_activity</sys_class_name>
+        <sys_created_by>aleck.lin</sys_created_by>
+        <sys_created_on>2017-11-25 09:10:40</sys_created_on>
+        <sys_id>5c042f8b4fe203402f9ae4928110c784</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>Get account token</sys_name>
+        <sys_package display_value="Tesla" source="x_snc_tesla">7441c3a64f5a4f002f9ae4928110c771</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Tesla">7441c3a64f5a4f002f9ae4928110c771</sys_scope>
+        <sys_update_name>wf_element_activity_5c042f8b4fe203402f9ae4928110c784</sys_update_name>
+        <sys_updated_by>aleck.lin</sys_updated_by>
+        <sys_updated_on>2017-11-25 09:35:04</sys_updated_on>
+        <version_container_id>107463cb4fe203402f9ae4928110c75f</version_container_id>
+    </wf_element_activity>
+    <sys_translated_text action="delete_multiple" query="documentkey=5c042f8b4fe203402f9ae4928110c784"/>
+    <wf_versionable action="INSERT_OR_UPDATE">
+        <checked_out/>
+        <checked_out_by/>
+        <published>false</published>
+        <sys_created_by>aleck.lin</sys_created_by>
+        <sys_created_on>2017-11-25 09:10:40</sys_created_on>
+        <sys_id>d87463cb4fe203402f9ae4928110c75f</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>aleck.lin</sys_updated_by>
+        <sys_updated_on>2017-11-25 09:35:04</sys_updated_on>
+        <valid_from>2017-11-25 09:20:01</valid_from>
+        <valid_to/>
+        <version>1</version>
+        <version_container_id>107463cb4fe203402f9ae4928110c75f</version_container_id>
+        <wf_element_definition display_value="Get account token">5c042f8b4fe203402f9ae4928110c784</wf_element_definition>
+    </wf_versionable>
+    <wf_condition_default action="INSERT_OR_UPDATE">
+        <activity_definition display_value="Get account token">5c042f8b4fe203402f9ae4928110c784</activity_definition>
+        <condition>activityOutput.success == true</condition>
+        <derived_definition/>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <name>Success</name>
+        <order>100</order>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>aleck.lin</sys_created_by>
+        <sys_created_on>2017-11-25 09:18:07</sys_created_on>
+        <sys_id>0fb5a30f4fe203402f9ae4928110c72a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>aleck.lin</sys_updated_by>
+        <sys_updated_on>2017-11-25 09:18:07</sys_updated_on>
+    </wf_condition_default>
+    <wf_condition_default action="INSERT_OR_UPDATE">
+        <activity_definition display_value="Get account token">5c042f8b4fe203402f9ae4928110c784</activity_definition>
+        <condition/>
+        <derived_definition/>
+        <else_flag>true</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <name>Failure</name>
+        <order>200</order>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>aleck.lin</sys_created_by>
+        <sys_created_on>2017-11-25 09:18:07</sys_created_on>
+        <sys_id>7b06a70f4fe203402f9ae4928110c78f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>aleck.lin</sys_updated_by>
+        <sys_updated_on>2017-11-25 09:18:07</sys_updated_on>
+    </wf_condition_default>
+</record_update>

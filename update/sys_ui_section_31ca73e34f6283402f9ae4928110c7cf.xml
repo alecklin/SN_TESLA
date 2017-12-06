@@ -1,0 +1,646 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_ui_section caption="" section_id="31ca73e34f6283402f9ae4928110c7cf" sys_domain="global" table="x_snc_tesla_charging_state" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.begin_split</element>
+            <position>0</position>
+            <sys_created_by>aleck.lin</sys_created_by>
+            <sys_created_on>2017-11-27 00:05:14</sys_created_on>
+            <sys_id>46cab3e34f6283402f9ae4928110c7ff</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_tesla_charging_state" sys_domain="global" view="Default view">31ca73e34f6283402f9ae4928110c7cf</sys_ui_section>
+            <sys_updated_by>aleck.lin</sys_updated_by>
+            <sys_updated_on>2017-11-27 00:05:14</sys_updated_on>
+            <sys_user/>
+            <type>.begin_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>charging_state</element>
+            <position>1</position>
+            <sys_created_by>aleck.lin</sys_created_by>
+            <sys_created_on>2017-11-27 00:05:14</sys_created_on>
+            <sys_id>cacab3e34f6283402f9ae4928110c7ff</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_tesla_charging_state" sys_domain="global" view="Default view">31ca73e34f6283402f9ae4928110c7cf</sys_ui_section>
+            <sys_updated_by>aleck.lin</sys_updated_by>
+            <sys_updated_on>2017-11-27 00:05:14</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>charge_limit_soc</element>
+            <position>2</position>
+            <sys_created_by>aleck.lin</sys_created_by>
+            <sys_created_on>2017-11-27 00:05:14</sys_created_on>
+            <sys_id>4ecab3e34f6283402f9ae4928110c7ff</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_tesla_charging_state" sys_domain="global" view="Default view">31ca73e34f6283402f9ae4928110c7cf</sys_ui_section>
+            <sys_updated_by>aleck.lin</sys_updated_by>
+            <sys_updated_on>2017-11-27 00:05:14</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>charge_limit_soc_max</element>
+            <position>3</position>
+            <sys_created_by>aleck.lin</sys_created_by>
+            <sys_created_on>2017-11-27 00:05:14</sys_created_on>
+            <sys_id>cecab3e34f6283402f9ae4928110c7ff</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_tesla_charging_state" sys_domain="global" view="Default view">31ca73e34f6283402f9ae4928110c7cf</sys_ui_section>
+            <sys_updated_by>aleck.lin</sys_updated_by>
+            <sys_updated_on>2017-11-27 00:05:14</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>charge_limit_soc_min</element>
+            <position>4</position>
+            <sys_created_by>aleck.lin</sys_created_by>
+            <sys_created_on>2017-11-27 00:05:14</sys_created_on>
+            <sys_id>42caf3e34f6283402f9ae4928110c700</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_tesla_charging_state" sys_domain="global" view="Default view">31ca73e34f6283402f9ae4928110c7cf</sys_ui_section>
+            <sys_updated_by>aleck.lin</sys_updated_by>
+            <sys_updated_on>2017-11-27 00:05:14</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>charge_limit_soc_std</element>
+            <position>5</position>
+            <sys_created_by>aleck.lin</sys_created_by>
+            <sys_created_on>2017-11-27 00:05:14</sys_created_on>
+            <sys_id>c2caf3e34f6283402f9ae4928110c700</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_tesla_charging_state" sys_domain="global" view="Default view">31ca73e34f6283402f9ae4928110c7cf</sys_ui_section>
+            <sys_updated_by>aleck.lin</sys_updated_by>
+            <sys_updated_on>2017-11-27 00:05:14</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>fast_charger_brand</element>
+            <position>6</position>
+            <sys_created_by>aleck.lin</sys_created_by>
+            <sys_created_on>2017-11-27 00:05:14</sys_created_on>
+            <sys_id>46caf3e34f6283402f9ae4928110c700</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_tesla_charging_state" sys_domain="global" view="Default view">31ca73e34f6283402f9ae4928110c7cf</sys_ui_section>
+            <sys_updated_by>aleck.lin</sys_updated_by>
+            <sys_updated_on>2017-11-27 00:05:14</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>fast_charger_type</element>
+            <position>7</position>
+            <sys_created_by>aleck.lin</sys_created_by>
+            <sys_created_on>2017-11-27 00:05:14</sys_created_on>
+            <sys_id>c6caf3e34f6283402f9ae4928110c700</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_tesla_charging_state" sys_domain="global" view="Default view">31ca73e34f6283402f9ae4928110c7cf</sys_ui_section>
+            <sys_updated_by>aleck.lin</sys_updated_by>
+            <sys_updated_on>2017-11-27 00:05:14</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>battery_range</element>
+            <position>8</position>
+            <sys_created_by>aleck.lin</sys_created_by>
+            <sys_created_on>2017-11-27 00:05:14</sys_created_on>
+            <sys_id>4acaf3e34f6283402f9ae4928110c700</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_tesla_charging_state" sys_domain="global" view="Default view">31ca73e34f6283402f9ae4928110c7cf</sys_ui_section>
+            <sys_updated_by>aleck.lin</sys_updated_by>
+            <sys_updated_on>2017-11-27 00:05:14</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>charge_to_max_range</element>
+            <position>9</position>
+            <sys_created_by>aleck.lin</sys_created_by>
+            <sys_created_on>2017-11-27 00:05:14</sys_created_on>
+            <sys_id>cacaf3e34f6283402f9ae4928110c700</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_tesla_charging_state" sys_domain="global" view="Default view">31ca73e34f6283402f9ae4928110c7cf</sys_ui_section>
+            <sys_updated_by>aleck.lin</sys_updated_by>
+            <sys_updated_on>2017-11-27 00:05:14</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>est_battery_range</element>
+            <position>10</position>
+            <sys_created_by>aleck.lin</sys_created_by>
+            <sys_created_on>2017-11-27 00:05:14</sys_created_on>
+            <sys_id>4ecaf3e34f6283402f9ae4928110c700</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_tesla_charging_state" sys_domain="global" view="Default view">31ca73e34f6283402f9ae4928110c7cf</sys_ui_section>
+            <sys_updated_by>aleck.lin</sys_updated_by>
+            <sys_updated_on>2017-11-27 00:05:14</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>fast_charger_present</element>
+            <position>11</position>
+            <sys_created_by>aleck.lin</sys_created_by>
+            <sys_created_on>2017-11-27 00:05:14</sys_created_on>
+            <sys_id>cecaf3e34f6283402f9ae4928110c700</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_tesla_charging_state" sys_domain="global" view="Default view">31ca73e34f6283402f9ae4928110c7cf</sys_ui_section>
+            <sys_updated_by>aleck.lin</sys_updated_by>
+            <sys_updated_on>2017-11-27 00:05:14</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>ideal_battery_range</element>
+            <position>12</position>
+            <sys_created_by>aleck.lin</sys_created_by>
+            <sys_created_on>2017-11-27 00:05:14</sys_created_on>
+            <sys_id>42caf3e34f6283402f9ae4928110c701</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_tesla_charging_state" sys_domain="global" view="Default view">31ca73e34f6283402f9ae4928110c7cf</sys_ui_section>
+            <sys_updated_by>aleck.lin</sys_updated_by>
+            <sys_updated_on>2017-11-27 00:05:14</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>max_range_charge_counter</element>
+            <position>13</position>
+            <sys_created_by>aleck.lin</sys_created_by>
+            <sys_created_on>2017-11-27 00:05:14</sys_created_on>
+            <sys_id>c2caf3e34f6283402f9ae4928110c701</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_tesla_charging_state" sys_domain="global" view="Default view">31ca73e34f6283402f9ae4928110c7cf</sys_ui_section>
+            <sys_updated_by>aleck.lin</sys_updated_by>
+            <sys_updated_on>2017-11-27 00:05:14</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>battery_level</element>
+            <position>14</position>
+            <sys_created_by>aleck.lin</sys_created_by>
+            <sys_created_on>2017-11-27 00:05:14</sys_created_on>
+            <sys_id>46caf3e34f6283402f9ae4928110c701</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_tesla_charging_state" sys_domain="global" view="Default view">31ca73e34f6283402f9ae4928110c7cf</sys_ui_section>
+            <sys_updated_by>aleck.lin</sys_updated_by>
+            <sys_updated_on>2017-11-27 00:05:14</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>charger_pilot_current</element>
+            <position>15</position>
+            <sys_created_by>aleck.lin</sys_created_by>
+            <sys_created_on>2017-11-27 00:05:14</sys_created_on>
+            <sys_id>c6caf3e34f6283402f9ae4928110c701</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_tesla_charging_state" sys_domain="global" view="Default view">31ca73e34f6283402f9ae4928110c7cf</sys_ui_section>
+            <sys_updated_by>aleck.lin</sys_updated_by>
+            <sys_updated_on>2017-11-27 00:05:14</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>charger_voltage</element>
+            <position>16</position>
+            <sys_created_by>aleck.lin</sys_created_by>
+            <sys_created_on>2017-11-27 00:05:14</sys_created_on>
+            <sys_id>4acaf3e34f6283402f9ae4928110c701</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_tesla_charging_state" sys_domain="global" view="Default view">31ca73e34f6283402f9ae4928110c7cf</sys_ui_section>
+            <sys_updated_by>aleck.lin</sys_updated_by>
+            <sys_updated_on>2017-11-27 00:05:14</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>charge_energy_added</element>
+            <position>17</position>
+            <sys_created_by>aleck.lin</sys_created_by>
+            <sys_created_on>2017-11-27 00:05:14</sys_created_on>
+            <sys_id>cacaf3e34f6283402f9ae4928110c701</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_tesla_charging_state" sys_domain="global" view="Default view">31ca73e34f6283402f9ae4928110c7cf</sys_ui_section>
+            <sys_updated_by>aleck.lin</sys_updated_by>
+            <sys_updated_on>2017-11-27 00:05:14</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>charge_miles_added_ideal</element>
+            <position>18</position>
+            <sys_created_by>aleck.lin</sys_created_by>
+            <sys_created_on>2017-11-27 00:05:14</sys_created_on>
+            <sys_id>4ecaf3e34f6283402f9ae4928110c701</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_tesla_charging_state" sys_domain="global" view="Default view">31ca73e34f6283402f9ae4928110c7cf</sys_ui_section>
+            <sys_updated_by>aleck.lin</sys_updated_by>
+            <sys_updated_on>2017-11-27 00:05:14</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>charge_miles_added_rated</element>
+            <position>19</position>
+            <sys_created_by>aleck.lin</sys_created_by>
+            <sys_created_on>2017-11-27 00:05:14</sys_created_on>
+            <sys_id>cecaf3e34f6283402f9ae4928110c701</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_tesla_charging_state" sys_domain="global" view="Default view">31ca73e34f6283402f9ae4928110c7cf</sys_ui_section>
+            <sys_updated_by>aleck.lin</sys_updated_by>
+            <sys_updated_on>2017-11-27 00:05:14</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>usable_battery_level</element>
+            <position>20</position>
+            <sys_created_by>aleck.lin</sys_created_by>
+            <sys_created_on>2017-11-27 00:05:14</sys_created_on>
+            <sys_id>42caf3e34f6283402f9ae4928110c702</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_tesla_charging_state" sys_domain="global" view="Default view">31ca73e34f6283402f9ae4928110c7cf</sys_ui_section>
+            <sys_updated_by>aleck.lin</sys_updated_by>
+            <sys_updated_on>2017-11-27 00:05:14</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>charger_actual_current</element>
+            <position>21</position>
+            <sys_created_by>aleck.lin</sys_created_by>
+            <sys_created_on>2017-11-27 00:05:14</sys_created_on>
+            <sys_id>c2caf3e34f6283402f9ae4928110c702</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_tesla_charging_state" sys_domain="global" view="Default view">31ca73e34f6283402f9ae4928110c7cf</sys_ui_section>
+            <sys_updated_by>aleck.lin</sys_updated_by>
+            <sys_updated_on>2017-11-27 00:05:14</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>22</position>
+            <sys_created_by>aleck.lin</sys_created_by>
+            <sys_created_on>2017-11-27 00:05:14</sys_created_on>
+            <sys_id>46caf3e34f6283402f9ae4928110c702</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_tesla_charging_state" sys_domain="global" view="Default view">31ca73e34f6283402f9ae4928110c7cf</sys_ui_section>
+            <sys_updated_by>aleck.lin</sys_updated_by>
+            <sys_updated_on>2017-11-27 00:05:14</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>charger_power</element>
+            <position>23</position>
+            <sys_created_by>aleck.lin</sys_created_by>
+            <sys_created_on>2017-11-27 00:05:14</sys_created_on>
+            <sys_id>c6caf3e34f6283402f9ae4928110c702</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_tesla_charging_state" sys_domain="global" view="Default view">31ca73e34f6283402f9ae4928110c7cf</sys_ui_section>
+            <sys_updated_by>aleck.lin</sys_updated_by>
+            <sys_updated_on>2017-11-27 00:05:14</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>charge_port_door_open</element>
+            <position>24</position>
+            <sys_created_by>aleck.lin</sys_created_by>
+            <sys_created_on>2017-11-27 00:05:14</sys_created_on>
+            <sys_id>4acaf3e34f6283402f9ae4928110c702</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_tesla_charging_state" sys_domain="global" view="Default view">31ca73e34f6283402f9ae4928110c7cf</sys_ui_section>
+            <sys_updated_by>aleck.lin</sys_updated_by>
+            <sys_updated_on>2017-11-27 00:05:14</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>charge_rate</element>
+            <position>25</position>
+            <sys_created_by>aleck.lin</sys_created_by>
+            <sys_created_on>2017-11-27 00:05:14</sys_created_on>
+            <sys_id>cacaf3e34f6283402f9ae4928110c702</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_tesla_charging_state" sys_domain="global" view="Default view">31ca73e34f6283402f9ae4928110c7cf</sys_ui_section>
+            <sys_updated_by>aleck.lin</sys_updated_by>
+            <sys_updated_on>2017-11-27 00:05:14</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>time_to_full_charge</element>
+            <position>26</position>
+            <sys_created_by>aleck.lin</sys_created_by>
+            <sys_created_on>2017-11-27 00:05:14</sys_created_on>
+            <sys_id>4ecaf3e34f6283402f9ae4928110c702</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_tesla_charging_state" sys_domain="global" view="Default view">31ca73e34f6283402f9ae4928110c7cf</sys_ui_section>
+            <sys_updated_by>aleck.lin</sys_updated_by>
+            <sys_updated_on>2017-11-27 00:05:14</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>trip_charging</element>
+            <position>27</position>
+            <sys_created_by>aleck.lin</sys_created_by>
+            <sys_created_on>2017-11-27 00:05:14</sys_created_on>
+            <sys_id>cecaf3e34f6283402f9ae4928110c702</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_tesla_charging_state" sys_domain="global" view="Default view">31ca73e34f6283402f9ae4928110c7cf</sys_ui_section>
+            <sys_updated_by>aleck.lin</sys_updated_by>
+            <sys_updated_on>2017-11-27 00:05:14</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>charger_phases</element>
+            <position>28</position>
+            <sys_created_by>aleck.lin</sys_created_by>
+            <sys_created_on>2017-11-27 00:05:14</sys_created_on>
+            <sys_id>42caf3e34f6283402f9ae4928110c703</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_tesla_charging_state" sys_domain="global" view="Default view">31ca73e34f6283402f9ae4928110c7cf</sys_ui_section>
+            <sys_updated_by>aleck.lin</sys_updated_by>
+            <sys_updated_on>2017-11-27 00:05:14</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>charge_enable_request</element>
+            <position>29</position>
+            <sys_created_by>aleck.lin</sys_created_by>
+            <sys_created_on>2017-11-27 00:05:14</sys_created_on>
+            <sys_id>c2caf3e34f6283402f9ae4928110c703</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_tesla_charging_state" sys_domain="global" view="Default view">31ca73e34f6283402f9ae4928110c7cf</sys_ui_section>
+            <sys_updated_by>aleck.lin</sys_updated_by>
+            <sys_updated_on>2017-11-27 00:05:14</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>charge_port_latch</element>
+            <position>30</position>
+            <sys_created_by>aleck.lin</sys_created_by>
+            <sys_created_on>2017-11-27 00:05:14</sys_created_on>
+            <sys_id>46caf3e34f6283402f9ae4928110c703</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_tesla_charging_state" sys_domain="global" view="Default view">31ca73e34f6283402f9ae4928110c7cf</sys_ui_section>
+            <sys_updated_by>aleck.lin</sys_updated_by>
+            <sys_updated_on>2017-11-27 00:05:14</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>scheduled_charging_pending</element>
+            <position>31</position>
+            <sys_created_by>aleck.lin</sys_created_by>
+            <sys_created_on>2017-11-27 00:05:14</sys_created_on>
+            <sys_id>c6caf3e34f6283402f9ae4928110c703</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_tesla_charging_state" sys_domain="global" view="Default view">31ca73e34f6283402f9ae4928110c7cf</sys_ui_section>
+            <sys_updated_by>aleck.lin</sys_updated_by>
+            <sys_updated_on>2017-11-27 00:05:14</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>scheduled_charging_start_time</element>
+            <position>32</position>
+            <sys_created_by>aleck.lin</sys_created_by>
+            <sys_created_on>2017-11-27 00:05:14</sys_created_on>
+            <sys_id>4acaf3e34f6283402f9ae4928110c703</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_tesla_charging_state" sys_domain="global" view="Default view">31ca73e34f6283402f9ae4928110c7cf</sys_ui_section>
+            <sys_updated_by>aleck.lin</sys_updated_by>
+            <sys_updated_on>2017-11-27 00:05:14</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>user_charge_enable_request</element>
+            <position>33</position>
+            <sys_created_by>aleck.lin</sys_created_by>
+            <sys_created_on>2017-11-27 00:05:14</sys_created_on>
+            <sys_id>cacaf3e34f6283402f9ae4928110c703</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_tesla_charging_state" sys_domain="global" view="Default view">31ca73e34f6283402f9ae4928110c7cf</sys_ui_section>
+            <sys_updated_by>aleck.lin</sys_updated_by>
+            <sys_updated_on>2017-11-27 00:05:14</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>battery_heater_on</element>
+            <position>34</position>
+            <sys_created_by>aleck.lin</sys_created_by>
+            <sys_created_on>2017-11-27 00:05:14</sys_created_on>
+            <sys_id>4ecaf3e34f6283402f9ae4928110c703</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_tesla_charging_state" sys_domain="global" view="Default view">31ca73e34f6283402f9ae4928110c7cf</sys_ui_section>
+            <sys_updated_by>aleck.lin</sys_updated_by>
+            <sys_updated_on>2017-11-27 00:05:14</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>charge_current_request</element>
+            <position>35</position>
+            <sys_created_by>aleck.lin</sys_created_by>
+            <sys_created_on>2017-11-27 00:05:14</sys_created_on>
+            <sys_id>cecaf3e34f6283402f9ae4928110c703</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_tesla_charging_state" sys_domain="global" view="Default view">31ca73e34f6283402f9ae4928110c7cf</sys_ui_section>
+            <sys_updated_by>aleck.lin</sys_updated_by>
+            <sys_updated_on>2017-11-27 00:05:14</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>charge_current_request_max</element>
+            <position>36</position>
+            <sys_created_by>aleck.lin</sys_created_by>
+            <sys_created_on>2017-11-27 00:05:14</sys_created_on>
+            <sys_id>42caf3e34f6283402f9ae4928110c704</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_tesla_charging_state" sys_domain="global" view="Default view">31ca73e34f6283402f9ae4928110c7cf</sys_ui_section>
+            <sys_updated_by>aleck.lin</sys_updated_by>
+            <sys_updated_on>2017-11-27 00:05:14</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>managed_charging_active</element>
+            <position>37</position>
+            <sys_created_by>aleck.lin</sys_created_by>
+            <sys_created_on>2017-11-27 00:05:14</sys_created_on>
+            <sys_id>c2caf3e34f6283402f9ae4928110c704</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_tesla_charging_state" sys_domain="global" view="Default view">31ca73e34f6283402f9ae4928110c7cf</sys_ui_section>
+            <sys_updated_by>aleck.lin</sys_updated_by>
+            <sys_updated_on>2017-11-27 00:05:14</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>managed_charging_start_time</element>
+            <position>38</position>
+            <sys_created_by>aleck.lin</sys_created_by>
+            <sys_created_on>2017-11-27 00:05:14</sys_created_on>
+            <sys_id>46caf3e34f6283402f9ae4928110c704</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_tesla_charging_state" sys_domain="global" view="Default view">31ca73e34f6283402f9ae4928110c7cf</sys_ui_section>
+            <sys_updated_by>aleck.lin</sys_updated_by>
+            <sys_updated_on>2017-11-27 00:05:14</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>managed_charging_user_canceled</element>
+            <position>39</position>
+            <sys_created_by>aleck.lin</sys_created_by>
+            <sys_created_on>2017-11-27 00:05:14</sys_created_on>
+            <sys_id>c6caf3e34f6283402f9ae4928110c704</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_tesla_charging_state" sys_domain="global" view="Default view">31ca73e34f6283402f9ae4928110c7cf</sys_ui_section>
+            <sys_updated_by>aleck.lin</sys_updated_by>
+            <sys_updated_on>2017-11-27 00:05:14</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>not_enough_power_to_heat</element>
+            <position>40</position>
+            <sys_created_by>aleck.lin</sys_created_by>
+            <sys_created_on>2017-11-27 00:05:14</sys_created_on>
+            <sys_id>4acaf3e34f6283402f9ae4928110c704</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_tesla_charging_state" sys_domain="global" view="Default view">31ca73e34f6283402f9ae4928110c7cf</sys_ui_section>
+            <sys_updated_by>aleck.lin</sys_updated_by>
+            <sys_updated_on>2017-11-27 00:05:14</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>timestamp</element>
+            <position>41</position>
+            <sys_created_by>aleck.lin</sys_created_by>
+            <sys_created_on>2017-11-27 00:05:14</sys_created_on>
+            <sys_id>cacaf3e34f6283402f9ae4928110c704</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_tesla_charging_state" sys_domain="global" view="Default view">31ca73e34f6283402f9ae4928110c7cf</sys_ui_section>
+            <sys_updated_by>aleck.lin</sys_updated_by>
+            <sys_updated_on>2017-11-27 00:05:14</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>vehicle</element>
+            <position>42</position>
+            <sys_created_by>aleck.lin</sys_created_by>
+            <sys_created_on>2017-11-27 00:05:14</sys_created_on>
+            <sys_id>4ecaf3e34f6283402f9ae4928110c704</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_tesla_charging_state" sys_domain="global" view="Default view">31ca73e34f6283402f9ae4928110c7cf</sys_ui_section>
+            <sys_updated_by>aleck.lin</sys_updated_by>
+            <sys_updated_on>2017-11-27 00:05:14</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.end_split</element>
+            <position>43</position>
+            <sys_created_by>aleck.lin</sys_created_by>
+            <sys_created_on>2017-11-27 00:05:14</sys_created_on>
+            <sys_id>cecaf3e34f6283402f9ae4928110c704</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_tesla_charging_state" sys_domain="global" view="Default view">31ca73e34f6283402f9ae4928110c7cf</sys_ui_section>
+            <sys_updated_by>aleck.lin</sys_updated_by>
+            <sys_updated_on>2017-11-27 00:05:14</sys_updated_on>
+            <sys_user/>
+            <type>.end_split</type>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption/>
+            <header>false</header>
+            <name>x_snc_tesla_charging_state</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>aleck.lin</sys_created_by>
+            <sys_created_on>2017-11-27 00:05:14</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>31ca73e34f6283402f9ae4928110c7cf</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_snc_tesla_charging_state</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Tesla" source="x_snc_tesla">7441c3a64f5a4f002f9ae4928110c771</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Tesla">7441c3a64f5a4f002f9ae4928110c771</sys_scope>
+            <sys_update_name>sys_ui_section_31ca73e34f6283402f9ae4928110c7cf</sys_update_name>
+            <sys_updated_by>aleck.lin</sys_updated_by>
+            <sys_updated_on>2017-11-27 00:05:14</sys_updated_on>
+            <sys_user/>
+            <title>true</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

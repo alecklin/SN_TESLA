@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Driving and Position" max_length="40" name="x_snc_tesla_driving_and_position" type="collection">
+        <element label="Gps as of" max_length="40" name="gps_as_of" type="integer"/>
+        <element label="Heading" max_length="40" name="heading" type="integer"/>
+        <element label="Latitude" max_length="20" name="latitude" type="decimal"/>
+        <element label="Longitude" max_length="20" name="longitude" type="decimal"/>
+        <element label="Power" max_length="40" name="power" type="string"/>
+        <element label="Shift state" max_length="40" name="shift_state" type="string"/>
+        <element label="Speed" max_length="40" name="speed" type="integer"/>
+        <element label="Timestamp" max_length="40" name="timestamp" type="integer"/>
+        <element label="Vehicle" max_length="32" name="vehicle" reference="x_snc_tesla_tesla_vehicle" reference_cascade_rule="delete" type="reference"/>
+        <index name="index">
+            <element name="vehicle"/>
+        </index>
+    </element>
+</database>

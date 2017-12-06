@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_documentation element="u_tesla_account" label="Tesla Account" language="en" table="var__m_var_dictionary_a2699e834feecf002f9ae4928110c738">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>u_tesla_account</element>
+            <help/>
+            <hint/>
+            <label>Tesla Account</label>
+            <language>en</language>
+            <name>var__m_var_dictionary_a2699e834feecf002f9ae4928110c738</name>
+            <plural>Tesla Account</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>aleck.lin</sys_created_by>
+            <sys_created_on>2017-11-25 09:06:37</sys_created_on>
+            <sys_id>8d83278b4fe203402f9ae4928110c741</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Tesla Account</sys_name>
+            <sys_package display_value="Tesla" source="x_snc_tesla">7441c3a64f5a4f002f9ae4928110c771</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Tesla">7441c3a64f5a4f002f9ae4928110c771</sys_scope>
+            <sys_update_name>sys_documentation_var__m_var_dictionary_a2699e834feecf002f9ae4928110c738_u_tesla_account_en</sys_update_name>
+            <sys_updated_by>aleck.lin</sys_updated_by>
+            <sys_updated_on>2017-11-25 09:06:37</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

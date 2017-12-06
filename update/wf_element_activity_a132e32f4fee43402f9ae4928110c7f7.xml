@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="wf_element_activity">
+    <wf_element_activity action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <attributes/>
+        <base_provider display_value="REST Web Service">8817a25e37222100aa40cc9fbe41f106</base_provider>
+        <category>Tesla API</category>
+        <checked_out_by/>
+        <default_height/>
+        <default_width/>
+        <description/>
+        <image>images/heisenberg_icons/workflow_ie8/provider_rest.png</image>
+        <input_meta>{"name":"Input","type":"DATA_OBJECT","properties":[{"name":"token","type":"STRING","mandatory":true},{"name":"vehicle_id","type":"STRING","mandatory":true}]}</input_meta>
+        <input_process_script/>
+        <input_transform>{"web_service_message":"e7223dbc4f6ac7002f9ae4928110c77f","web_service_message_function":"d47271fc4f6ac7002f9ae4928110c7b9","web_service_endpoint":"","parameters":"[{\"name\":\"command\",\"value\":\"data_request/gui_settings\",\"additional_attribute\":\"\"},{\"name\":\"version\",\"value\":\"1\",\"additional_attribute\":\"\"},{\"name\":\"vehicle_id\",\"value\":\"${activityInput.vehicle_id}\",\"additional_attribute\":\"\"},{\"name\":\"access_token\",\"value\":\"${activityInput.token}\",\"additional_attribute\":\"\"}]","headers":"[]","queryParameters":"[]","midCapabilities":"18409d8007482000dada43c0d1021e8f","use_mid_server":"false","time_out":"10","auth_type":"use_existing_credentials","credentials":"","protocol_profile":"","oauth_entity_profile":""}</input_transform>
+        <local_variables>{"name":"Local","type":"DATA_OBJECT","properties":[{"name":"localStatus_code","type":"INTEGER"},{"name":"localHeader","type":"DATA_OBJECT"},{"name":"localBody","type":"STRING"},{"name":"localError","type":"STRING"},{"name":"localOutput","type":"DATA_OBJECT","properties":[{"name":"response","type":"DATA_OBJECT","properties":[{"name":"gui_distance_units","type":"STRING"},{"name":"gui_range_display","type":"STRING"},{"name":"gui_24_hour_time","type":"BOOLEAN"},{"name":"gui_charge_rate_units","type":"STRING"},{"name":"gui_temperature_units","type":"STRING"},{"name":"timestamp","type":"INTEGER"}]}]}]}</local_variables>
+        <name>GUI Setting</name>
+        <output_meta>{"name":"Output","type":"DATA_OBJECT","properties":[{"name":"status_code","type":"INTEGER"},{"name":"header","type":"DATA_OBJECT"},{"name":"body","type":"STRING"},{"name":"error","type":"STRING"},{"name":"output","type":"DATA_OBJECT","properties":[{"name":"response","type":"DATA_OBJECT","properties":[{"name":"gui_distance_units","type":"STRING"},{"name":"gui_range_display","type":"STRING"},{"name":"gui_24_hour_time","type":"BOOLEAN"},{"name":"gui_charge_rate_units","type":"STRING"},{"name":"gui_temperature_units","type":"STRING"},{"name":"timestamp","type":"INTEGER"}]}]}]}</output_meta>
+        <output_process_script/>
+        <output_transform>[{"toLink":"activityOutput.status_code","to":"status_code","toType":"string","toDestination":"activityOutput","sourceLabel":"executionResult.status_code","from":"${executionResult.status_code}","fromSource":"executionResult","type":"Direct","translation":"","description":"","children":[]},{"toLink":"activityOutput.header","to":"header","toType":"string","toDestination":"activityOutput","sourceLabel":"executionResult.header","from":"${executionResult.header}","fromSource":"executionResult","type":"JSON","translation":"$","description":"","children":[]},{"toLink":"activityOutput.body","to":"body","toType":"string","toDestination":"activityOutput","sourceLabel":"executionResult.body","from":"${executionResult.body}","fromSource":"executionResult","type":"Direct","translation":"","description":"","children":[]},{"toLink":"activityOutput.error","to":"error","toType":"string","toDestination":"activityOutput","sourceLabel":"executionResult.error","from":"${executionResult.error}","fromSource":"executionResult","type":"Direct","translation":"","description":"","children":[]},{"toLink":"activityOutput.output","to":"output","toType":"string","toDestination":"activityOutput","sourceLabel":"executionResult.body","from":"${executionResult.body}","fromSource":"executionResult","type":"JSON","translation":"$","description":"","children":[]}]</output_transform>
+        <processing_script/>
+        <sample_payloads>{"executionResult.status_code":{"payload":200,"type":"direct"},"executionResult.header":{"payload":"{\"Server\":\"nginx\",\"X-Request-Id\":\"e8d156b9-16c8-4035-9543-dfd3ba66ec0b\",\"X-Content-Type-Options\":\"nosniff\",\"X-Runtime\":\"0.384093\",\"Connection\":\"keep-alive\",\"Date\":\"Sun, 26 Nov 2017 22:19:28 GMT\",\"X-Frame-Options\":\"SAMEORIGIN\",\"Cache-Control\":\"max-age=0, private, must-revalidate\",\"ETag\":\"W/\\\"ae752628d415ae265fe3ed12ffd7c0cf\\\"\",\"X-TXID\":\"9c4002e99e079ffe1f720e3c0a94f1c4\",\"Content-Length\":\"182\",\"X-XSS-Protection\":\"1; mode=block\",\"Content-Type\":\"application/json; charset=utf-8\"}","type":"direct"},"executionResult.body":{"payload":"{\"response\":{\"gui_distance_units\":\"mi/hr\",\"gui_temperature_units\":\"F\",\"gui_charge_rate_units\":\"mi/hr\",\"gui_24_hour_time\":false,\"gui_range_display\":\"Rated\",\"timestamp\":1511734768268}}","type":"direct"},"executionResult.error":{"payload":"null","type":"direct"}}</sample_payloads>
+        <short_description/>
+        <style/>
+        <sys_class_name>wf_element_activity</sys_class_name>
+        <sys_created_by>aleck.lin</sys_created_by>
+        <sys_created_on>2017-11-26 22:18:10</sys_created_on>
+        <sys_id>a132e32f4fee43402f9ae4928110c7f7</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>GUI Setting</sys_name>
+        <sys_package display_value="Tesla" source="x_snc_tesla">7441c3a64f5a4f002f9ae4928110c771</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Tesla">7441c3a64f5a4f002f9ae4928110c771</sys_scope>
+        <sys_update_name>wf_element_activity_a132e32f4fee43402f9ae4928110c7f7</sys_update_name>
+        <sys_updated_by>aleck.lin</sys_updated_by>
+        <sys_updated_on>2017-11-27 00:57:08</sys_updated_on>
+        <version_container_id>f542272f4fee43402f9ae4928110c725</version_container_id>
+    </wf_element_activity>
+    <sys_translated_text action="delete_multiple" query="documentkey=a132e32f4fee43402f9ae4928110c7f7"/>
+    <wf_versionable action="INSERT_OR_UPDATE">
+        <checked_out/>
+        <checked_out_by/>
+        <published>false</published>
+        <sys_created_by>aleck.lin</sys_created_by>
+        <sys_created_on>2017-11-26 22:18:10</sys_created_on>
+        <sys_id>b142272f4fee43402f9ae4928110c726</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>aleck.lin</sys_updated_by>
+        <sys_updated_on>2017-11-27 00:57:08</sys_updated_on>
+        <valid_from>2017-11-26 22:21:12</valid_from>
+        <valid_to/>
+        <version>1</version>
+        <version_container_id>f542272f4fee43402f9ae4928110c725</version_container_id>
+        <wf_element_definition display_value="GUI Setting">a132e32f4fee43402f9ae4928110c7f7</wf_element_definition>
+    </wf_versionable>
+    <wf_condition_default action="INSERT_OR_UPDATE">
+        <activity_definition display_value="GUI Setting">a132e32f4fee43402f9ae4928110c7f7</activity_definition>
+        <condition/>
+        <derived_definition/>
+        <else_flag>true</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <name>Failure</name>
+        <order>200</order>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>aleck.lin</sys_created_by>
+        <sys_created_on>2017-11-26 22:21:12</sys_created_on>
+        <sys_id>7ae2af2f4fee43402f9ae4928110c766</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>aleck.lin</sys_updated_by>
+        <sys_updated_on>2017-11-26 22:21:12</sys_updated_on>
+    </wf_condition_default>
+    <wf_condition_default action="INSERT_OR_UPDATE">
+        <activity_definition display_value="GUI Setting">a132e32f4fee43402f9ae4928110c7f7</activity_definition>
+        <condition>activityLocal.status_code == 200</condition>
+        <derived_definition/>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <name>Success</name>
+        <order>100</order>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>aleck.lin</sys_created_by>
+        <sys_created_on>2017-11-26 22:21:12</sys_created_on>
+        <sys_id>9cb2eb2f4fee43402f9ae4928110c7d4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>aleck.lin</sys_updated_by>
+        <sys_updated_on>2017-11-26 22:21:12</sys_updated_on>
+    </wf_condition_default>
+</record_update>

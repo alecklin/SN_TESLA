@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_documentation element="u_username" label="username" language="en" table="var__m_var_dictionary_183eed344f6ac7002f9ae4928110c72a">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>u_username</element>
+            <help/>
+            <hint/>
+            <label>username</label>
+            <language>en</language>
+            <name>var__m_var_dictionary_183eed344f6ac7002f9ae4928110c72a</name>
+            <plural>username</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>aleck.lin</sys_created_by>
+            <sys_created_on>2017-11-18 01:44:53</sys_created_on>
+            <sys_id>c24b79f44faac7002f9ae4928110c7ce</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>username</sys_name>
+            <sys_package display_value="Tesla" source="x_snc_tesla">7441c3a64f5a4f002f9ae4928110c771</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Tesla">7441c3a64f5a4f002f9ae4928110c771</sys_scope>
+            <sys_update_name>sys_documentation_var__m_var_dictionary_183eed344f6ac7002f9ae4928110c72a_u_username_en</sys_update_name>
+            <sys_updated_by>aleck.lin</sys_updated_by>
+            <sys_updated_on>2017-11-18 01:44:53</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

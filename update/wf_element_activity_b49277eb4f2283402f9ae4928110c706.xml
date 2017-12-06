@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="wf_element_activity">
+    <wf_element_activity action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <attributes/>
+        <base_provider display_value="REST Web Service">8817a25e37222100aa40cc9fbe41f106</base_provider>
+        <category>Tesla API</category>
+        <checked_out_by/>
+        <default_height/>
+        <default_width/>
+        <description/>
+        <image>images/heisenberg_icons/workflow_ie8/provider_rest.png</image>
+        <input_meta>{"name":"Input","type":"DATA_OBJECT","properties":[{"name":"vehicle_id","type":"STRING","mandatory":false},{"name":"token","type":"STRING","mandatory":false}]}</input_meta>
+        <input_process_script/>
+        <input_transform>{"web_service_message":"e7223dbc4f6ac7002f9ae4928110c77f","web_service_message_function":"d47271fc4f6ac7002f9ae4928110c7b9","web_service_endpoint":"","parameters":"[{\"name\":\"command\",\"value\":\"data_request/drive_state\",\"additional_attribute\":\"\"},{\"name\":\"version\",\"value\":\"1\",\"additional_attribute\":\"\"},{\"name\":\"vehicle_id\",\"value\":\"${activityInput.vehicle_id}\",\"additional_attribute\":\"\"},{\"name\":\"access_token\",\"value\":\"${activityInput.token}\",\"additional_attribute\":\"\"}]","headers":"[]","queryParameters":"[]","midCapabilities":"18409d8007482000dada43c0d1021e8f","use_mid_server":"false","time_out":"10","auth_type":"use_existing_credentials","credentials":"","protocol_profile":"","oauth_entity_profile":""}</input_transform>
+        <local_variables>{"name":"Local","type":"DATA_OBJECT","properties":[{"name":"status_code","type":"INTEGER"},{"name":"localHeader","type":"DATA_OBJECT","properties":[]},{"name":"localBody","type":"STRING"},{"name":"localError","type":"STRING"},{"name":"localOutput","type":"DATA_OBJECT","properties":[{"name":"response","type":"DATA_OBJECT","properties":[{"name":"shift_state","type":"STRING"},{"name":"heading","type":"INTEGER"},{"name":"latitude","type":"DECIMAL"},{"name":"power","type":"INTEGER"},{"name":"speed","type":"INTEGER"},{"name":"gps_as_of","type":"INTEGER"},{"name":"longitude","type":"DECIMAL"},{"name":"timestamp","type":"INTEGER"}]}]}]}</local_variables>
+        <name>Get Driving &amp; Position</name>
+        <output_meta>{"name":"Output","type":"DATA_OBJECT","properties":[{"name":"status_code","type":"INTEGER"},{"name":"header","type":"DATA_OBJECT"},{"name":"body","type":"STRING"},{"name":"error","type":"STRING"},{"name":"output","type":"DATA_OBJECT","properties":[{"name":"response","type":"DATA_OBJECT","properties":[{"name":"shift_state","type":"STRING"},{"name":"heading","type":"INTEGER"},{"name":"latitude","type":"DECIMAL"},{"name":"power","type":"INTEGER"},{"name":"speed","type":"STRING"},{"name":"gps_as_of","type":"INTEGER"},{"name":"longitude","type":"DECIMAL"},{"name":"timestamp","type":"INTEGER"}]}]}]}</output_meta>
+        <output_process_script/>
+        <output_transform>[{"toLink":"activityOutput.status_code","to":"status_code","toType":"string","toDestination":"activityOutput","sourceLabel":"executionResult.status_code","from":"${executionResult.status_code}","fromSource":"executionResult","type":"Direct","translation":"","description":"","children":[]},{"toLink":"activityOutput.header","to":"header","toType":"string","toDestination":"activityOutput","sourceLabel":"executionResult.header","from":"${executionResult.header}","fromSource":"executionResult","type":"JSON","translation":"$","description":"","children":[]},{"toLink":"activityOutput.body","to":"body","toType":"string","toDestination":"activityOutput","sourceLabel":"executionResult.body","from":"${executionResult.body}","fromSource":"executionResult","type":"Direct","translation":"","description":"","children":[]},{"toLink":"activityOutput.error","to":"error","toType":"string","toDestination":"activityOutput","sourceLabel":"executionResult.error","from":"${executionResult.error}","fromSource":"executionResult","type":"Direct","translation":"","description":"","children":[]},{"toLink":"activityOutput.output","to":"output","toType":"string","toDestination":"activityOutput","sourceLabel":"executionResult.body","from":"${executionResult.body}","fromSource":"executionResult","type":"JSON","translation":"$","description":"","children":[]}]</output_transform>
+        <processing_script/>
+        <sample_payloads>{"executionResult.status_code":{"payload":200,"type":"direct"},"executionResult.header":{"payload":"{\"Server\":\"nginx\",\"X-Request-Id\":\"2bca7634-45a1-406d-ad27-1b95541c742e\",\"X-Content-Type-Options\":\"nosniff\",\"X-Runtime\":\"0.416671\",\"Connection\":\"keep-alive\",\"Date\":\"Sat, 25 Nov 2017 20:26:50 GMT\",\"X-Frame-Options\":\"SAMEORIGIN\",\"Cache-Control\":\"max-age=0, private, must-revalidate\",\"ETag\":\"W/\\\"6627599a913f863a4fd3f6199583a1e1\\\"\",\"X-TXID\":\"5544cb703bc2423db0b5951975cc4681\",\"Content-Length\":\"163\",\"X-XSS-Protection\":\"1; mode=block\",\"Content-Type\":\"application/json; charset=utf-8\"}","type":"direct"},"executionResult.body":{"payload":"{\"response\":{\"shift_state\":\"P\",\"speed\":12,\"power\":\"0\",\"latitude\":37.757393,\"longitude\":-122.482239,\"heading\":267,\"gps_as_of\":1511641610,\"timestamp\":1511641610706}}","type":"json"},"executionResult.error":{"payload":"null","type":"direct"}}</sample_payloads>
+        <short_description/>
+        <style/>
+        <sys_class_name>wf_element_activity</sys_class_name>
+        <sys_created_by>aleck.lin</sys_created_by>
+        <sys_created_on>2017-11-26 23:29:22</sys_created_on>
+        <sys_id>b49277eb4f2283402f9ae4928110c706</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Get Driving &amp; Position</sys_name>
+        <sys_package display_value="Tesla" source="x_snc_tesla">7441c3a64f5a4f002f9ae4928110c771</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Tesla">7441c3a64f5a4f002f9ae4928110c771</sys_scope>
+        <sys_update_name>wf_element_activity_b49277eb4f2283402f9ae4928110c706</sys_update_name>
+        <sys_updated_by>aleck.lin</sys_updated_by>
+        <sys_updated_on>2017-11-27 00:51:55</sys_updated_on>
+        <version_container_id>529efd534f2e03402f9ae4928110c712</version_container_id>
+    </wf_element_activity>
+    <sys_translated_text action="delete_multiple" query="documentkey=b49277eb4f2283402f9ae4928110c706"/>
+    <wf_versionable action="INSERT_OR_UPDATE">
+        <checked_out/>
+        <checked_out_by/>
+        <published>true</published>
+        <sys_created_by>aleck.lin</sys_created_by>
+        <sys_created_on>2017-11-26 23:29:22</sys_created_on>
+        <sys_id>bc9277eb4f2283402f9ae4928110c706</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>aleck.lin</sys_updated_by>
+        <sys_updated_on>2017-11-27 00:51:55</sys_updated_on>
+        <valid_from>2017-11-27 00:51:55</valid_from>
+        <valid_to/>
+        <version>3</version>
+        <version_container_id>529efd534f2e03402f9ae4928110c712</version_container_id>
+        <wf_element_definition display_value="Get Driving &amp; Position">b49277eb4f2283402f9ae4928110c706</wf_element_definition>
+    </wf_versionable>
+    <wf_condition_default action="INSERT_OR_UPDATE">
+        <activity_definition display_value="Get Driving &amp; Position">b49277eb4f2283402f9ae4928110c706</activity_definition>
+        <condition/>
+        <derived_definition>8430c2d34f2e03402f9ae4928110c7d0</derived_definition>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <name>Failure</name>
+        <order>200</order>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>aleck.lin</sys_created_by>
+        <sys_created_on>2017-11-26 23:29:23</sys_created_on>
+        <sys_id>749277eb4f2283402f9ae4928110c707</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>aleck.lin</sys_updated_by>
+        <sys_updated_on>2017-11-26 23:29:23</sys_updated_on>
+    </wf_condition_default>
+    <wf_condition_default action="INSERT_OR_UPDATE">
+        <activity_definition display_value="Get Driving &amp; Position">b49277eb4f2283402f9ae4928110c706</activity_definition>
+        <condition>activityOutput.status_code == 200</condition>
+        <derived_definition>104f39934f2e03402f9ae4928110c7c1</derived_definition>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <name>Success</name>
+        <order>100</order>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>aleck.lin</sys_created_by>
+        <sys_created_on>2017-11-26 23:29:23</sys_created_on>
+        <sys_id>b89277eb4f2283402f9ae4928110c707</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>aleck.lin</sys_updated_by>
+        <sys_updated_on>2017-11-26 23:29:36</sys_updated_on>
+    </wf_condition_default>
+    <wf_versionable action="update_multiple" query="version_container_id=529efd534f2e03402f9ae4928110c712^sys_id!=bc9277eb4f2283402f9ae4928110c706^version&lt;3">
+        <published>false</published>
+    </wf_versionable>
+    <wf_activity action="update_multiple" is_dot_walk_query="true" query="workflow_version.published=true^activity_definition.version_container_id=529efd534f2e03402f9ae4928110c712">
+        <new_activity_definition>b49277eb4f2283402f9ae4928110c706</new_activity_definition>
+        <out_of_date>true</out_of_date>
+        <notes>There is a newer version of this activity.
+
+To update the activity, check out the workflow, select the activity, right click
+and select 'Update activity' to use the latest version, then publish the workflow</notes>
+    </wf_activity>
+</record_update>

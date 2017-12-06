@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Vehicle State" max_length="40" name="x_snc_tesla_vehicle_state" type="collection">
+        <element label="Api version" max_length="40" name="api_version" type="string"/>
+        <element label="Autopark state" max_length="40" name="autopark_state" type="string"/>
+        <element label="Autopark state v2" max_length="40" name="autopark_state_v2" type="string"/>
+        <element label="Autopark style" max_length="40" name="autopark_style" type="string"/>
+        <element label="Calendar supported" max_length="40" name="calendar_supported" type="string"/>
+        <element label="Car version" max_length="40" name="car_version" type="string"/>
+        <element label="Center display state" max_length="40" name="center_display_state" type="string"/>
+        <element label="Df" max_length="40" name="df" type="string"/>
+        <element label="Dr" max_length="40" name="dr" type="string"/>
+        <element label="Ft" max_length="40" name="ft" type="string"/>
+        <element label="Homelink nearby" max_length="40" name="homelink_nearby" type="string"/>
+        <element label="Last autopark error" max_length="40" name="last_autopark_error" type="string"/>
+        <element label="Locked" max_length="40" name="locked" type="string"/>
+        <element label="Notifications supported" max_length="40" name="notifications_supported" type="string"/>
+        <element label="Odometer" max_length="40" name="odometer" type="string"/>
+        <element label="Parsed calendar supported" max_length="40" name="parsed_calendar_supported" type="string"/>
+        <element label="Pf" max_length="40" name="pf" type="string"/>
+        <element label="Pr" max_length="40" name="pr" type="string"/>
+        <element label="Remote start" max_length="40" name="remote_start" type="string"/>
+        <element label="Remote start supported" max_length="40" name="remote_start_supported" type="string"/>
+        <element label="Rt" max_length="40" name="rt" type="string"/>
+        <element label="Sun roof percent open" max_length="40" name="sun_roof_percent_open" type="string"/>
+        <element label="Sun roof state" max_length="40" name="sun_roof_state" type="string"/>
+        <element label="Timestamp" max_length="40" name="timestamp" type="string"/>
+        <element label="Valet mode" max_length="40" name="valet_mode" type="string"/>
+        <element label="Vehicle" max_length="32" name="vehicle" reference="x_snc_tesla_tesla_vehicle" reference_cascade_rule="delete" type="reference"/>
+        <element label="Vehicle name" max_length="40" name="vehicle_name" type="string"/>
+        <index name="index">
+            <element name="vehicle"/>
+        </index>
+    </element>
+</database>

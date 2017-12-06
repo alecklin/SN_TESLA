@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Charging State" max_length="40" name="x_snc_tesla_charging_state" type="collection">
+        <element label="Battery heater on" max_length="40" name="battery_heater_on" type="string"/>
+        <element label="Battery level" max_length="40" name="battery_level" type="string"/>
+        <element label="Battery range" max_length="40" name="battery_range" type="string"/>
+        <element label="Charger actual current" max_length="40" name="charger_actual_current" type="string"/>
+        <element label="Charger phases" max_length="40" name="charger_phases" type="string"/>
+        <element label="Charger pilot current" max_length="40" name="charger_pilot_current" type="string"/>
+        <element label="Charger power" max_length="40" name="charger_power" type="string"/>
+        <element label="Charger voltage" max_length="40" name="charger_voltage" type="string"/>
+        <element label="Charge current request" max_length="40" name="charge_current_request" type="string"/>
+        <element label="Charge current request max" max_length="40" name="charge_current_request_max" type="string"/>
+        <element label="Charge enable request" max_length="40" name="charge_enable_request" type="string"/>
+        <element label="Charge energy added" max_length="40" name="charge_energy_added" type="string"/>
+        <element label="Charge limit soc" max_length="40" name="charge_limit_soc" type="string"/>
+        <element label="Charge limit soc max" max_length="40" name="charge_limit_soc_max" type="string"/>
+        <element label="Charge limit soc min" max_length="40" name="charge_limit_soc_min" type="string"/>
+        <element label="Charge limit soc std" max_length="40" name="charge_limit_soc_std" type="string"/>
+        <element label="Charge miles added ideal" max_length="40" name="charge_miles_added_ideal" type="string"/>
+        <element label="Charge miles added rated" max_length="40" name="charge_miles_added_rated" type="string"/>
+        <element label="Charge port door open" max_length="40" name="charge_port_door_open" type="string"/>
+        <element label="Charge port latch" max_length="40" name="charge_port_latch" type="string"/>
+        <element label="Charge rate" max_length="40" name="charge_rate" type="string"/>
+        <element label="Charge to max range" max_length="40" name="charge_to_max_range" type="string"/>
+        <element label="Charging state" max_length="40" name="charging_state" type="string"/>
+        <element label="Est battery range" max_length="40" name="est_battery_range" type="string"/>
+        <element label="Fast charger brand" max_length="40" name="fast_charger_brand" type="string"/>
+        <element label="Fast charger present" max_length="40" name="fast_charger_present" type="string"/>
+        <element label="Fast charger type" max_length="40" name="fast_charger_type" type="string"/>
+        <element label="Ideal battery range" max_length="40" name="ideal_battery_range" type="string"/>
+        <element label="Managed charging active" max_length="40" name="managed_charging_active" type="string"/>
+        <element label="Managed charging start time" max_length="40" name="managed_charging_start_time" type="string"/>
+        <element label="Managed charging user canceled" max_length="40" name="managed_charging_user_canceled" type="string"/>
+        <element label="Max range charge counter" max_length="40" name="max_range_charge_counter" type="string"/>
+        <element label="Not enough power to heat" max_length="40" name="not_enough_power_to_heat" type="string"/>
+        <element label="Scheduled charging pending" max_length="40" name="scheduled_charging_pending" type="string"/>
+        <element label="Scheduled charging start time" max_length="40" name="scheduled_charging_start_time" type="string"/>
+        <element label="Timestamp" max_length="40" name="timestamp" type="string"/>
+        <element label="Time to full charge" max_length="40" name="time_to_full_charge" type="string"/>
+        <element label="Trip charging" max_length="40" name="trip_charging" type="string"/>
+        <element label="Usable battery level" max_length="40" name="usable_battery_level" type="string"/>
+        <element label="User charge enable request" max_length="40" name="user_charge_enable_request" type="string"/>
+        <element label="Vehicle" max_length="32" name="vehicle" reference="x_snc_tesla_tesla_vehicle" reference_cascade_rule="delete" type="reference"/>
+        <index name="index">
+            <element name="vehicle"/>
+        </index>
+    </element>
+</database>

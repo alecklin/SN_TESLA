@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Climate Setting" max_length="40" name="x_snc_tesla_climate_setting" type="collection">
+        <element label="Driver temp setting" max_length="40" name="driver_temp_setting" type="string"/>
+        <element label="Fan status" max_length="40" name="fan_status" type="string"/>
+        <element label="Inside temp" max_length="40" name="inside_temp" type="string"/>
+        <element label="Is auto conditioning on" max_length="40" name="is_auto_conditioning_on" type="string"/>
+        <element label="Is climate on" max_length="40" name="is_climate_on" type="string"/>
+        <element label="Is front defroster on" max_length="40" name="is_front_defroster_on" type="string"/>
+        <element label="Is rear defroster on" max_length="40" name="is_rear_defroster_on" type="string"/>
+        <element label="Left temp direction" max_length="40" name="left_temp_direction" type="string"/>
+        <element label="Max avail temp" max_length="40" name="max_avail_temp" type="string"/>
+        <element label="Min avail temp" max_length="40" name="min_avail_temp" type="string"/>
+        <element label="Outside temp" max_length="40" name="outside_temp" type="string"/>
+        <element label="Passenger temp setting" max_length="40" name="passenger_temp_setting" type="string"/>
+        <element label="Right temp direction" max_length="40" name="right_temp_direction" type="string"/>
+        <element label="Seat heater left" max_length="40" name="seat_heater_left" type="string"/>
+        <element label="Seat heater rear center" max_length="40" name="seat_heater_rear_center" type="string"/>
+        <element label="Seat heater rear left" max_length="40" name="seat_heater_rear_left" type="string"/>
+        <element label="Seat heater rear left back" max_length="40" name="seat_heater_rear_left_back" type="string"/>
+        <element label="Seat heater rear right" max_length="40" name="seat_heater_rear_right" type="string"/>
+        <element label="Seat heater rear right back" max_length="40" name="seat_heater_rear_right_back" type="string"/>
+        <element label="Seat heater right" max_length="40" name="seat_heater_right" type="string"/>
+        <element label="Smart preconditioning" max_length="40" name="smart_preconditioning" type="string"/>
+        <element label="Timestamp" max_length="40" name="timestamp" type="string"/>
+        <element label="Vehicle" max_length="32" name="vehicle" reference="x_snc_tesla_tesla_vehicle" reference_cascade_rule="delete" type="reference"/>
+        <index name="index">
+            <element name="vehicle"/>
+        </index>
+    </element>
+</database>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="wf_element_activity">
+    <wf_element_activity action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <attributes/>
+        <base_provider display_value="REST Web Service">8817a25e37222100aa40cc9fbe41f106</base_provider>
+        <category>Tesla API</category>
+        <checked_out_by/>
+        <default_height/>
+        <default_width/>
+        <description/>
+        <image>images/heisenberg_icons/workflow_ie8/provider_rest.png</image>
+        <input_meta>{"name":"Input","type":"DATA_OBJECT","properties":[{"name":"vehicle_id","type":"STRING","mandatory":true},{"name":"token","type":"STRING","mandatory":true}]}</input_meta>
+        <input_process_script/>
+        <input_transform>{"web_service_message":"e7223dbc4f6ac7002f9ae4928110c77f","web_service_message_function":"d47271fc4f6ac7002f9ae4928110c7b9","web_service_endpoint":"","parameters":"[{\"name\":\"command\",\"value\":\"data_request/climate_state\",\"additional_attribute\":\"\"},{\"name\":\"version\",\"value\":\"1\",\"additional_attribute\":\"\"},{\"name\":\"vehicle_id\",\"value\":\"${activityInput.vehicle_id}\",\"additional_attribute\":\"\"},{\"name\":\"access_token\",\"value\":\"${activityInput.token}\",\"additional_attribute\":\"\"}]","headers":"[]","queryParameters":"[]","midCapabilities":"18409d8007482000dada43c0d1021e8f","use_mid_server":"false","time_out":"10","auth_type":"use_existing_credentials","credentials":"","protocol_profile":"","oauth_entity_profile":""}</input_transform>
+        <local_variables>{"name":"Local","type":"DATA_OBJECT","properties":[{"name":"localStatus_code","type":"INTEGER"},{"name":"localHeader","type":"DATA_OBJECT"},{"name":"localBody","type":"STRING"},{"name":"localError","type":"STRING"},{"name":"localOutput","type":"DATA_OBJECT","properties":[{"name":"response","type":"DATA_OBJECT","properties":[{"name":"driver_temp_setting","type":"DECIMAL"},{"name":"is_auto_conditioning_on","type":"STRING"},{"name":"right_temp_direction","type":"STRING"},{"name":"is_climate_on","type":"BOOLEAN"},{"name":"outside_temp","type":"STRING"},{"name":"left_temp_direction","type":"STRING"},{"name":"min_avail_temp","type":"INTEGER"},{"name":"passenger_temp_setting","type":"DECIMAL"},{"name":"max_avail_temp","type":"INTEGER"},{"name":"seat_heater_rear_right_back","type":"INTEGER"},{"name":"fan_status","type":"INTEGER"},{"name":"is_front_defroster_on","type":"BOOLEAN"},{"name":"is_rear_defroster_on","type":"BOOLEAN"},{"name":"seat_heater_rear_left","type":"INTEGER"},{"name":"smart_preconditioning","type":"BOOLEAN"},{"name":"inside_temp","type":"STRING"},{"name":"seat_heater_rear_left_back","type":"INTEGER"},{"name":"seat_heater_rear_right","type":"INTEGER"},{"name":"seat_heater_right","type":"INTEGER"},{"name":"seat_heater_rear_center","type":"INTEGER"},{"name":"seat_heater_left","type":"INTEGER"},{"name":"timestamp","type":"INTEGER"}]}]}]}</local_variables>
+        <name>Climate Setting</name>
+        <output_meta>{"name":"Output","type":"DATA_OBJECT","properties":[{"name":"status_code","type":"INTEGER"},{"name":"header","type":"DATA_OBJECT"},{"name":"body","type":"STRING"},{"name":"error","type":"STRING"},{"name":"output","type":"DATA_OBJECT","properties":[{"name":"response","type":"DATA_OBJECT","properties":[{"name":"driver_temp_setting","type":"DECIMAL"},{"name":"is_auto_conditioning_on","type":"STRING"},{"name":"right_temp_direction","type":"STRING"},{"name":"is_climate_on","type":"BOOLEAN"},{"name":"outside_temp","type":"STRING"},{"name":"left_temp_direction","type":"STRING"},{"name":"min_avail_temp","type":"INTEGER"},{"name":"passenger_temp_setting","type":"DECIMAL"},{"name":"max_avail_temp","type":"INTEGER"},{"name":"seat_heater_rear_right_back","type":"INTEGER"},{"name":"fan_status","type":"INTEGER"},{"name":"is_front_defroster_on","type":"BOOLEAN"},{"name":"is_rear_defroster_on","type":"BOOLEAN"},{"name":"seat_heater_rear_left","type":"INTEGER"},{"name":"smart_preconditioning","type":"BOOLEAN"},{"name":"inside_temp","type":"STRING"},{"name":"seat_heater_rear_left_back","type":"INTEGER"},{"name":"seat_heater_rear_right","type":"INTEGER"},{"name":"seat_heater_right","type":"INTEGER"},{"name":"seat_heater_rear_center","type":"INTEGER"},{"name":"seat_heater_left","type":"INTEGER"},{"name":"timestamp","type":"INTEGER"}]}]}]}</output_meta>
+        <output_process_script/>
+        <output_transform>[{"toLink":"activityOutput.status_code","to":"status_code","toType":"string","toDestination":"activityOutput","sourceLabel":"executionResult.status_code","from":"${executionResult.status_code}","fromSource":"executionResult","type":"Direct","translation":"","description":"","children":[]},{"toLink":"activityOutput.header","to":"header","toType":"string","toDestination":"activityOutput","sourceLabel":"executionResult.header","from":"${executionResult.header}","fromSource":"executionResult","type":"JSON","translation":"$","description":"","children":[]},{"toLink":"activityOutput.body","to":"body","toType":"string","toDestination":"activityOutput","sourceLabel":"executionResult.body","from":"${executionResult.body}","fromSource":"executionResult","type":"Direct","translation":"","description":"","children":[]},{"toLink":"activityOutput.error","to":"error","toType":"string","toDestination":"activityOutput","sourceLabel":"executionResult.error","from":"${executionResult.error}","fromSource":"executionResult","type":"Direct","translation":"","description":"","children":[]},{"toLink":"activityOutput.output","to":"output","toType":"string","toDestination":"activityOutput","sourceLabel":"executionResult.body","from":"${executionResult.body}","fromSource":"executionResult","type":"JSON","translation":"$","description":"","children":[]}]</output_transform>
+        <processing_script/>
+        <sample_payloads>{"executionResult.status_code":{"payload":200,"type":"direct"},"executionResult.header":{"payload":"{\"Server\":\"nginx\",\"X-Request-Id\":\"a54840b6-7f40-4242-9417-9c6563b152ec\",\"X-Content-Type-Options\":\"nosniff\",\"X-Runtime\":\"3.748673\",\"Connection\":\"keep-alive\",\"Date\":\"Sun, 26 Nov 2017 22:02:18 GMT\",\"X-Frame-Options\":\"SAMEORIGIN\",\"Cache-Control\":\"max-age=0, private, must-revalidate\",\"ETag\":\"W/\\\"bc3e3ad2df069b47790209f4e892e4f1\\\"\",\"X-TXID\":\"70b5a15372555e016e1ecd925cb74fb8\",\"Content-Length\":\"579\",\"X-XSS-Protection\":\"1; mode=block\",\"Content-Type\":\"application/json; charset=utf-8\"}","type":"direct"},"executionResult.body":{"payload":"{\"response\":{\"inside_temp\":null,\"outside_temp\":null,\"driver_temp_setting\":22.8,\"passenger_temp_setting\":22.8,\"left_temp_direction\":null,\"right_temp_direction\":null,\"is_front_defroster_on\":false,\"is_rear_defroster_on\":false,\"fan_status\":0,\"is_climate_on\":false,\"min_avail_temp\":15.0,\"max_avail_temp\":28.0,\"seat_heater_left\":0,\"seat_heater_right\":0,\"seat_heater_rear_left\":0,\"seat_heater_rear_right\":0,\"seat_heater_rear_center\":0,\"seat_heater_rear_right_back\":0,\"seat_heater_rear_left_back\":0,\"smart_preconditioning\":false,\"is_auto_conditioning_on\":null,\"timestamp\":1511733737998}}","type":"direct"},"executionResult.error":{"payload":"null","type":"direct"}}</sample_payloads>
+        <short_description/>
+        <style/>
+        <sys_class_name>wf_element_activity</sys_class_name>
+        <sys_created_by>aleck.lin</sys_created_by>
+        <sys_created_on>2017-11-26 22:00:33</sys_created_on>
+        <sys_id>ae2e972b4fee43402f9ae4928110c7e5</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>Climate Setting</sys_name>
+        <sys_package display_value="Tesla" source="x_snc_tesla">7441c3a64f5a4f002f9ae4928110c771</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Tesla">7441c3a64f5a4f002f9ae4928110c771</sys_scope>
+        <sys_update_name>wf_element_activity_ae2e972b4fee43402f9ae4928110c7e5</sys_update_name>
+        <sys_updated_by>aleck.lin</sys_updated_by>
+        <sys_updated_on>2017-11-26 22:03:52</sys_updated_on>
+        <version_container_id>e73e172b4fee43402f9ae4928110c79a</version_container_id>
+    </wf_element_activity>
+    <sys_translated_text action="delete_multiple" query="documentkey=ae2e972b4fee43402f9ae4928110c7e5"/>
+    <wf_versionable action="INSERT_OR_UPDATE">
+        <checked_out/>
+        <checked_out_by/>
+        <published>false</published>
+        <sys_created_by>aleck.lin</sys_created_by>
+        <sys_created_on>2017-11-26 22:00:33</sys_created_on>
+        <sys_id>a33e172b4fee43402f9ae4928110c79b</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>aleck.lin</sys_updated_by>
+        <sys_updated_on>2017-11-26 22:03:52</sys_updated_on>
+        <valid_from>2017-11-26 22:03:21</valid_from>
+        <valid_to/>
+        <version>1</version>
+        <version_container_id>e73e172b4fee43402f9ae4928110c79a</version_container_id>
+        <wf_element_definition display_value="Climate Setting">ae2e972b4fee43402f9ae4928110c7e5</wf_element_definition>
+    </wf_versionable>
+    <wf_condition_default action="INSERT_OR_UPDATE">
+        <activity_definition display_value="Climate Setting">ae2e972b4fee43402f9ae4928110c7e5</activity_definition>
+        <condition/>
+        <derived_definition/>
+        <else_flag>true</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <name>Failure</name>
+        <order/>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>aleck.lin</sys_created_by>
+        <sys_created_on>2017-11-26 22:03:18</sys_created_on>
+        <sys_id>a0de536b4fee43402f9ae4928110c742</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>aleck.lin</sys_updated_by>
+        <sys_updated_on>2017-11-26 22:03:18</sys_updated_on>
+    </wf_condition_default>
+    <wf_condition_default action="INSERT_OR_UPDATE">
+        <activity_definition display_value="Climate Setting">ae2e972b4fee43402f9ae4928110c7e5</activity_definition>
+        <condition>activityLocal.status_code == 200</condition>
+        <derived_definition/>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <name>Success</name>
+        <order>100</order>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>aleck.lin</sys_created_by>
+        <sys_created_on>2017-11-26 22:03:18</sys_created_on>
+        <sys_id>dbbe136b4fee43402f9ae4928110c7eb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>aleck.lin</sys_updated_by>
+        <sys_updated_on>2017-11-26 22:03:18</sys_updated_on>
+    </wf_condition_default>
+</record_update>

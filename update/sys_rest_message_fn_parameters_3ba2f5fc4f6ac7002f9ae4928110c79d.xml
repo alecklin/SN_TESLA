@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_rest_message_fn_parameters">
+    <sys_rest_message_fn_parameters action="INSERT_OR_UPDATE">
+        <name>version</name>
+        <rest_message_function display_value="Run Get Command">d47271fc4f6ac7002f9ae4928110c7b9</rest_message_function>
+        <sys_class_name>sys_rest_message_fn_parameters</sys_class_name>
+        <sys_created_by>aleck.lin</sys_created_by>
+        <sys_created_on>2017-11-18 01:07:19</sys_created_on>
+        <sys_id>3ba2f5fc4f6ac7002f9ae4928110c79d</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>version</sys_name>
+        <sys_package display_value="Tesla" source="x_snc_tesla">7441c3a64f5a4f002f9ae4928110c771</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Tesla">7441c3a64f5a4f002f9ae4928110c771</sys_scope>
+        <sys_update_name>sys_rest_message_fn_parameters_3ba2f5fc4f6ac7002f9ae4928110c79d</sys_update_name>
+        <sys_updated_by>aleck.lin</sys_updated_by>
+        <sys_updated_on>2017-11-18 01:07:25</sys_updated_on>
+        <type>string</type>
+        <value>1</value>
+    </sys_rest_message_fn_parameters>
+</record_update>

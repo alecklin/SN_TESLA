@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="GUI Setting" max_length="40" name="x_snc_tesla_gui_setting" type="collection">
+        <element label="Gui 24 hour time" max_length="40" name="gui_24_hour_time" type="string"/>
+        <element label="Gui charge rate units" max_length="40" name="gui_charge_rate_units" type="string"/>
+        <element label="Gui distance units" max_length="40" name="gui_distance_units" type="string"/>
+        <element label="Gui range display" max_length="40" name="gui_range_display" type="string"/>
+        <element label="Gui temperature units" max_length="40" name="gui_temperature_units" type="string"/>
+        <element label="Timestamp" max_length="40" name="timestamp" type="string"/>
+        <element label="Vehicle" max_length="32" name="vehicle" reference="x_snc_tesla_tesla_vehicle" reference_cascade_rule="delete" type="reference"/>
+        <index name="index">
+            <element name="vehicle"/>
+        </index>
+    </element>
+</database>
