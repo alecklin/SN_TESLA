@@ -31,6 +31,8 @@
         <element>fast_charger_present</element>
         <element_reference>false</element_reference>
         <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
         <internal_type display_value="String">string</internal_type>
         <mandatory>false</mandatory>
         <max_length>40</max_length>
@@ -52,15 +54,17 @@
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>aleck.lin</sys_created_by>
         <sys_created_on>2017-11-26 21:32:43</sys_created_on>
-        <sys_id>76661b234fee43402f9ae4928110c724</sys_id>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>18ee19db4ffac3008c81efd18110c778</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Fast charger present</sys_name>
         <sys_package display_value="Tesla" source="x_snc_tesla">7441c3a64f5a4f002f9ae4928110c771</sys_package>
         <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Tesla">7441c3a64f5a4f002f9ae4928110c771</sys_scope>
         <sys_update_name>sys_dictionary_x_snc_tesla_charging_state_fast_charger_present</sys_update_name>
-        <sys_updated_by>aleck.lin</sys_updated_by>
-        <sys_updated_on>2017-11-26 21:32:43</sys_updated_on>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2017-12-08 04:21:29</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
