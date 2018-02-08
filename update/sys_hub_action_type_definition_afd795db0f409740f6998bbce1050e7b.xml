@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_hub_action_type_definition">
+    <sys_hub_action_type_definition action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <annotation/>
+        <category/>
+        <description/>
+        <label_cache>[{"name":"{{action.ah_valetmode}}","label":"action➛valetMode","type":"action","ref":""},{"name":"{{action.ah_vehicle}}","label":"action➛vehicle","type":"action","ref":"x_snc_tesla_tesla_vehicle"},{"name":"{{action.ah_vehicle.id}}","label":"action➛vehicle➛ID","type":"action","ref":""},{"name":"{{step[4f48ef7c-48c6-4ba4-a1fa-a22a134204f7].t}}","label":"step➛Script step➛t","type":"step","ref":""},{"name":"{{step[4f48ef7c-48c6-4ba4-a1fa-a22a134204f7].to}}","label":"step➛Script step➛to","type":"step","ref":""},{"name":"{{step[4f48ef7c-48c6-4ba4-a1fa-a22a134204f7].tok}}","label":"step➛Script step➛tok","type":"step","ref":""},{"name":"{{step[4f48ef7c-48c6-4ba4-a1fa-a22a134204f7].toke}}","label":"step➛Script step➛toke","type":"step","ref":""},{"name":"{{step[4f48ef7c-48c6-4ba4-a1fa-a22a134204f7].token}}","label":"step➛Script step➛token","type":"step","ref":""},{"name":"{{step[88034f0d-79a8-4e65-ae52-673a3ceb36f6].responseBody}}","label":"step➛Send REST Message to set temperature➛responseBody","type":"step","ref":""},{"name":"{{step[88034f0d-79a8-4e65-ae52-673a3ceb36f6].httpStatus}}","label":"step➛Send REST Message to set temperature➛httpStatus","type":"step","ref":""}]</label_cache>
+        <latest_snapshot display_value="Set Tesla Valet Mode">cf68d91f0f409740f6998bbce1050e5c</latest_snapshot>
+        <name>Set Tesla Valet Mode</name>
+        <outputs/>
+        <outputs/>
+        <state>published</state>
+        <sys_class_name>sys_hub_action_type_definition</sys_class_name>
+        <sys_created_by>aleck.lin</sys_created_by>
+        <sys_created_on>2018-02-08 07:09:09</sys_created_on>
+        <sys_id>afd795db0f409740f6998bbce1050e7b</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Set Tesla Valet Mode</sys_name>
+        <sys_package display_value="Tesla" source="x_snc_tesla">7441c3a64f5a4f002f9ae4928110c771</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Tesla">7441c3a64f5a4f002f9ae4928110c771</sys_scope>
+        <sys_update_name>sys_hub_action_type_definition_afd795db0f409740f6998bbce1050e7b</sys_update_name>
+        <sys_updated_by>aleck.lin</sys_updated_by>
+        <sys_updated_on>2018-02-08 07:11:38</sys_updated_on>
+        <system_level>false</system_level>
+    </sys_hub_action_type_definition>
+    <sys_translated_text action="delete_multiple" query="documentkey=afd795db0f409740f6998bbce1050e7b"/>
+    <sys_variable_value action="delete_multiple" query="document_key=afd795db0f409740f6998bbce1050e7b"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_type_definition</document>
+        <document_key>afd795db0f409740f6998bbce1050e7b</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>aleck.lin</sys_created_by>
+        <sys_created_on>2018-02-08 07:11:33</sys_created_on>
+        <sys_id>6668d91f0f409740f6998bbce1050e07</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>aleck.lin</sys_updated_by>
+        <sys_updated_on>2018-02-08 07:11:33</sys_updated_on>
+        <value/>
+        <variable display_value="">a668991f0f409740f6998bbce1050efb</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=afd795db0f409740f6998bbce1050e7b"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>httpstatus</field>
+        <id>afd795db0f409740f6998bbce1050e7b</id>
+        <sys_created_by>aleck.lin</sys_created_by>
+        <sys_created_on>2018-02-08 07:11:33</sys_created_on>
+        <sys_id>e268d91f0f409740f6998bbce1050e07</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>aleck.lin</sys_updated_by>
+        <sys_updated_on>2018-02-08 07:11:33</sys_updated_on>
+        <table>var__m_sys_hub_action_output_afd795db0f409740f6998bbce1050e7b</table>
+        <value>{{step[88034f0d-79a8-4e65-ae52-673a3ceb36f6].httpStatus}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>responsebody</field>
+        <id>afd795db0f409740f6998bbce1050e7b</id>
+        <sys_created_by>aleck.lin</sys_created_by>
+        <sys_created_on>2018-02-08 07:11:33</sys_created_on>
+        <sys_id>2268d91f0f409740f6998bbce1050e07</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>aleck.lin</sys_updated_by>
+        <sys_updated_on>2018-02-08 07:11:33</sys_updated_on>
+        <table>var__m_sys_hub_action_output_afd795db0f409740f6998bbce1050e7b</table>
+        <value>{{step[88034f0d-79a8-4e65-ae52-673a3ceb36f6].responseBody}}</value>
+    </sys_element_mapping>
+</record_update>

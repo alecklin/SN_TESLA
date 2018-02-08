@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_hub_step_instance">
+    <sys_hub_step_instance action="INSERT_OR_UPDATE">
+        <action display_value="Set Tesla Charge Limit">7ad6dd9b0f409740f6998bbce1050e13</action>
+        <cid>7b6d611d-989f-4977-a354-103b536f0dea</cid>
+        <extended_inputs/>
+        <extended_inputs/>
+        <extended_outputs/>
+        <icon/>
+        <inputs/>
+        <label>Set Charge Limit</label>
+        <order>2</order>
+        <outputs/>
+        <step_type display_value="Script">106afb6647032200b4fad7527c9a71e7</step_type>
+        <sys_class_name>sys_hub_step_instance</sys_class_name>
+        <sys_created_by>aleck.lin</sys_created_by>
+        <sys_created_on>2018-02-08 07:04:46</sys_created_on>
+        <sys_id>c7d6dd9b0f409740f6998bbce1050e47</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Set Charge Limit</sys_name>
+        <sys_package display_value="Tesla" source="x_snc_tesla">7441c3a64f5a4f002f9ae4928110c771</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Tesla">7441c3a64f5a4f002f9ae4928110c771</sys_scope>
+        <sys_update_name>sys_hub_step_instance_c7d6dd9b0f409740f6998bbce1050e47</sys_update_name>
+        <sys_updated_by>aleck.lin</sys_updated_by>
+        <sys_updated_on>2018-02-08 07:04:46</sys_updated_on>
+    </sys_hub_step_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=c7d6dd9b0f409740f6998bbce1050e47"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>c7d6dd9b0f409740f6998bbce1050e47</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>aleck.lin</sys_created_by>
+        <sys_created_on>2018-02-08 07:04:46</sys_created_on>
+        <sys_id>dbd6dd9b0f409740f6998bbce1050e7d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>aleck.lin</sys_updated_by>
+        <sys_updated_on>2018-02-08 07:04:46</sys_updated_on>
+        <value>(function execute(inputs, outputs) {
+// ... code ...
+	var chargePercentage = inputs.chargePercentage;
+  
+    var command = "set_charge_limit?percent="+chargePercentage;
+
+    var r = new sn_ws.RESTMessageV2('x_snc_tesla.Tesla - Command APIs', 'Execute Command');
+    r.setStringParameterNoEscape('vehicle_id', inputs.vehicle_id);
+    r.setStringParameterNoEscape('version', '1');
+    r.setStringParameterNoEscape('access_token', inputs.access_token);
+    r.setStringParameterNoEscape('command', command);
+
+    var response = r.execute();
+    outputs.responseBody = response.getBody();
+    outputs.httpStatus = response.getStatusCode();
+  
+})(inputs, outputs);
+</value>
+        <variable display_value="">71aa7f6647032200b4fad7527c9a719b</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=c7d6dd9b0f409740f6998bbce1050e47"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>access_token</field>
+        <id>c7d6dd9b0f409740f6998bbce1050e47</id>
+        <sys_created_by>aleck.lin</sys_created_by>
+        <sys_created_on>2018-02-08 07:04:46</sys_created_on>
+        <sys_id>57d6dd9b0f409740f6998bbce1050e7e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>aleck.lin</sys_updated_by>
+        <sys_updated_on>2018-02-08 07:04:46</sys_updated_on>
+        <table>var__m_sys_hub_step_ext_input_c7d6dd9b0f409740f6998bbce1050e47</table>
+        <value>{{step[ee711614-6fe0-4f8d-8fa8-cbfbd2ccf566].token}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>chargePercentage</field>
+        <id>c7d6dd9b0f409740f6998bbce1050e47</id>
+        <sys_created_by>aleck.lin</sys_created_by>
+        <sys_created_on>2018-02-08 07:04:46</sys_created_on>
+        <sys_id>dfd6dd9b0f409740f6998bbce1050e8a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>aleck.lin</sys_updated_by>
+        <sys_updated_on>2018-02-08 07:04:46</sys_updated_on>
+        <table>var__m_sys_hub_step_ext_input_c7d6dd9b0f409740f6998bbce1050e47</table>
+        <value>{{action.ah_percentage}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>script</field>
+        <id>c7d6dd9b0f409740f6998bbce1050e47</id>
+        <sys_created_by>aleck.lin</sys_created_by>
+        <sys_created_on>2018-02-08 07:04:46</sys_created_on>
+        <sys_id>5bd6dd9b0f409740f6998bbce1050e7d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>aleck.lin</sys_updated_by>
+        <sys_updated_on>2018-02-08 07:04:46</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>vehicle_id</field>
+        <id>c7d6dd9b0f409740f6998bbce1050e47</id>
+        <sys_created_by>aleck.lin</sys_created_by>
+        <sys_created_on>2018-02-08 07:04:46</sys_created_on>
+        <sys_id>93d6dd9b0f409740f6998bbce1050e8b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>aleck.lin</sys_updated_by>
+        <sys_updated_on>2018-02-08 07:04:46</sys_updated_on>
+        <table>var__m_sys_hub_step_ext_input_c7d6dd9b0f409740f6998bbce1050e47</table>
+        <value>{{action.ah_vehicle.id}}</value>
+    </sys_element_mapping>
+</record_update>

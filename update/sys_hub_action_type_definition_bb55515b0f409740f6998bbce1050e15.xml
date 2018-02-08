@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_hub_action_type_definition">
+    <sys_hub_action_type_definition action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <annotation/>
+        <category/>
+        <description/>
+        <label_cache>[{"name":"{{action.ah_percentage}}","label":"action➛percentage","type":"action","ref":""},{"name":"{{action.ah_vehicle}}","label":"action➛vehicle","type":"action","ref":"x_snc_tesla_tesla_vehicle"},{"name":"{{action.ah_vehicle.id}}","label":"action➛vehicle➛ID","type":"action","ref":""},{"name":"{{step[ee711614-6fe0-4f8d-8fa8-cbfbd2ccf566].t}}","label":"step➛Get Account Token➛t","type":"step","ref":""},{"name":"{{step[ee711614-6fe0-4f8d-8fa8-cbfbd2ccf566].to}}","label":"step➛Get Account Token➛to","type":"step","ref":""},{"name":"{{step[ee711614-6fe0-4f8d-8fa8-cbfbd2ccf566].tok}}","label":"step➛Get Account Token➛tok","type":"step","ref":""},{"name":"{{step[ee711614-6fe0-4f8d-8fa8-cbfbd2ccf566].toke}}","label":"step➛Get Account Token➛toke","type":"step","ref":""},{"name":"{{step[ee711614-6fe0-4f8d-8fa8-cbfbd2ccf566].token}}","label":"step➛Get Account Token➛token","type":"step","ref":""},{"name":"{{step[7b6d611d-989f-4977-a354-103b536f0dea].responseBody}}","label":"step➛Set Charge Limit➛responseBody","type":"step","ref":""},{"name":"{{step[7b6d611d-989f-4977-a354-103b536f0dea].httpStatus}}","label":"step➛Set Charge Limit➛httpStatus","type":"step","ref":""}]</label_cache>
+        <latest_snapshot display_value="Set Tesla Charge Limit">7ad6dd9b0f409740f6998bbce1050e13</latest_snapshot>
+        <name>Set Tesla Charge Limit</name>
+        <outputs/>
+        <outputs/>
+        <state>published</state>
+        <sys_class_name>sys_hub_action_type_definition</sys_class_name>
+        <sys_created_by>aleck.lin</sys_created_by>
+        <sys_created_on>2018-02-08 06:58:16</sys_created_on>
+        <sys_id>bb55515b0f409740f6998bbce1050e15</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Set Tesla Charge Limit</sys_name>
+        <sys_package display_value="Tesla" source="x_snc_tesla">7441c3a64f5a4f002f9ae4928110c771</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Tesla">7441c3a64f5a4f002f9ae4928110c771</sys_scope>
+        <sys_update_name>sys_hub_action_type_definition_bb55515b0f409740f6998bbce1050e15</sys_update_name>
+        <sys_updated_by>aleck.lin</sys_updated_by>
+        <sys_updated_on>2018-02-08 07:04:47</sys_updated_on>
+        <system_level>false</system_level>
+    </sys_hub_action_type_definition>
+    <sys_translated_text action="delete_multiple" query="documentkey=bb55515b0f409740f6998bbce1050e15"/>
+    <sys_variable_value action="delete_multiple" query="document_key=bb55515b0f409740f6998bbce1050e15"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_type_definition</document>
+        <document_key>bb55515b0f409740f6998bbce1050e15</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>aleck.lin</sys_created_by>
+        <sys_created_on>2018-02-08 07:03:55</sys_created_on>
+        <sys_id>b2a6599b0f409740f6998bbce1050eca</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>aleck.lin</sys_updated_by>
+        <sys_updated_on>2018-02-08 07:03:55</sys_updated_on>
+        <value/>
+        <variable display_value="">22a6599b0f409740f6998bbce1050eb1</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=bb55515b0f409740f6998bbce1050e15"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>httpstatus</field>
+        <id>bb55515b0f409740f6998bbce1050e15</id>
+        <sys_created_by>aleck.lin</sys_created_by>
+        <sys_created_on>2018-02-08 07:03:55</sys_created_on>
+        <sys_id>32a6599b0f409740f6998bbce1050eca</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>aleck.lin</sys_updated_by>
+        <sys_updated_on>2018-02-08 07:03:55</sys_updated_on>
+        <table>var__m_sys_hub_action_output_bb55515b0f409740f6998bbce1050e15</table>
+        <value>{{step[7b6d611d-989f-4977-a354-103b536f0dea].httpStatus}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>responsebody</field>
+        <id>bb55515b0f409740f6998bbce1050e15</id>
+        <sys_created_by>aleck.lin</sys_created_by>
+        <sys_created_on>2018-02-08 07:03:55</sys_created_on>
+        <sys_id>7ea6599b0f409740f6998bbce1050ec9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>aleck.lin</sys_updated_by>
+        <sys_updated_on>2018-02-08 07:03:55</sys_updated_on>
+        <table>var__m_sys_hub_action_output_bb55515b0f409740f6998bbce1050e15</table>
+        <value>{{step[7b6d611d-989f-4977-a354-103b536f0dea].responseBody}}</value>
+    </sys_element_mapping>
+</record_update>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_hub_action_type_snapshot">
+    <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <annotation/>
+        <category/>
+        <description/>
+        <label_cache>[{"name":"{{action.ah_temp}}","label":"action➛temp","type":"action","ref":""},{"name":"{{action.ah_vehicle}}","label":"action➛vehicle","type":"action","ref":"x_snc_tesla_tesla_vehicle"},{"name":"{{action.ah_vehicle.id}}","label":"action➛vehicle➛ID","type":"action","ref":""},{"name":"{{step[16e6648b-ea40-4961-b41f-12afa8b5b807].token}}","label":"step➛Get account token➛token","type":"step","ref":""},{"name":"{{step[3e0ae3fd-ecaf-4a20-940e-9c8651c81a7b].responseBody}}","label":"step➛Send REST Message to set temperature➛responseBody","type":"step","ref":""},{"name":"{{step[3e0ae3fd-ecaf-4a20-940e-9c8651c81a7b].httpStatus}}","label":"step➛Send REST Message to set temperature➛httpStatus","type":"step","ref":""}]</label_cache>
+        <name>Set Tesla temperature</name>
+        <outputs/>
+        <outputs/>
+        <parent_action display_value="Set Tesla temperature">d51751db0f409740f6998bbce1050eea</parent_action>
+        <sys_class_name>sys_hub_action_type_snapshot</sys_class_name>
+        <sys_created_by>aleck.lin</sys_created_by>
+        <sys_created_on>2018-02-08 07:08:44</sys_created_on>
+        <sys_id>1dc7d9db0f409740f6998bbce1050edb</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Set Tesla temperature</sys_name>
+        <sys_package display_value="Tesla" source="x_snc_tesla">7441c3a64f5a4f002f9ae4928110c771</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Tesla">7441c3a64f5a4f002f9ae4928110c771</sys_scope>
+        <sys_update_name>sys_hub_action_type_snapshot_1dc7d9db0f409740f6998bbce1050edb</sys_update_name>
+        <sys_updated_by>aleck.lin</sys_updated_by>
+        <sys_updated_on>2018-02-08 07:08:47</sys_updated_on>
+        <system_level>false</system_level>
+    </sys_hub_action_type_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=1dc7d9db0f409740f6998bbce1050edb"/>
+    <sys_variable_value action="delete_multiple" query="document_key=1dc7d9db0f409740f6998bbce1050edb"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_type_snapshot</document>
+        <document_key>1dc7d9db0f409740f6998bbce1050edb</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>aleck.lin</sys_created_by>
+        <sys_created_on>2018-02-08 07:08:47</sys_created_on>
+        <sys_id>4ac71ddb0f409740f6998bbce1050e9b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>aleck.lin</sys_updated_by>
+        <sys_updated_on>2018-02-08 07:08:47</sys_updated_on>
+        <value/>
+        <variable display_value="">8ac71ddb0f409740f6998bbce1050e8f</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=1dc7d9db0f409740f6998bbce1050edb"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>httpstatus</field>
+        <id>1dc7d9db0f409740f6998bbce1050edb</id>
+        <sys_created_by>aleck.lin</sys_created_by>
+        <sys_created_on>2018-02-08 07:08:47</sys_created_on>
+        <sys_id>c6c71ddb0f409740f6998bbce1050e9b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>aleck.lin</sys_updated_by>
+        <sys_updated_on>2018-02-08 07:08:47</sys_updated_on>
+        <table>var__m_sys_hub_action_output_1dc7d9db0f409740f6998bbce1050edb</table>
+        <value>{{step[3e0ae3fd-ecaf-4a20-940e-9c8651c81a7b].httpStatus}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>responsebody</field>
+        <id>1dc7d9db0f409740f6998bbce1050edb</id>
+        <sys_created_by>aleck.lin</sys_created_by>
+        <sys_created_on>2018-02-08 07:08:47</sys_created_on>
+        <sys_id>06c71ddb0f409740f6998bbce1050e9b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>aleck.lin</sys_updated_by>
+        <sys_updated_on>2018-02-08 07:08:47</sys_updated_on>
+        <table>var__m_sys_hub_action_output_1dc7d9db0f409740f6998bbce1050edb</table>
+        <value>{{step[3e0ae3fd-ecaf-4a20-940e-9c8651c81a7b].responseBody}}</value>
+    </sys_element_mapping>
+</record_update>
