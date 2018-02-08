@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ui_policy_action">
+    <sys_ui_policy_action action="INSERT_OR_UPDATE">
+        <disabled>true</disabled>
+        <field>token</field>
+        <mandatory>ignore</mandatory>
+        <sys_class_name>sys_ui_policy_action</sys_class_name>
+        <sys_created_by>aleck.lin</sys_created_by>
+        <sys_created_on>2018-02-08 06:47:18</sys_created_on>
+        <sys_id>08d219570f409740f6998bbce1050e02</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>token</sys_name>
+        <sys_package display_value="Tesla" source="x_snc_tesla">7441c3a64f5a4f002f9ae4928110c771</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Tesla">7441c3a64f5a4f002f9ae4928110c771</sys_scope>
+        <sys_update_name>sys_ui_policy_action_08d219570f409740f6998bbce1050e02</sys_update_name>
+        <sys_updated_by>aleck.lin</sys_updated_by>
+        <sys_updated_on>2018-02-08 06:47:18</sys_updated_on>
+        <table>x_snc_tesla_tesla_account</table>
+        <ui_policy display_value="Set READ ONLY  fields">7ca215570f409740f6998bbce1050e41</ui_policy>
+        <visible>ignore</visible>
+    </sys_ui_policy_action>
+</record_update>

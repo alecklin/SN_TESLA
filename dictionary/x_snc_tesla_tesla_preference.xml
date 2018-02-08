@@ -3,5 +3,9 @@
     <element label="Tesla Preference" max_length="40" name="x_snc_tesla_tesla_preference" type="collection">
         <element label="Name" max_length="40" name="name" type="string"/>
         <element label="Value" max_length="40" name="value" type="string"/>
+        <element label="Vehicle" max_length="32" name="vehicle" reference="x_snc_tesla_tesla_vehicle" type="reference"/>
+        <index name="index">
+            <element name="vehicle"/>
+        </index>
     </element>
 </database>
