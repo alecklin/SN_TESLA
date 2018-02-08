@@ -33,11 +33,13 @@ if (!gr.get(account)) {
         <sys_class_name>wf_element_activity</sys_class_name>
         <sys_created_by>aleck.lin</sys_created_by>
         <sys_created_on>2017-11-25 09:20:16</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
         <sys_id>38a6af0f4fe203402f9ae4928110c7eb</sys_id>
         <sys_mod_count>4</sys_mod_count>
         <sys_name>Get account token</sys_name>
         <sys_package display_value="Tesla" source="x_snc_tesla">7441c3a64f5a4f002f9ae4928110c771</sys_package>
         <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Tesla">7441c3a64f5a4f002f9ae4928110c771</sys_scope>
         <sys_update_name>wf_element_activity_38a6af0f4fe203402f9ae4928110c7eb</sys_update_name>
         <sys_updated_by>aleck.lin</sys_updated_by>

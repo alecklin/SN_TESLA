@@ -9,11 +9,11 @@
             <related_list>x_snc_tesla_vehicle_state.vehicle</related_list>
             <sys_class_name>sys_ui_related_list_entry</sys_class_name>
             <sys_created_by>aleck.lin</sys_created_by>
-            <sys_created_on>2018-02-07 22:34:11</sys_created_on>
-            <sys_id>8402e7030f485740f6998bbce1050edf</sys_id>
+            <sys_created_on>2017-11-27 01:06:38</sys_created_on>
+            <sys_id>d1d84cff4f6283402f9ae4928110c703</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>aleck.lin</sys_updated_by>
-            <sys_updated_on>2018-02-07 22:34:11</sys_updated_on>
+            <sys_updated_on>2017-11-27 01:06:38</sys_updated_on>
         </sys_ui_related_list_entry>
         <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
             <filter/>
@@ -23,11 +23,11 @@
             <related_list>x_snc_tesla_driving_and_position.vehicle</related_list>
             <sys_class_name>sys_ui_related_list_entry</sys_class_name>
             <sys_created_by>aleck.lin</sys_created_by>
-            <sys_created_on>2018-02-07 22:34:11</sys_created_on>
-            <sys_id>0002e7030f485740f6998bbce1050ee0</sys_id>
+            <sys_created_on>2017-11-27 01:06:38</sys_created_on>
+            <sys_id>d9d84cff4f6283402f9ae4928110c703</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>aleck.lin</sys_updated_by>
-            <sys_updated_on>2018-02-07 22:34:11</sys_updated_on>
+            <sys_updated_on>2017-11-27 01:06:38</sys_updated_on>
         </sys_ui_related_list_entry>
         <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
             <filter/>
@@ -37,11 +37,11 @@
             <related_list>x_snc_tesla_charging_state.vehicle</related_list>
             <sys_class_name>sys_ui_related_list_entry</sys_class_name>
             <sys_created_by>aleck.lin</sys_created_by>
-            <sys_created_on>2018-02-07 22:34:11</sys_created_on>
-            <sys_id>0402e7030f485740f6998bbce1050ee0</sys_id>
+            <sys_created_on>2017-11-27 01:06:38</sys_created_on>
+            <sys_id>ddd84cff4f6283402f9ae4928110c703</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>aleck.lin</sys_updated_by>
-            <sys_updated_on>2018-02-07 22:34:11</sys_updated_on>
+            <sys_updated_on>2017-11-27 01:06:38</sys_updated_on>
         </sys_ui_related_list_entry>
         <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
             <filter/>
@@ -51,11 +51,11 @@
             <related_list>x_snc_tesla_climate_setting.vehicle</related_list>
             <sys_class_name>sys_ui_related_list_entry</sys_class_name>
             <sys_created_by>aleck.lin</sys_created_by>
-            <sys_created_on>2018-02-07 22:34:11</sys_created_on>
-            <sys_id>0802e7030f485740f6998bbce1050ee0</sys_id>
+            <sys_created_on>2017-11-27 01:06:38</sys_created_on>
+            <sys_id>d1d84cff4f6283402f9ae4928110c704</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>aleck.lin</sys_updated_by>
-            <sys_updated_on>2018-02-07 22:34:11</sys_updated_on>
+            <sys_updated_on>2017-11-27 01:06:38</sys_updated_on>
         </sys_ui_related_list_entry>
         <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
             <filter/>
@@ -65,11 +65,11 @@
             <related_list>x_snc_tesla_gui_setting.vehicle</related_list>
             <sys_class_name>sys_ui_related_list_entry</sys_class_name>
             <sys_created_by>aleck.lin</sys_created_by>
-            <sys_created_on>2018-02-07 22:34:11</sys_created_on>
-            <sys_id>0c02e7030f485740f6998bbce1050ee0</sys_id>
+            <sys_created_on>2017-11-27 01:06:38</sys_created_on>
+            <sys_id>d5d84cff4f6283402f9ae4928110c704</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>aleck.lin</sys_updated_by>
-            <sys_updated_on>2018-02-07 22:34:11</sys_updated_on>
+            <sys_updated_on>2017-11-27 01:06:38</sys_updated_on>
         </sys_ui_related_list_entry>
         <sys_ui_related_list action="INSERT_OR_UPDATE">
             <calculated_name>Tesla Vehicle - Default view</calculated_name>
@@ -80,7 +80,8 @@
             <related_list/>
             <sys_class_name>sys_ui_related_list</sys_class_name>
             <sys_created_by>aleck.lin</sys_created_by>
-            <sys_created_on>2018-02-07 22:34:11</sys_created_on>
+            <sys_created_on>2017-11-27 01:06:38</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_id>19d84cff4f6283402f9ae4928110c702</sys_id>
@@ -88,10 +89,11 @@
             <sys_name>Tesla Vehicle - Default view</sys_name>
             <sys_package display_value="Tesla" source="x_snc_tesla">7441c3a64f5a4f002f9ae4928110c771</sys_package>
             <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
             <sys_scope display_value="Tesla">7441c3a64f5a4f002f9ae4928110c771</sys_scope>
             <sys_update_name>sys_ui_related_x_snc_tesla_tesla_vehicle_null</sys_update_name>
             <sys_updated_by>aleck.lin</sys_updated_by>
-            <sys_updated_on>2018-02-07 22:34:11</sys_updated_on>
+            <sys_updated_on>2017-11-27 01:06:38</sys_updated_on>
             <sys_user/>
             <view display_value="Default view" name="NULL">Default view</view>
             <view_name/>
