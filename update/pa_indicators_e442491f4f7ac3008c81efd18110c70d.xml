@@ -30,7 +30,7 @@ Created by = aleck.lin</description>
         <frequency>10</frequency>
         <groups/>
         <has_managed_indicators>false</has_managed_indicators>
-        <id>221</id>
+        <id>830</id>
         <key>false</key>
         <label/>
         <linked_indicator/>
@@ -48,9 +48,9 @@ Created by = aleck.lin</description>
         <role_override>false</role_override>
         <roles>x_snc_tesla.user</roles>
         <score_periods>-1</score_periods>
-        <scores_modified_at>2017-12-08 02:17:00</scores_modified_at>
-        <script/>
-        <scripted>false</scripted>
+        <scores_modified_at>2018-02-08 05:00:26</scores_modified_at>
+        <script display_value="Tesla.Get Outside Temperature">dacd8d9f0f009740f6998bbce1050e9b</script>
+        <scripted>true</scripted>
         <show_delta>true</show_delta>
         <show_realtime_score>true</show_realtime_score>
         <snapshot_periods>-1</snapshot_periods>
@@ -58,20 +58,18 @@ Created by = aleck.lin</description>
         <sys_class_name>pa_indicators</sys_class_name>
         <sys_created_by>aleck.lin</sys_created_by>
         <sys_created_on>2017-12-08 02:16:15</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>e442491f4f7ac3008c81efd18110c70d</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name>Tesla Outside Temperature</sys_name>
         <sys_overrides/>
         <sys_package display_value="Tesla" source="x_snc_tesla">7441c3a64f5a4f002f9ae4928110c771</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Tesla">7441c3a64f5a4f002f9ae4928110c771</sys_scope>
         <sys_update_name>pa_indicators_e442491f4f7ac3008c81efd18110c70d</sys_update_name>
         <sys_updated_by>aleck.lin</sys_updated_by>
-        <sys_updated_on>2017-12-08 02:37:13</sys_updated_on>
+        <sys_updated_on>2018-02-08 06:25:21</sys_updated_on>
         <type>1</type>
         <unit display_value="#">17b365e2d7320100ba986f14ce6103ad</unit>
         <users/>

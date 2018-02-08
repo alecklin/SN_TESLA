@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="pa_scripts">
+    <pa_scripts action="INSERT_OR_UPDATE">
+        <arguments>outside_temp</arguments>
+        <description/>
+        <name>Tesla.Get Outside Temperature</name>
+        <script><![CDATA[	var getTemp=function(temp){
+		return temp;
+	};
+
+	var temp = current.outside_temp;
+	var tSetting = getTemperatureSetting(current.vehicle.sys_id);
+	if (tSetting == "F")
+		getTemp(temp*9/5+32);
+	else
+		getTemp(temp);
+
+	function getTemperatureSetting(vehicle) {
+		//Get the car setting...  
+		var gr = new GlideRecord("x_snc_tesla_gui_setting");
+		gr.addQuery("vehicle", vehicle);
+		gr.query();
+		if (!gr.next())
+			return "C";
+				
+		return gr.gui_temperature_units + '';		
+	}]]></script>
+        <sys_class_name>pa_scripts</sys_class_name>
+        <sys_created_by>aleck.lin</sys_created_by>
+        <sys_created_on>2018-02-08 06:25:07</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>dacd8d9f0f009740f6998bbce1050e9b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Tesla.Get Outside Temperature</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Tesla" source="x_snc_tesla">7441c3a64f5a4f002f9ae4928110c771</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Tesla">7441c3a64f5a4f002f9ae4928110c771</sys_scope>
+        <sys_update_name>pa_scripts_dacd8d9f0f009740f6998bbce1050e9b</sys_update_name>
+        <sys_updated_by>aleck.lin</sys_updated_by>
+        <sys_updated_on>2018-02-08 06:25:07</sys_updated_on>
+        <table>x_snc_tesla_climate_setting</table>
+    </pa_scripts>
+    <sys_translated_text action="delete_multiple" query="documentkey=dacd8d9f0f009740f6998bbce1050e9b"/>
+</record_update>

@@ -14,7 +14,6 @@
             <sys_class_name>sys_ui_list</sys_class_name>
             <sys_created_by>aleck.lin</sys_created_by>
             <sys_created_on>2017-11-26 23:55:28</sys_created_on>
-            <sys_customer_update>false</sys_customer_update>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_id>f288bb234f6283402f9ae4928110c7d0</sys_id>
@@ -22,12 +21,11 @@
             <sys_name>x_snc_tesla_driving_and_position</sys_name>
             <sys_package display_value="Tesla" source="x_snc_tesla">7441c3a64f5a4f002f9ae4928110c771</sys_package>
             <sys_policy/>
-            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
             <sys_scope display_value="Tesla">7441c3a64f5a4f002f9ae4928110c771</sys_scope>
             <sys_update_name>sys_ui_list_x_snc_tesla_driving_and_position_null</sys_update_name>
             <sys_updated_by>aleck.lin</sys_updated_by>
             <sys_updated_on>2017-11-26 23:55:28</sys_updated_on>
-            <sys_user display_value="Aleck Lin">6882267413331200ab3bb8b12244b059</sys_user>
+            <sys_user display_value="Aleck Lin">f615d7f4dbb1b200e99852f4ce961943</sys_user>
             <view display_value="Default view" name="NULL">Default view</view>
             <view_name/>
         </sys_ui_list>

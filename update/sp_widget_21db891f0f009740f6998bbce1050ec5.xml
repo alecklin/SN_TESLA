@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function($scope, spUtil) {
+  /* widget controller */
+  var c = this;
+	
+	
+	c.setValet = function (valet_state, vehicle) {
+		//alert(valet_state);
+		c.server.get({action: 'setValet', valetState: valet_state, vehicle: vehicle});
+		
+	}
+	
+	c.setEndChargingTime = function(endChargingTime, vehicle) {
+		c.server.get({action: 'setEndChargingTime', endChargingTime: endChargingTime, vehicle: vehicle});		
+	}
+	
+	
+	spUtil.recordWatch($scope, "x_snc_tesla_vehicle_state", "", function(name,data) {
+		spUtil.update($scope);										 
+	})
+
+	spUtil.recordWatch($scope, "x_snc_tesla_driving_and_position", "", function(name,data) {
+		spUtil.update($scope);										 
+	})
+	
+	spUtil.recordWatch($scope, "x_snc_tesla_charging_state", "", function(name,data) {
+		spUtil.update($scope);										 
+	})
+	
+	spUtil.recordWatch($scope, "x_snc_tesla_climate_setting", "", function(name,data) {
+		spUtil.update($scope);										 
+	})
+	
+	spUtil.recordWatch($scope, "x_snc_tesla_gui_setting", "", function(name,data) {
+		spUtil.update($scope);										 
+	})
+	
+
+/*
+	
+	c.setValet = function() {
+		c.data.action = "someMsg";
+		c.server.update().then(function(){
+			c.data.action = undefined;
+			c.data.message = "";
+		})
+	}	
+	*/
+	
+}
+
+]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.panel-wrapper {&#13;
+	margin-bottom: 10px;&#13;
+}&#13;
+.panel-proper {&#13;
+	background-color: #fff;&#13;
+	border-radius: 5px;&#13;
+	transition: box-shadow 0.5s;&#13;
+	position: relative;&#13;
+}&#13;
+&#13;
+.header_img img{&#13;
+  width:50%;&#13;
+}&#13;
+&#13;
+&#13;
+&#13;
+&#13;
+&#13;
+/* The switch - the box around the slider */&#13;
+.switch {&#13;
+  position: relative;&#13;
+  display: inline-block;&#13;
+  width: 60px;&#13;
+  height: 34px;&#13;
+}&#13;
+&#13;
+/* Hide default HTML checkbox */&#13;
+.switch input {display:none;}&#13;
+&#13;
+/* The slider */&#13;
+.slider {&#13;
+  position: absolute;&#13;
+  cursor: pointer;&#13;
+  top: 0;&#13;
+  left: 0;&#13;
+  right: 0;&#13;
+  bottom: 0;&#13;
+  background-color: #ccc;&#13;
+  -webkit-transition: .4s;&#13;
+  transition: .4s;&#13;
+}&#13;
+&#13;
+.slider:before {&#13;
+  position: absolute;&#13;
+  content: "";&#13;
+  height: 26px;&#13;
+  width: 26px;&#13;
+  left: 4px;&#13;
+  bottom: 4px;&#13;
+  background-color: white;&#13;
+  -webkit-transition: .4s;&#13;
+  transition: .4s;&#13;
+}&#13;
+&#13;
+input:checked + .slider {&#13;
+  background-color: #2196F3;&#13;
+}&#13;
+&#13;
+input:focus + .slider {&#13;
+  box-shadow: 0 0 1px #2196F3;&#13;
+}&#13;
+&#13;
+input:checked + .slider:before {&#13;
+  -webkit-transform: translateX(26px);&#13;
+  -ms-transform: translateX(26px);&#13;
+  transform: translateX(26px);&#13;
+}&#13;
+&#13;
+/* Rounded sliders */&#13;
+.slider.round {&#13;
+  border-radius: 34px;&#13;
+}&#13;
+&#13;
+.slider.round:before {&#13;
+  border-radius: 50%;&#13;
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>tesla-info</id>
+        <internal>false</internal>
+        <link/>
+        <name>Tesla Info</name>
+        <option_schema/>
+        <public>false</public>
+        <roles>x_snc_tesla.user</roles>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+
+	
+	var vehicle_ids = getVehicles(); 
+	
+	var vehicles = {};
+	
+	var vehicleStates = {};
+	var vehicleDrivingPosition = {};
+	var vehicleChargingState = {};
+	var vehicleClimateSetting = {};
+	var vehicleGuiSetting = {};	
+	
+	for (var i=0; i<vehicle_ids.length; i++) {
+		var vehicle_id = vehicle_ids[i];
+		vehicles[vehicle_id] = {};
+		
+		vehicleStates = getVehicleProps(vehicle_id, "x_snc_tesla_vehicle_state");	
+		vehicleDrivingPosition = getVehicleProps(vehicle_id, "x_snc_tesla_driving_and_position");	
+		vehicleChargingState = getVehicleProps(vehicle_id, "x_snc_tesla_charging_state");	
+		vehicleClimateSetting = getVehicleProps(vehicle_id, "x_snc_tesla_climate_setting");	
+		vehicleGuiSetting = getVehicleProps(vehicle_id, "x_snc_tesla_gui_setting");	
+	}
+	
+	data.vehicleStates = vehicleStates;
+	data.vehicleDrivingPosition = vehicleDrivingPosition;
+	data.vehicleChargingState = vehicleChargingState;
+	data.vehicleClimateSetting = vehicleClimateSetting;
+	data.vehicleGuiSetting = vehicleGuiSetting;
+	
+	function getVehicles() {
+		var vehicles = [];
+
+		var gr = new GlideRecord("x_snc_tesla_tesla_vehicle");
+		gr.addQuery("sys_created_by", gs.getUserName());
+		gr.query();
+		while (gr.next()) {
+			vehicles.push(gr.sys_id+'');				
+		}		
+		return vehicles;
+	}
+	
+	
+	function getVehicleProps(vehicleId, tableName) {
+		var obj = {};
+		gr = new GlideRecord(tableName);
+		gr.addQuery("vehicle", vehicleId);
+		gr.query();
+		if (gr.next()) {
+			var columns = getTableAttrigbutes(tableName);
+			for (var i=0; i<columns.length; i++) {
+				var column = columns[i];
+				var clabel = ''; 
+				var cname = '';				
+				for (var prop in column) {
+					cname = prop;
+					clabel = column[prop];					
+				}
+				
+				var value = gr[cname]+'';
+				
+				//Convert booleans properly
+				if (value == "true")
+				  value = true;
+				else if (value == "false")
+					value = false;
+				
+				// Set up the label and value
+				//obj[cname] = {value:clabel};
+				obj[cname] = value;
+			}
+		}					
+		
+		return obj;
+	}
+	
+	
+	function getTableAttrigbutes(tableName) {
+		var columns = [];
+		var gr = new GlideRecord("sys_dictionary");
+		gr.addQuery("name", tableName);
+		gr.query();
+		while (gr.next()){
+			var cname = gr.element + '';
+			var label = gr.column_label + '';
+			
+			if (cname.startsWith("sys_") || gs.nil(cname))
+				continue;
+			
+			var obj = {};
+			obj[cname] = label;
+			
+			columns.push(obj);
+		}
+		
+		return columns;		
+	}
+	
+	/********************************************************
+	* Process client calls
+	*********************************************************/
+	
+	
+	if (input) {
+		if (input.action == "setValet") {
+			setValet(input.valetState, input.vehicle);
+		}
+		if (input.action == "setEndChargingTime") {
+			setEndChargingTime(input.endChargingTime, input.vehicle);
+		}
+		
+	}	
+	
+	function setEndChargingTime(endChargingTime, vehicle) {
+		setPreference("car.end_charging_time", endChargingTime, vehicle)	
+	}
+	
+	function setValet(valetState, vehicle) {		
+		setPreference("car.valet_mode", valetState, vehicle);		
+	}
+	
+	function setPreference(prefName, value, vehicle) {
+		var gr = new GlideRecord("x_snc_tesla_tesla_preference");
+		gr.addQuery("vehicle", vehicle);
+		gr.addQuery("name", prefName);
+		gr.query();
+		if (gr.next()) {
+			gr.value = value;
+			gr.update();
+		} else {
+			gr.initialize();
+			gr.vehicle = vehicle;
+			gr.name = prefName;
+			gr.value = value;
+			gr.insert();						
+		}
+		
+		return gr;
+	}
+	
+	
+
+	
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>aleck.lin</sys_created_by>
+        <sys_created_on>2018-02-08 06:16:36</sys_created_on>
+        <sys_id>21db891f0f009740f6998bbce1050ec5</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Tesla Info</sys_name>
+        <sys_package display_value="Tesla" source="x_snc_tesla">7441c3a64f5a4f002f9ae4928110c771</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Tesla">7441c3a64f5a4f002f9ae4928110c771</sys_scope>
+        <sys_update_name>sp_widget_21db891f0f009740f6998bbce1050ec5</sys_update_name>
+        <sys_updated_by>aleck.lin</sys_updated_by>
+        <sys_updated_on>2018-02-08 06:17:59</sys_updated_on>
+        <template><![CDATA[<div class="panel-wrapper" ng-class="{ 'expanded': c.expanded, 'recovered': (c.alert.state === 'Closed') }">
+	<div class="panel-proper">
+
+
+    <div class="header_img">
+      <img src="https://s.aolcdn.com/dims-global/dims3/GLOB/legacy_thumbnail/788x525/quality/85/https://s.aolcdn.com/commerce/autodata/images/USC70TSC024B021001.jpg"/>
+
+    </div>
+    <!--
+    <div ng-repeat-start="vehicle in c.data.vehicles">
+      {{ vehicle.odometer }}
+      {{ c.data.odometer }}
+    </div>
+	  -->
+    <div>
+      Mileage: {{ c.data.vehicleStates.odometer }}
+      <br/>
+      Locked: {{ c.data.vehicleStates.locked }}
+      <br/>
+      Battery Range: {{ c.data.vehicleChargingState.battery_range }}
+      <br/>
+      Estimated Battery Range: {{ c.data.vehicleChargingState.est_battery_range }}
+      <br/>
+      Battery Level: {{ c.data.vehicleChargingState.battery_level }}%
+      <br/>
+      Version: {{ c.data.vehicleStates.car_version }}
+      <br/>
+      Inside temp: {{ c.data.vehicleClimateSetting.inside_temp}}
+      <br/>
+      Outside temp: {{ c.data.vehicleClimateSetting.outside_temp}}
+      <br/>
+      Driver temp setting: {{ c.data.vehicleClimateSetting.driver_temp_setting}}
+      <br/>
+      Passenger temp setting: {{ c.data.vehicleClimateSetting.passenger_temp_setting}}
+      
+    </div>
+  
+    
+    <div>
+      Valet Mode
+    </div>
+  	<label class="switch">
+	  	<input type="checkbox" ng-model="c.data.valet_mode" ng-click="c.setValet(c.data.valet_mode, c.data.vehicleStates.vehicle)" ng-checked="c.data.vehicleStates.valet_mode" >
+	  	<span class="slider round"></span>
+		</label>
+    
+    <div>
+      <label>Charge End Time</label>
+      <input ng-model="c.data.end_charging_time">      
+      <input type="submit" ng-click="c.setEndChargingTime(c.data.end_charging_time, c.data.vehicleStates.vehicle)" />
+    </div>
+    
+    <div>
+	    Charging Schedule      
+      <br/>
+      Starting Time: {{ c.data.vehicleChargingState.scheduled_charging_start_time}}
+      <br/>
+      Set Charging Start Time
+      <br/>
+      Set Charging End Time
+    </div>
+
+    <!--
+    <div class="info_segment" ng-repeat="prop in c.data.vehicleStates">
+      <div> {{prop}}  </div>
+      
+    </div>
+		-->
+      
+      
+    </div>
+    
+    
+    
+    
+    
+    
+  </div><!-- pannel-proper -->
+</div> <!-- panel-wrapper --> ]]></template>
+    </sp_widget>
+</record_update>

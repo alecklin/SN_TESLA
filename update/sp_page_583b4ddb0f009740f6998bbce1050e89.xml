@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sp_page">
+    <sp_page action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <css/>
+        <draft>false</draft>
+        <dynamic_title_structure/>
+        <id>tesla</id>
+        <internal>false</internal>
+        <public>false</public>
+        <roles/>
+        <short_description/>
+        <sys_class_name>sp_page</sys_class_name>
+        <sys_created_by>aleck.lin</sys_created_by>
+        <sys_created_on>2018-02-08 06:13:47</sys_created_on>
+        <sys_id>583b4ddb0f009740f6998bbce1050e89</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>tesla</sys_name>
+        <sys_package display_value="Tesla" source="x_snc_tesla">7441c3a64f5a4f002f9ae4928110c771</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Tesla">7441c3a64f5a4f002f9ae4928110c771</sys_scope>
+        <sys_update_name>sp_page_583b4ddb0f009740f6998bbce1050e89</sys_update_name>
+        <sys_updated_by>aleck.lin</sys_updated_by>
+        <sys_updated_on>2018-02-08 06:13:47</sys_updated_on>
+        <title>Tesla</title>
+    </sp_page>
+    <sys_translated_text action="delete_multiple" query="documentkey=583b4ddb0f009740f6998bbce1050e89"/>
+</record_update>
