@@ -54,15 +54,17 @@
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>aleck.lin</sys_created_by>
         <sys_created_on>2017-11-26 21:32:48</sys_created_on>
-        <sys_id>a1d61ac913d813002c235d422244b044</sys_id>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>2672d1ad4fd0d3808c81efd18110c7be</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Not enough power to heat</sys_name>
         <sys_package display_value="Tesla" source="x_snc_tesla">7441c3a64f5a4f002f9ae4928110c771</sys_package>
         <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Tesla">7441c3a64f5a4f002f9ae4928110c771</sys_scope>
         <sys_update_name>sys_dictionary_x_snc_tesla_charging_state_not_enough_power_to_heat</sys_update_name>
         <sys_updated_by>system</sys_updated_by>
-        <sys_updated_on>2018-02-13 22:13:50</sys_updated_on>
+        <sys_updated_on>2018-02-15 06:32:13</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

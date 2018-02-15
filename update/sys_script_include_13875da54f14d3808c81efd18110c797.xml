@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_snc_tesla.TeslaMetricPusher</api_name>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>TeslaMetricPusher</name>
+        <script><![CDATA[/*
+* Aleck.Lin@ServiceNow.com
+* Description: Class to push out various metric data for Tesla vehicle
+*/
+
+var TeslaMetricPusher = Class.create();
+TeslaMetricPusher.prototype = {
+    initialize: function() {
+    },
+	
+	run: function() {				
+		this.pushOdometerInfo();
+		this.pushInsideTemp();
+		this.pushOutsideTemp();
+		this.pushBatteryLevel();
+		this.pushBatteryUsableLevel();		
+		this.pushBatteryRange();		
+		this.pushEstBatteryRange();
+		this.pushIdealBatteryRange();		
+	},
+	
+	pushOdometerInfo: function() {
+		var gr = new GlideRecord("x_snc_tesla_vehicle_state");
+		gr.query();
+		while (gr.next()) {
+			var ciName = gr.vehicle.name+'';
+			var metricName = "Odometer";
+			var metricValue = Number(gr.odometer);
+			
+			this.pushMetric(ciName, metricName,metricValue);
+		}	
+	},
+	
+	pushInsideTemp: function() {
+		var gr = new GlideRecord("x_snc_tesla_climate_setting");
+		gr.query();
+		while (gr.next()) {
+			var ciName = gr.vehicle.name+'';
+			var metricName = "Inside Temperature";
+			var metricValue = Number(gr.inside_temp);
+			metricValue = new TeslaUtils().getTemperature(metricValue, gr.vehicle.sys_id+'');
+			
+			this.pushMetric(ciName, metricName,metricValue);
+		}			
+	},
+	
+	pushOutsideTemp: function() {
+		var gr = new GlideRecord("x_snc_tesla_climate_setting");
+		gr.query();
+		while (gr.next()) {
+			var ciName = gr.vehicle.name+'';
+			var metricName = "Outside Temperature";
+			var metricValue = Number(gr.outside_temp);
+			metricValue = new TeslaUtils().getTemperature(metricValue, gr.vehicle.sys_id+'');			
+			
+			this.pushMetric(ciName, metricName,metricValue);
+		}			
+	},	
+	
+	pushBatteryLevel: function() {
+		var gr = new GlideRecord("x_snc_tesla_charging_state");
+		gr.query();
+		while (gr.next()) {
+			var ciName = gr.vehicle.name+'';
+			var metricName = "Battery Level";
+			var metricValue = Number(gr.battery_level);			
+			
+			this.pushMetric(ciName, metricName,metricValue);
+		}			
+	},
+	
+	pushBatteryUsableLevel: function() {
+		var gr = new GlideRecord("x_snc_tesla_charging_state");
+		gr.query();
+		while (gr.next()) {
+			var ciName = gr.vehicle.name+'';
+			var metricName = "Battery Usable Level";
+			var metricValue = Number(gr.usable_battery_level);			
+			
+			this.pushMetric(ciName, metricName,metricValue);
+		}			
+	},
+	
+	pushBatteryRange: function() {
+		var gr = new GlideRecord("x_snc_tesla_charging_state");
+		gr.query();
+		while (gr.next()) {
+			var ciName = gr.vehicle.name+'';
+			var metricName = "Battery Range";
+			var metricValue = Number(gr.battery_range);			
+			
+			this.pushMetric(ciName, metricName,metricValue);
+		}			
+	},
+	
+	pushEstBatteryRange: function() {
+		var gr = new GlideRecord("x_snc_tesla_charging_state");
+		gr.query();
+		while (gr.next()) {
+			var ciName = gr.vehicle.name+'';
+			var metricName = "Estimate Battery Range";
+			var metricValue = Number(gr.est_battery_range);			
+			
+			this.pushMetric(ciName, metricName,metricValue);
+		}			
+	},
+	
+	pushIdealBatteryRange: function() {
+		var gr = new GlideRecord("x_snc_tesla_charging_state");
+		gr.query();
+		while (gr.next()) {
+			var ciName = gr.vehicle.name+'';
+			var metricName = "Ideal Battery Range";
+			var metricValue = Number(gr.ideal_battery_range);			
+			
+			this.pushMetric(ciName, metricName,metricValue);
+		}			
+	},	
+	
+	
+	pushMetric: function(ciName, metricName, metricValue) {				
+		var p = new x_snc_sn_metric_se.GenericProbe("AWS_MID_2");
+		p.setTopic("JavascriptProbe");
+		p.setMIDServer("AWS_MID_2");
+		p.setName("MetricProbe");
+		p.setSource(ciName + " - " + metricName);
+		p.addParameter("node", ciName);
+		p.addParameter("metric_type", metricName);
+		p.addParameter("metric_value", metricValue);
+		p.addParameter("ci_type", "x_snc_tesla_automobile");
+		
+		p.create();
+			
+	},
+
+	
+
+    type: 'TeslaMetricPusher'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>aleck.lin</sys_created_by>
+        <sys_created_on>2018-02-15 06:54:20</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>13875da54f14d3808c81efd18110c797</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>TeslaMetricPusher</sys_name>
+        <sys_package display_value="Tesla" source="x_snc_tesla">7441c3a64f5a4f002f9ae4928110c771</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Tesla">7441c3a64f5a4f002f9ae4928110c771</sys_scope>
+        <sys_update_name>sys_script_include_13875da54f14d3808c81efd18110c797</sys_update_name>
+        <sys_updated_by>aleck.lin</sys_updated_by>
+        <sys_updated_on>2018-02-15 07:32:41</sys_updated_on>
+    </sys_script_include>
+</record_update>
