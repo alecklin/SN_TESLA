@@ -20,8 +20,6 @@
         <query/>
         <report/>
         <roles>x_snc_tesla.user</roles>
-        <survey/>
-        <survey_overwrite>true</survey_overwrite>
         <sys_class_name>sys_app_module</sys_class_name>
         <sys_created_by>aleck.lin</sys_created_by>
         <sys_created_on>2017-11-25 09:00:42</sys_created_on>

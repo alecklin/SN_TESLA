@@ -4,7 +4,6 @@
         <access>public</access>
         <active>true</active>
         <api_name>x_snc_tesla.TeslaUtils</api_name>
-        <caller_access/>
         <client_callable>false</client_callable>
         <description/>
         <name>TeslaUtils</name>

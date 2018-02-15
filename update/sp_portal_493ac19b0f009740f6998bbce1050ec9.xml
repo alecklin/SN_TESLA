@@ -31,7 +31,6 @@
         <sys_updated_on>2018-02-08 06:15:19</sys_updated_on>
         <theme/>
         <title>Tesla</title>
-        <u_available_in_portal_picker>false</u_available_in_portal_picker>
         <url_suffix>tesla</url_suffix>
     </sp_portal>
     <sys_translated_text action="delete_multiple" query="documentkey=493ac19b0f009740f6998bbce1050ec9"/>

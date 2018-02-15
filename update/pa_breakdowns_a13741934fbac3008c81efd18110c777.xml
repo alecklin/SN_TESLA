@@ -9,7 +9,7 @@
         <facts_table/>
         <field/>
         <groups/>
-        <id>245</id>
+        <id>27</id>
         <name>Tesla Vehicle</name>
         <role_override>false</role_override>
         <roles>x_snc_tesla.user</roles>

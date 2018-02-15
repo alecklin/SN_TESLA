@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_documentation element="skip_sync" label="Skip sync" language="en" table="x_snc_tesla_automobile">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>skip_sync</element>
+            <help/>
+            <hint/>
+            <label>Skip sync</label>
+            <language>en</language>
+            <name>x_snc_tesla_automobile</name>
+            <plural>Skip syncs</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>aleck.lin</sys_created_by>
+            <sys_created_on>2018-02-15 06:26:51</sys_created_on>
+            <sys_id>84519165131853002c235d422244b074</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Skip sync</sys_name>
+            <sys_package display_value="Tesla" source="x_snc_tesla">7441c3a64f5a4f002f9ae4928110c771</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Tesla">7441c3a64f5a4f002f9ae4928110c771</sys_scope>
+            <sys_update_name>sys_documentation_x_snc_tesla_automobile_skip_sync_en</sys_update_name>
+            <sys_updated_by>aleck.lin</sys_updated_by>
+            <sys_updated_on>2018-02-15 06:26:51</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

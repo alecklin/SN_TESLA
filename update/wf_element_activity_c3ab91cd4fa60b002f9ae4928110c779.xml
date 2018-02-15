@@ -3,7 +3,7 @@
     <wf_element_activity action="INSERT_OR_UPDATE">
         <access>public</access>
         <attributes/>
-        <base_provider display_value="REST Web Service">8817a25e37222100aa40cc9fbe41f106</base_provider>
+        <base_provider display_value="">8817a25e37222100aa40cc9fbe41f106</base_provider>
         <category/>
         <checked_out_by/>
         <default_height/>

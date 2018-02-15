@@ -3,7 +3,7 @@
     <wf_element_activity action="INSERT_OR_UPDATE">
         <access>public</access>
         <attributes/>
-        <base_provider display_value="Run Script">d0c7fe11eb013100fc5e8a7af106fee0</base_provider>
+        <base_provider display_value="">d0c7fe11eb013100fc5e8a7af106fee0</base_provider>
         <category/>
         <checked_out_by/>
         <default_height/>

@@ -30,7 +30,7 @@ Created by = aleck.lin</description>
         <frequency>10</frequency>
         <groups/>
         <has_managed_indicators>false</has_managed_indicators>
-        <id>829</id>
+        <id>101</id>
         <key>false</key>
         <label/>
         <linked_indicator/>
@@ -48,7 +48,7 @@ Created by = aleck.lin</description>
         <role_override>false</role_override>
         <roles>x_snc_tesla.user</roles>
         <score_periods>-1</score_periods>
-        <scores_modified_at>2018-02-08 05:00:26</scores_modified_at>
+        <scores_modified_at>2018-02-15 05:00:05</scores_modified_at>
         <script display_value="Tesla.Get Inside Temperature">634dc99f0f009740f6998bbce1050e3d</script>
         <scripted>true</scripted>
         <show_delta>true</show_delta>
