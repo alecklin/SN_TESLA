@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="wf_element_activity">
+    <wf_element_activity action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <attributes/>
+        <base_provider display_value="Run Script">d0c7fe11eb013100fc5e8a7af106fee0</base_provider>
+        <category>Internal</category>
+        <checked_out_by/>
+        <default_height/>
+        <default_width/>
+        <description/>
+        <image>images/heisenberg_icons/workflow_ie8/provider_runscript.png</image>
+        <input_meta>{"name":"Input","type":"DATA_OBJECT","properties":[{"name":"table_name","type":"STRING","mandatory":true},{"name":"reference_table_id","type":"STRING","mandatory":false},{"name":"obj_json","type":"STRING","mandatory":false}]}</input_meta>
+        <input_process_script/>
+        <input_transform/>
+        <local_variables/>
+        <name>Update vehicle info</name>
+        <output_meta>{"name":"Output","type":"DATA_OBJECT","properties":[{"name":"success","type":"BOOLEAN"}]}</output_meta>
+        <output_process_script/>
+        <output_transform/>
+        <processing_script><![CDATA[(function () {
+	//Assume false unless otherwise indicated...
+	activityOutput.success = false;
+	var obj = new global.JSON().decode(activityInput.obj_json);	
+
+	var gr = new GlideRecord(activityInput.table_name);
+	gr.addQuery("vehicle", activityInput.reference_table_id);
+	gr.query();
+	if (!gr.next()) {
+		gs.debug("Unable to find the record with sys_id " + activityInput.reference_table_id + " in " + activityInput.table_name);
+		doInsert(gr, obj);
+	} else {
+		doUpdate(gr, obj);
+	}
+
+	function doInsert(gr, obj) {
+		gr.initialize();
+		for (var name in obj)
+			gr[name] = obj[name];
+
+		gr['vehicle'] = activityInput.reference_table_id;
+		if (gr.insert())
+			activityOutput.success = true;	
+	}
+	
+	function doUpdate(gr, obj) {
+		// Update the fields in the table...
+		for (var name in obj) {					
+gs.info(name + " : _" + obj[name] + "_");
+			if (!obj[name]) {
+gs.info("skipping becuase " + name + " is " + obj[name]);
+				return;
+			}
+			gr[name] = obj[name];
+		}
+
+		gr.update();
+		activityOutput.success = true;	
+	}
+	
+	
+}());
+]]></processing_script>
+        <sample_payloads>{}</sample_payloads>
+        <short_description/>
+        <style/>
+        <sys_class_name>wf_element_activity</sys_class_name>
+        <sys_created_by>aleck.lin</sys_created_by>
+        <sys_created_on>2018-02-28 07:02:49</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>fd3618714f6853c08c81efd18110c7ba</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Update vehicle info</sys_name>
+        <sys_package display_value="Tesla" source="x_snc_tesla">7441c3a64f5a4f002f9ae4928110c771</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Tesla">7441c3a64f5a4f002f9ae4928110c771</sys_scope>
+        <sys_update_name>wf_element_activity_fd3618714f6853c08c81efd18110c7ba</sys_update_name>
+        <sys_updated_by>aleck.lin</sys_updated_by>
+        <sys_updated_on>2018-02-28 07:05:54</sys_updated_on>
+        <version_container_id>751a2be34f2283402f9ae4928110c7e4</version_container_id>
+    </wf_element_activity>
+    <sys_translated_text action="delete_multiple" query="documentkey=fd3618714f6853c08c81efd18110c7ba"/>
+    <wf_versionable action="INSERT_OR_UPDATE">
+        <checked_out/>
+        <checked_out_by/>
+        <published>false</published>
+        <sys_created_by>aleck.lin</sys_created_by>
+        <sys_created_on>2018-02-28 07:02:49</sys_created_on>
+        <sys_id>f93618714f6853c08c81efd18110c7bb</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>aleck.lin</sys_updated_by>
+        <sys_updated_on>2018-02-28 07:05:54</sys_updated_on>
+        <valid_from>2018-02-28 07:04:26</valid_from>
+        <valid_to/>
+        <version>3</version>
+        <version_container_id>751a2be34f2283402f9ae4928110c7e4</version_container_id>
+        <wf_element_definition display_value="Update vehicle info">fd3618714f6853c08c81efd18110c7ba</wf_element_definition>
+    </wf_versionable>
+    <wf_condition_default action="INSERT_OR_UPDATE">
+        <activity_definition display_value="Update vehicle info">fd3618714f6853c08c81efd18110c7ba</activity_definition>
+        <condition/>
+        <derived_definition>fb05b76f4f2283402f9ae4928110c760</derived_definition>
+        <else_flag>true</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <name>Failure</name>
+        <order>200</order>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>aleck.lin</sys_created_by>
+        <sys_created_on>2018-02-28 07:02:49</sys_created_on>
+        <sys_id>753618714f6853c08c81efd18110c7bc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>aleck.lin</sys_updated_by>
+        <sys_updated_on>2018-02-28 07:02:49</sys_updated_on>
+    </wf_condition_default>
+    <wf_condition_default action="INSERT_OR_UPDATE">
+        <activity_definition display_value="Update vehicle info">fd3618714f6853c08c81efd18110c7ba</activity_definition>
+        <condition>activityOutput.success == true</condition>
+        <derived_definition>7424fb2f4f2283402f9ae4928110c776</derived_definition>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <name>Success</name>
+        <order>100</order>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>aleck.lin</sys_created_by>
+        <sys_created_on>2018-02-28 07:02:49</sys_created_on>
+        <sys_id>bd3618714f6853c08c81efd18110c7bc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>aleck.lin</sys_updated_by>
+        <sys_updated_on>2018-02-28 07:02:49</sys_updated_on>
+    </wf_condition_default>
+    <wf_versionable action="update_multiple" query="version_container_id=751a2be34f2283402f9ae4928110c7e4^sys_id!=f93618714f6853c08c81efd18110c7bb^version&lt;3">
+        <published>false</published>
+    </wf_versionable>
+    <wf_activity action="update_multiple" is_dot_walk_query="true" query="workflow_version.published=true^activity_definition.version_container_id=751a2be34f2283402f9ae4928110c7e4">
+        <new_activity_definition>fd3618714f6853c08c81efd18110c7ba</new_activity_definition>
+        <out_of_date>true</out_of_date>
+        <notes>There is a newer version of this activity.
+
+To update the activity, check out the workflow, select the activity, right click
+and select 'Update activity' to use the latest version, then publish the workflow</notes>
+    </wf_activity>
+</record_update>

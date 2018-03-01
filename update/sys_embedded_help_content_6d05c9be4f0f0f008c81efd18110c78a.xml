@@ -4,7 +4,7 @@
         <active>true</active>
         <category>discovery</category>
         <content><![CDATA[    <h1 class="title topictitle1">Discovery configuration console</h1>        <div class="body taskbody">        <div class="section context" id="zz_discovery_configuration_console-normal__context_kch_zxh_x1b">            <div class="p">By default, Discovery finds all the information on    your network that is specified in probes and patterns. <span class="ph" id="zz_discovery_configuration_console-normal__d33615e46">Use the     controls in this console to prevent Discovery from finding data that your organization does not     need</span>. You can control these aspects of Discovery: <ul class="ul" id="zz_discovery_configuration_console-normal__d33615e49"><li class="li">The discovery of entire CI types, such as Windows servers.</li><li class="li">The discovery of specific CI details, such as OS information on Windows servers.</li><li class="li">The discovery of software packages containing keyword terms that you add, such as Hotfix or      Security Update.</li></ul></div>            <div class="p">The console is divided into these sections: <ul class="ul" id="zz_discovery_configuration_console-normal__d33615e80"><li class="li"><span class="ph uicontrol">Devices</span>: network devices such a printers, storage devices such as      storage switches, and Unix and Windows computers.</li><li class="li"><span class="ph uicontrol">Applications</span>: automation applications such as Puppet, databases such      as MSSQL, and web servers such as Tomcat.</li><li class="li"><span class="ph uicontrol">Software Filter</span>: Unix and Windows applications that include or      exclude keywords that you enter.</li></ul></div>            <p class="p">By default, all the CI types are enabled.</p>        </div>        <ol class="ol steps"><li class="li step stepexpand">                <span class="ph cmd">Click the arrow by each device type to expand that section and view all the                    classes within that type.</span>                <div class="itemgroup info">You can disable an entire device type or specific classes within that                    type.</div>            </li><li class="li step stepexpand">                <span class="ph cmd">To disable discovery of a CI, click the green switch next to it.</span>                <div class="itemgroup info">The switch turns gray, and a lock icon appears next to the type&#39;s name.                    Discovery will ignore this CI type or class when it runs.</div>            </li><li class="li step stepexpand">                <span class="ph cmd">Disable all the CIs you do not want to discover.</span>            </li><li class="li step stepexpand">                <span class="ph cmd">When you are done, navigate away from the console.</span>                <div class="itemgroup info">Your selections are saved automatically.</div>            </li></ol>    </div>    <div class="related-links"><div class="relinfo"><div class="reltitle">Related information<br /><div><a class="link" href="https://docs.servicenow.com/?context&#61;CSHelp:Discovery-Configuration-Console&amp;version&#61;kingston" target="_blank">Discovery Configuration Console</a></div></div></div></div>]]></content>
-        <last_sync>2018-02-01 23:28:11</last_sync>
+        <last_sync>2018-02-16 23:29:10</last_sync>
         <modifier>normal</modifier>
         <name>$discovery_configuration_console-normal</name>
         <page>$discovery_configuration_console</page>
@@ -20,7 +20,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>6d05c9be4f0f0f008c81efd18110c78a</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name>$discovery_configuration_console-normal</sys_name>
         <sys_package display_value="Tesla" source="x_snc_tesla">7441c3a64f5a4f002f9ae4928110c771</sys_package>
         <sys_policy/>
@@ -28,7 +28,7 @@
         <sys_scope display_value="Tesla">7441c3a64f5a4f002f9ae4928110c771</sys_scope>
         <sys_update_name>sys_embedded_help_content_6d05c9be4f0f0f008c81efd18110c78a</sys_update_name>
         <sys_updated_by>system</sys_updated_by>
-        <sys_updated_on>2018-02-01 23:28:11</sys_updated_on>
+        <sys_updated_on>2018-02-16 23:29:10</sys_updated_on>
         <version>k</version>
     </sys_embedded_help_content>
     <sys_translated_text action="delete_multiple" query="documentkey=6d05c9be4f0f0f008c81efd18110c78a"/>

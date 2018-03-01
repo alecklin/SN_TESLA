@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="em_incident_template">
+    <em_incident_template action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <global>false</global>
+        <group/>
+        <link_element/>
+        <name>Tesla Incident Template</name>
+        <next/>
+        <next_child/>
+        <roles/>
+        <short_description/>
+        <show_on_template_bar>true</show_on_template_bar>
+        <stand_alone>false</stand_alone>
+        <sys_class_name>em_incident_template</sys_class_name>
+        <sys_created_by>aleck.lin</sys_created_by>
+        <sys_created_on>2018-02-28 00:48:42</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_id>694003694fe053c08c81efd18110c785</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Tesla Incident Template</sys_name>
+        <sys_package display_value="Tesla" source="x_snc_tesla">7441c3a64f5a4f002f9ae4928110c771</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Tesla">7441c3a64f5a4f002f9ae4928110c771</sys_scope>
+        <sys_update_name>em_incident_template_694003694fe053c08c81efd18110c785</sys_update_name>
+        <sys_updated_by>aleck.lin</sys_updated_by>
+        <sys_updated_on>2018-02-28 00:48:42</sys_updated_on>
+        <table>incident</table>
+        <template>category=hardware^EQ</template>
+        <user display_value="Aleck Lin">6882267413331200ab3bb8b12244b059</user>
+        <view/>
+    </em_incident_template>
+</record_update>

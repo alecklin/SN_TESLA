@@ -2,9 +2,10 @@
 <database>
     <element label="Tesla Vehicle" max_length="40" name="x_snc_tesla_tesla_vehicle" type="collection">
         <element label="Account" max_length="32" name="account" reference="x_snc_tesla_tesla_account" reference_cascade_rule="delete" type="reference"/>
-        <element label="Automobile" max_length="32" name="automobile" reference="x_snc_tesla_automobile" type="reference"/>
+        <element label="Automobile" max_length="32" name="automobile" reference="x_snc_tesla_automobile" reference_cascade_rule="clear" type="reference"/>
         <element label="ID" max_length="40" name="id" type="string"/>
         <element display="true" label="name" max_length="40" name="name" type="string"/>
+        <element label="Owner" max_length="32" name="owner" reference="sys_user" type="reference"/>
         <element label="State" max_length="40" name="state" type="string"/>
         <element label="Vehicle ID" max_length="40" name="vehicle_id" type="string"/>
         <element label="Vin" max_length="40" name="vin" type="string"/>
@@ -12,6 +13,9 @@
             <element name="automobile"/>
         </index>
         <index name="index2">
+            <element name="owner"/>
+        </index>
+        <index name="index3">
             <element name="account"/>
         </index>
     </element>

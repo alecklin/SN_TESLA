@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_snc_tesla.TeslaPreferenceChecker</api_name>
+        <client_callable>false</client_callable>
+        <description>Checking various preferences and notify appropriately </description>
+        <name>TeslaPreferenceChecker</name>
+        <script><![CDATA[/*
+* Aleck.Lin@ServiceNow.com
+* Description: Checking various preferences
+*
+* To test this script, use
+
+	var tpc = new TeslaPreferenceChecker();
+	tpc.setDebug(true);
+	tpc.run();
+*/
+
+var TeslaPreferenceChecker = Class.create();
+TeslaPreferenceChecker.prototype = {
+    initialize: function() {
+		this.debugFlag = false;
+    },
+	
+	run: function() {		
+		this.chargingReminder();
+		
+	},
+	
+	chargingReminder: function() {
+		// Currently we'll remind the person within 3 minutes of the set time
+		
+		var CHARGING_START_TIME = "charging_start_time";
+		var gr = new GlideRecord("x_snc_tesla_tesla_preference");
+		gr.addQuery("name", CHARGING_START_TIME);
+		gr.addActiveQuery("active");
+		gr.addNotNullQuery("value");
+		gr.query();
+		while (gr.next()) {			
+			this.chargingReminderForCar(gr.vehicle.sys_id+'', gr.value);			
+		}		
+	},
+	
+	chargingReminderForCar: function(vehicleSysId, value) {		
+		// If car is already plugged in... then there's nothing to do...
+		if (this._checkIfCarIsPluggedIn(vehicleSysId)) 
+			return;
+		
+		// Until I convert everything to UTC, assuming pacific for now...
+
+		// Looks like car is not plugged in, let's see if we need to remind the driver...
+		
+		// Set up target time... 
+		var tgt = new GlideTime();
+		tgt.setValue(value+":00"); //The value is currnetly stored with hour:minute
+		
+		var nowgt = new GlideTime();
+		var currentTime = nowgt.getHourOfDayLocalTime() + ":" + nowgt.getMinutesLocalTime() + ":" + nowgt.getSeconds();		
+		nowgt.setValue(currentTime);
+		
+		var dur = GlideDate.subtract(nowgt, tgt); //the difference between tgt and nowgt
+		durationStr = dur.getDisplayValue();
+		
+		this.debug("The duration difference is currently " + durationStr);
+		
+		// Only looking for statements that contains minutes
+		if (durationStr.indexOf("Hour") > -1) //contains hour, nothing to do...
+			return;
+						 
+		//Get the minutes
+		var pattern = /(.+)\s.+/;
+		var minutes = Number(pattern.exec(durationStr));
+		
+		this.debug("The duration difference (in minutes) is " + minutes);
+		
+		if (isNaN(minutes))
+			return;
+		
+		if (minutes > 4) //Look for within 3 minutes of the start time...
+			return;
+		
+		this._notifyDriver(vehicleSysId, value);
+
+	},
+	
+	_checkIfCarIsPluggedIn: function(vehicleSysId) {
+		var gr = new GlideRecord("x_snc_tesla_charging_state");
+		gr.addQuery("vehicle", vehicleSysId);
+		gr.query();
+		if (gr.next()) {
+			if (gr.charging_state == "Disconnected")
+			this.debug("The charger for " + gr.vehicle.name + " is not connected");
+				return false;
+		}
+		
+		return true;
+	},
+	
+	
+	_notifyDriver: function(vehicleSysId, value) {		
+		var gr = new GlideRecord("x_snc_tesla_tesla_vehicle");
+		if (!gr.get(vehicleSysId))
+			return;
+				
+		var msg = gr.name + " is set to charge at " + value + ", but it is not plugged in. Please plug in car charger!";		
+		this.debug("Sending notification => " + msg);
+		
+		gs.eventQueue('x_snc_tesla.Tesla_Vehicle.Notification', gr , gr.owner, msg); 
+		
+	},
+
+
+	setDebug: function(flag) {
+		this.debugFlag = flag;
+	},
+	
+	debug: function(msg) {
+		if (!this.debugFlag)
+			return;
+		
+		gs.info("TeslaPreferenceChecker: " + msg);		
+	},
+	
+    type: 'TeslaPreferenceChecker'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>aleck.lin</sys_created_by>
+        <sys_created_on>2018-02-15 08:11:55</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>d759eda94f54d3808c81efd18110c72d</sys_id>
+        <sys_mod_count>37</sys_mod_count>
+        <sys_name>TeslaPreferenceChecker</sys_name>
+        <sys_package display_value="Tesla" source="x_snc_tesla">7441c3a64f5a4f002f9ae4928110c771</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Tesla">7441c3a64f5a4f002f9ae4928110c771</sys_scope>
+        <sys_update_name>sys_script_include_d759eda94f54d3808c81efd18110c72d</sys_update_name>
+        <sys_updated_by>aleck.lin</sys_updated_by>
+        <sys_updated_on>2018-03-01 06:16:45</sys_updated_on>
+    </sys_script_include>
+</record_update>

@@ -5,9 +5,15 @@
         <active>true</active>
         <api_name>x_snc_tesla.TeslaUtils</api_name>
         <client_callable>false</client_callable>
-        <description/>
+        <description>Utility functions for Tesla</description>
         <name>TeslaUtils</name>
-        <script><![CDATA[var TeslaUtils = Class.create();
+        <script><![CDATA[/* 
+* Author: Aleck.Lin@ServiceNow.com
+* Description: Utility functions for Tesla
+* 
+*/
+
+var TeslaUtils = Class.create();
 TeslaUtils.prototype = {
     initialize: function() {
     },
@@ -30,6 +36,26 @@ TeslaUtils.prototype = {
 				
 		return gr.gui_temperature_units + '';			
 	},
+	
+	setPreference: function(prefName, value, vehicle) {
+		var gr = new GlideRecord("x_snc_tesla_tesla_preference");
+		gr.addQuery("vehicle", vehicle);
+		gr.addQuery("name", prefName);
+		gr.query();
+		if (gr.next()) {
+			gr.value = value;
+			gr.update();
+		} else {
+			gr.initialize();
+			gr.vehicle = vehicle;
+			gr.name = prefName;
+			gr.value = value;
+			gr.insert();						
+		}
+		
+		return gr;
+	},
+	
 
     type: 'TeslaUtils'
 };]]></script>
@@ -38,7 +64,7 @@ TeslaUtils.prototype = {
         <sys_created_on>2018-02-08 06:21:32</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>89ecc19f0f009740f6998bbce1050e27</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name>TeslaUtils</sys_name>
         <sys_package display_value="Tesla" source="x_snc_tesla">7441c3a64f5a4f002f9ae4928110c771</sys_package>
         <sys_policy>read</sys_policy>
@@ -46,6 +72,6 @@ TeslaUtils.prototype = {
         <sys_scope display_value="Tesla">7441c3a64f5a4f002f9ae4928110c771</sys_scope>
         <sys_update_name>sys_script_include_89ecc19f0f009740f6998bbce1050e27</sys_update_name>
         <sys_updated_by>aleck.lin</sys_updated_by>
-        <sys_updated_on>2018-02-08 06:21:32</sys_updated_on>
+        <sys_updated_on>2018-02-15 08:04:52</sys_updated_on>
     </sys_script_include>
 </record_update>

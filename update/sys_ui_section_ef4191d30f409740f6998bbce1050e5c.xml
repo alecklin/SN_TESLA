@@ -2,30 +2,30 @@
 <record_update>
     <sys_ui_section caption="" section_id="ef4191d30f409740f6998bbce1050e5c" sys_domain="global" table="x_snc_tesla_tesla_preference" version="3" view="">
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>.begin_split</element>
+            <element>name</element>
             <position>0</position>
             <sys_created_by>aleck.lin</sys_created_by>
-            <sys_created_on>2018-02-08 06:40:30</sys_created_on>
-            <sys_id>fb4155d30f409740f6998bbce1050e02</sys_id>
+            <sys_created_on>2018-02-27 07:25:26</sys_created_on>
+            <sys_id>d3c11fdd4f6413c08c81efd18110c768</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_snc_tesla_tesla_preference" sys_domain="global" view="Default view">ef4191d30f409740f6998bbce1050e5c</sys_ui_section>
             <sys_updated_by>aleck.lin</sys_updated_by>
-            <sys_updated_on>2018-02-08 06:40:30</sys_updated_on>
+            <sys_updated_on>2018-02-27 07:25:26</sys_updated_on>
             <sys_user/>
-            <type>.begin_split</type>
+            <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>name</element>
+            <element>vehicle</element>
             <position>1</position>
             <sys_created_by>aleck.lin</sys_created_by>
-            <sys_created_on>2018-02-08 06:40:30</sys_created_on>
-            <sys_id>f34155d30f409740f6998bbce1050e03</sys_id>
+            <sys_created_on>2018-02-27 07:25:26</sys_created_on>
+            <sys_id>57c11fdd4f6413c08c81efd18110c768</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_snc_tesla_tesla_preference" sys_domain="global" view="Default view">ef4191d30f409740f6998bbce1050e5c</sys_ui_section>
             <sys_updated_by>aleck.lin</sys_updated_by>
-            <sys_updated_on>2018-02-08 06:40:30</sys_updated_on>
+            <sys_updated_on>2018-02-27 07:25:26</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -33,13 +33,13 @@
             <element>.split</element>
             <position>2</position>
             <sys_created_by>aleck.lin</sys_created_by>
-            <sys_created_on>2018-02-08 06:40:30</sys_created_on>
-            <sys_id>774155d30f409740f6998bbce1050e03</sys_id>
+            <sys_created_on>2018-02-27 07:25:26</sys_created_on>
+            <sys_id>d7c11fdd4f6413c08c81efd18110c768</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_snc_tesla_tesla_preference" sys_domain="global" view="Default view">ef4191d30f409740f6998bbce1050e5c</sys_ui_section>
             <sys_updated_by>aleck.lin</sys_updated_by>
-            <sys_updated_on>2018-02-08 06:40:30</sys_updated_on>
+            <sys_updated_on>2018-02-27 07:25:26</sys_updated_on>
             <sys_user/>
             <type>.split</type>
         </sys_ui_element>
@@ -47,41 +47,55 @@
             <element>value</element>
             <position>3</position>
             <sys_created_by>aleck.lin</sys_created_by>
-            <sys_created_on>2018-02-08 06:40:30</sys_created_on>
-            <sys_id>f74155d30f409740f6998bbce1050e03</sys_id>
+            <sys_created_on>2018-02-27 07:25:26</sys_created_on>
+            <sys_id>5bc11fdd4f6413c08c81efd18110c768</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_snc_tesla_tesla_preference" sys_domain="global" view="Default view">ef4191d30f409740f6998bbce1050e5c</sys_ui_section>
             <sys_updated_by>aleck.lin</sys_updated_by>
-            <sys_updated_on>2018-02-08 06:40:30</sys_updated_on>
+            <sys_updated_on>2018-02-27 07:25:26</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>user</element>
+            <position>4</position>
+            <sys_created_by>aleck.lin</sys_created_by>
+            <sys_created_on>2018-02-27 07:25:26</sys_created_on>
+            <sys_id>dbc11fdd4f6413c08c81efd18110c768</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_tesla_tesla_preference" sys_domain="global" view="Default view">ef4191d30f409740f6998bbce1050e5c</sys_ui_section>
+            <sys_updated_by>aleck.lin</sys_updated_by>
+            <sys_updated_on>2018-02-27 07:25:26</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>.end_split</element>
-            <position>4</position>
+            <position>5</position>
             <sys_created_by>aleck.lin</sys_created_by>
-            <sys_created_on>2018-02-08 06:40:30</sys_created_on>
-            <sys_id>7b4155d30f409740f6998bbce1050e03</sys_id>
+            <sys_created_on>2018-02-27 07:25:26</sys_created_on>
+            <sys_id>5fc11fdd4f6413c08c81efd18110c768</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_snc_tesla_tesla_preference" sys_domain="global" view="Default view">ef4191d30f409740f6998bbce1050e5c</sys_ui_section>
             <sys_updated_by>aleck.lin</sys_updated_by>
-            <sys_updated_on>2018-02-08 06:40:30</sys_updated_on>
+            <sys_updated_on>2018-02-27 07:25:26</sys_updated_on>
             <sys_user/>
             <type>.end_split</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>vehicle</element>
-            <position>5</position>
+            <element>active</element>
+            <position>6</position>
             <sys_created_by>aleck.lin</sys_created_by>
-            <sys_created_on>2018-02-08 06:41:07</sys_created_on>
-            <sys_id>707155d30f409740f6998bbce1050e33</sys_id>
+            <sys_created_on>2018-03-01 06:08:53</sys_created_on>
+            <sys_id>e57391ce4f2c93c08c81efd18110c71b</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_snc_tesla_tesla_preference" sys_domain="global" view="Default view">ef4191d30f409740f6998bbce1050e5c</sys_ui_section>
             <sys_updated_by>aleck.lin</sys_updated_by>
-            <sys_updated_on>2018-02-08 06:41:07</sys_updated_on>
+            <sys_updated_on>2018-03-01 06:08:53</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>

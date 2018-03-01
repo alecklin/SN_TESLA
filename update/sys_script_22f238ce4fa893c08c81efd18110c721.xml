@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>false</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_snc_tesla_vehicle_state</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition table="x_snc_tesla_vehicle_state">lockedVALCHANGES^ORhomelink_nearbyVALCHANGES^ORvalet_modeVALCHANGES^ORremote_startVALCHANGES^ORcar_versionVALCHANGES^ORapi_versionVALCHANGES^ORlast_autopark_errorVALCHANGES^EQ<item endquery="false" field="locked" goto="false" newquery="false" operator="VALCHANGES" or="false" value=""/>
+            <item endquery="false" field="homelink_nearby" goto="false" newquery="false" operator="VALCHANGES" or="true" value=""/>
+            <item endquery="false" field="valet_mode" goto="false" newquery="false" operator="VALCHANGES" or="true" value=""/>
+            <item endquery="false" field="remote_start" goto="false" newquery="false" operator="VALCHANGES" or="true" value=""/>
+            <item endquery="false" field="car_version" goto="false" newquery="false" operator="VALCHANGES" or="true" value=""/>
+            <item endquery="false" field="api_version" goto="false" newquery="false" operator="VALCHANGES" or="true" value=""/>
+            <item endquery="false" field="last_autopark_error" goto="false" newquery="false" operator="VALCHANGES" or="true" value=""/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter_condition>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Send notification when updated (Tesla)</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+
+	// Add your code here	
+	if (current.locked.changes())
+		sendNotification("locked", "Door Lock");
+	
+	if (current.valet_mode.changes())
+		sendNotification("valet_mode");
+
+	if (current.remote_start.changes())
+		sendNotification("remote_start");
+
+	if (current.homelink_nearby.changes())
+		sendNotification("homelink_nearby", "Homelink-Nearby setting");
+
+	if (current.car_version.changes())
+		sendNotification("car_version");
+
+	if (current.api_version.changes())
+		sendNotification("api_version");
+	
+	if (current.last_autopark_error.changes())
+		sendNotification("last_autopark_error");
+
+	
+	function sendNotification(column, label) {
+		x_snc_tesla.TelsaPushMessageTemplate.sendNotification(current, column, label);
+	}
+	
+
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>aleck.lin</sys_created_by>
+        <sys_created_on>2018-03-01 03:50:23</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>22f238ce4fa893c08c81efd18110c721</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name>Send notification when updated (Tesla)</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Tesla" source="x_snc_tesla">7441c3a64f5a4f002f9ae4928110c771</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Tesla">7441c3a64f5a4f002f9ae4928110c771</sys_scope>
+        <sys_update_name>sys_script_22f238ce4fa893c08c81efd18110c721</sys_update_name>
+        <sys_updated_by>aleck.lin</sys_updated_by>
+        <sys_updated_on>2018-03-01 05:41:57</sys_updated_on>
+        <template/>
+        <when>after</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=22f238ce4fa893c08c81efd18110c721"/>
+</record_update>
