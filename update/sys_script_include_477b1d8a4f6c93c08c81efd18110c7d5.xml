@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_snc_tesla.CollectTeslaNightlyInfo</api_name>
+        <client_callable>false</client_callable>
+        <description>Tesla - Collect vehicle nightly info </description>
+        <name>CollectTeslaNightlyInfo</name>
+        <script><![CDATA[/*  
+*  Author: Aleck.Lin@ServiceNow.com
+*
+*  Run this class with 
+
+	var ctni = new CollectTeslaNightlyInfo();
+	ctni.setDebug(true);
+	ctni.run();
+*/
+
+var CollectTeslaNightlyInfo = Class.create();
+CollectTeslaNightlyInfo.prototype = {
+    initialize: function() {
+		this.debugFlag = false;
+    },
+	
+	run: function() {
+		var gr = new GlideRecord("x_snc_tesla_tesla_vehicle");
+		gr.query();
+		while (gr.next()) {
+			this.getMileageStats(gr.sys_id);
+		}
+
+	},
+	
+	
+	/*
+	* Keep track of mileage number at each today, and also the total mileage driven in each day
+	*/
+	getMileageStats: function(vehicleSysId) {
+		var MILEAGE_ODOMETER = "mileage.odometer";
+		var MILEAGE_DAILY = "mileage.daily";
+
+		var mileageDaily;
+		var mileageToday;
+		
+		var gr = new GlideRecord("x_snc_tesla_vehicle_state");
+		gr.addQuery("vehicle", vehicleSysId);
+		gr.query();
+		if (!gr.next())
+			return;
+		
+		mileageToday = Number(gr.odometer);
+		
+		var grr = new GlideRecord("x_snc_tesla_staging_info");
+		grr.addQuery("vehicle", vehicleSysId);
+		grr.addQuery("name", MILEAGE_ODOMETER);
+		grr.orderByDesc("sys_created_on");
+		grr.setLimit(1);
+		grr.query();
+		if (grr.next()) {
+			var previousMileage = Number(grr.value);			
+			this.debug("The previous mileage is " + previousMileage);
+			mileageDaily = mileageToday - previousMileage;
+		}
+		
+		if (!isNaN(mileageDaily)) {
+			grr.initialize();
+			grr.name = MILEAGE_DAILY;
+			grr.value = mileageDaily;
+			grr.vehicle = vehicleSysId;
+			this.debug("The " + MILEAGE_DAILY + " is " + mileageDaily);
+			grr.insert();			
+		}
+			
+		if (!isNaN(mileageToday)) {
+			grr.initialize();
+			grr.name = MILEAGE_ODOMETER;
+			grr.value = mileageToday;
+			grr.vehicle = vehicleSysId;
+			this.debug("The " + MILEAGE_ODOMETER + " is " + mileageToday);			
+			grr.insert();				
+		}
+				
+	},
+
+	setDebug: function(flag) {
+		this.debugFlag = flag;
+	},
+	
+	debug: function(msg) {
+		if (!this.debugFlag)
+			return;
+		
+		gs.info("CollectTeslaNightlyInfo: " + msg);		
+	},
+	
+    type: 'CollectTeslaNightlyInfo'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>aleck.lin</sys_created_by>
+        <sys_created_on>2018-03-01 06:43:57</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>477b1d8a4f6c93c08c81efd18110c7d5</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>CollectTeslaNightlyInfo</sys_name>
+        <sys_package display_value="Tesla" source="x_snc_tesla">7441c3a64f5a4f002f9ae4928110c771</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Tesla">7441c3a64f5a4f002f9ae4928110c771</sys_scope>
+        <sys_update_name>sys_script_include_477b1d8a4f6c93c08c81efd18110c7d5</sys_update_name>
+        <sys_updated_by>aleck.lin</sys_updated_by>
+        <sys_updated_on>2018-03-01 07:41:29</sys_updated_on>
+    </sys_script_include>
+</record_update>
