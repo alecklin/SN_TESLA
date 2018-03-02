@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update node_type="sys_portal_page" unload_date="2018-03-02 08:13:57">
+    <sys_portal_page action="INSERT_OR_UPDATE">
+        <layout/>
+        <order/>
+        <read_roles/>
+        <roles/>
+        <selectable>false</selectable>
+        <sys_class_name>sys_portal_page</sys_class_name>
+        <sys_created_by>aleck.lin</sys_created_by>
+        <sys_created_on>2018-03-01 21:17:24</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>7d6320524fa8d3c08c81efd18110c79c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>PA Home</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Tesla" source="x_snc_tesla">7441c3a64f5a4f002f9ae4928110c771</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Tesla">7441c3a64f5a4f002f9ae4928110c771</sys_scope>
+        <sys_update_name>sys_portal_page_7d6320524fa8d3c08c81efd18110c79c</sys_update_name>
+        <sys_updated_by>aleck.lin</sys_updated_by>
+        <sys_updated_on>2018-03-01 21:17:24</sys_updated_on>
+        <title>PA Home</title>
+        <user/>
+        <view>pa_home_1</view>
+    </sys_portal_page>
+</record_update>

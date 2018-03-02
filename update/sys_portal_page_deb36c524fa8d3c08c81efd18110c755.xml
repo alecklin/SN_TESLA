@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update node_type="sys_portal_page" unload_date="2018-03-02 08:14:01">
+    <sys_portal_page action="INSERT_OR_UPDATE">
+        <layout/>
+        <order/>
+        <read_roles/>
+        <roles/>
+        <selectable>false</selectable>
+        <sys_class_name>sys_portal_page</sys_class_name>
+        <sys_created_by>aleck.lin</sys_created_by>
+        <sys_created_on>2018-03-01 21:18:48</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>deb36c524fa8d3c08c81efd18110c755</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>PA New Tab 1</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Tesla" source="x_snc_tesla">7441c3a64f5a4f002f9ae4928110c771</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Tesla">7441c3a64f5a4f002f9ae4928110c771</sys_scope>
+        <sys_update_name>sys_portal_page_deb36c524fa8d3c08c81efd18110c755</sys_update_name>
+        <sys_updated_by>aleck.lin</sys_updated_by>
+        <sys_updated_on>2018-03-01 21:18:48</sys_updated_on>
+        <title>PA New Tab 1</title>
+        <user/>
+        <view>pa_new_tab_1_1</view>
+        <related_items_node>
+            <sys_portal action="INSERT_OR_UPDATE">
+                <dropzone>dropzone1</dropzone>
+                <offset>0</offset>
+                <page display_value="PA New Tab 1">deb36c524fa8d3c08c81efd18110c755</page>
+                <summary/>
+                <sys_created_by>aleck.lin</sys_created_by>
+                <sys_created_on>2018-03-02 08:10:49</sys_created_on>
+                <sys_id>1df8fe164fe017c08c81efd18110c77a</sys_id>
+                <sys_mod_count>0</sys_mod_count>
+                <sys_updated_by>aleck.lin</sys_updated_by>
+                <sys_updated_on>2018-03-02 08:10:49</sys_updated_on>
+                <related_items_node>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>report_type</name>
+                        <portal_section display_value="Created 2018-03-02 00:10:49">1df8fe164fe017c08c81efd18110c77a</portal_section>
+                        <sys_created_by>aleck.lin</sys_created_by>
+                        <sys_created_on>2018-03-02 08:10:49</sys_created_on>
+                        <sys_id>11f8fe164fe017c08c81efd18110c77c</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>aleck.lin</sys_updated_by>
+                        <sys_updated_on>2018-03-02 08:10:49</sys_updated_on>
+                        <value>line</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>renderer</name>
+                        <portal_section display_value="Created 2018-03-02 00:10:49">1df8fe164fe017c08c81efd18110c77a</portal_section>
+                        <sys_created_by>aleck.lin</sys_created_by>
+                        <sys_created_on>2018-03-02 08:10:49</sys_created_on>
+                        <sys_id>15f8fe164fe017c08c81efd18110c77b</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>aleck.lin</sys_updated_by>
+                        <sys_updated_on>2018-03-02 08:10:49</sys_updated_on>
+                        <value>com.glide.ui.portal.RenderReport</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>title</name>
+                        <portal_section display_value="Created 2018-03-02 00:10:49">1df8fe164fe017c08c81efd18110c77a</portal_section>
+                        <sys_created_by>aleck.lin</sys_created_by>
+                        <sys_created_on>2018-03-02 08:10:49</sys_created_on>
+                        <sys_id>15f8fe164fe017c08c81efd18110c77c</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>aleck.lin</sys_updated_by>
+                        <sys_updated_on>2018-03-02 08:10:49</sys_updated_on>
+                        <value>Tesla Metric Battery Range Report</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>help_text_window</name>
+                        <portal_section display_value="Created 2018-03-02 00:10:49">1df8fe164fe017c08c81efd18110c77a</portal_section>
+                        <sys_created_by>aleck.lin</sys_created_by>
+                        <sys_created_on>2018-03-02 08:10:49</sys_created_on>
+                        <sys_id>19f8fe164fe017c08c81efd18110c77b</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>aleck.lin</sys_updated_by>
+                        <sys_updated_on>2018-03-02 08:10:49</sys_updated_on>
+                        <value>report_widget_description</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>can_subscribe</name>
+                        <portal_section display_value="Created 2018-03-02 00:10:49">1df8fe164fe017c08c81efd18110c77a</portal_section>
+                        <sys_created_by>aleck.lin</sys_created_by>
+                        <sys_created_on>2018-03-02 08:10:49</sys_created_on>
+                        <sys_id>1df8fe164fe017c08c81efd18110c77b</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>aleck.lin</sys_updated_by>
+                        <sys_updated_on>2018-03-02 08:10:49</sys_updated_on>
+                        <value>true</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>current_page</name>
+                        <portal_section display_value="Created 2018-03-02 00:10:49">1df8fe164fe017c08c81efd18110c77a</portal_section>
+                        <sys_created_by>aleck.lin</sys_created_by>
+                        <sys_created_on>2018-03-02 08:10:49</sys_created_on>
+                        <sys_id>99f8fe164fe017c08c81efd18110c77c</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>aleck.lin</sys_updated_by>
+                        <sys_updated_on>2018-03-02 08:10:49</sys_updated_on>
+                        <value>deb36c524fa8d3c08c81efd18110c755</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>sys_id</name>
+                        <portal_section display_value="Created 2018-03-02 00:10:49">1df8fe164fe017c08c81efd18110c77a</portal_section>
+                        <sys_created_by>aleck.lin</sys_created_by>
+                        <sys_created_on>2018-03-02 08:10:49</sys_created_on>
+                        <sys_id>9df8fe164fe017c08c81efd18110c77a</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>aleck.lin</sys_updated_by>
+                        <sys_updated_on>2018-03-02 08:10:49</sys_updated_on>
+                        <value>808772d24fe017c08c81efd18110c729</value>
+                    </sys_portal_preferences>
+                </related_items_node>
+            </sys_portal>
+            <sys_portal action="INSERT_OR_UPDATE">
+                <dropzone>dropzone999</dropzone>
+                <offset>0</offset>
+                <page display_value="PA New Tab 1">deb36c524fa8d3c08c81efd18110c755</page>
+                <summary/>
+                <sys_created_by>aleck.lin</sys_created_by>
+                <sys_created_on>2018-03-02 08:10:49</sys_created_on>
+                <sys_id>29f8fe164fe017c08c81efd18110c783</sys_id>
+                <sys_mod_count>0</sys_mod_count>
+                <sys_updated_by>aleck.lin</sys_updated_by>
+                <sys_updated_on>2018-03-02 08:10:49</sys_updated_on>
+                <related_items_node>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>renderer</name>
+                        <portal_section display_value="Created 2018-03-02 00:10:49">29f8fe164fe017c08c81efd18110c783</portal_section>
+                        <sys_created_by>aleck.lin</sys_created_by>
+                        <sys_created_on>2018-03-02 08:10:49</sys_created_on>
+                        <sys_id>21f8fe164fe017c08c81efd18110c784</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>aleck.lin</sys_updated_by>
+                        <sys_updated_on>2018-03-02 08:10:49</sys_updated_on>
+                        <value>com.glide.ui.portal.RenderReport</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>title</name>
+                        <portal_section display_value="Created 2018-03-02 00:10:49">29f8fe164fe017c08c81efd18110c783</portal_section>
+                        <sys_created_by>aleck.lin</sys_created_by>
+                        <sys_created_on>2018-03-02 08:10:49</sys_created_on>
+                        <sys_id>21f8fe164fe017c08c81efd18110c785</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>aleck.lin</sys_updated_by>
+                        <sys_updated_on>2018-03-02 08:10:49</sys_updated_on>
+                        <value>Tesla Metric Odometer Report</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>help_text_window</name>
+                        <portal_section display_value="Created 2018-03-02 00:10:49">29f8fe164fe017c08c81efd18110c783</portal_section>
+                        <sys_created_by>aleck.lin</sys_created_by>
+                        <sys_created_on>2018-03-02 08:10:49</sys_created_on>
+                        <sys_id>25f8fe164fe017c08c81efd18110c784</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>aleck.lin</sys_updated_by>
+                        <sys_updated_on>2018-03-02 08:10:49</sys_updated_on>
+                        <value>report_widget_description</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>can_subscribe</name>
+                        <portal_section display_value="Created 2018-03-02 00:10:49">29f8fe164fe017c08c81efd18110c783</portal_section>
+                        <sys_created_by>aleck.lin</sys_created_by>
+                        <sys_created_on>2018-03-02 08:10:49</sys_created_on>
+                        <sys_id>29f8fe164fe017c08c81efd18110c784</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>aleck.lin</sys_updated_by>
+                        <sys_updated_on>2018-03-02 08:10:49</sys_updated_on>
+                        <value>true</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>report_type</name>
+                        <portal_section display_value="Created 2018-03-02 00:10:49">29f8fe164fe017c08c81efd18110c783</portal_section>
+                        <sys_created_by>aleck.lin</sys_created_by>
+                        <sys_created_on>2018-03-02 08:10:49</sys_created_on>
+                        <sys_id>2df8fe164fe017c08c81efd18110c784</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>aleck.lin</sys_updated_by>
+                        <sys_updated_on>2018-03-02 08:10:49</sys_updated_on>
+                        <value>line</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>current_page</name>
+                        <portal_section display_value="Created 2018-03-02 00:10:49">29f8fe164fe017c08c81efd18110c783</portal_section>
+                        <sys_created_by>aleck.lin</sys_created_by>
+                        <sys_created_on>2018-03-02 08:10:49</sys_created_on>
+                        <sys_id>a5f8fe164fe017c08c81efd18110c785</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>aleck.lin</sys_updated_by>
+                        <sys_updated_on>2018-03-02 08:10:49</sys_updated_on>
+                        <value>deb36c524fa8d3c08c81efd18110c755</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>sys_id</name>
+                        <portal_section display_value="Created 2018-03-02 00:10:49">29f8fe164fe017c08c81efd18110c783</portal_section>
+                        <sys_created_by>aleck.lin</sys_created_by>
+                        <sys_created_on>2018-03-02 08:10:49</sys_created_on>
+                        <sys_id>a9f8fe164fe017c08c81efd18110c783</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>aleck.lin</sys_updated_by>
+                        <sys_updated_on>2018-03-02 08:10:49</sys_updated_on>
+                        <value>29c7f2d24fe017c08c81efd18110c773</value>
+                    </sys_portal_preferences>
+                </related_items_node>
+            </sys_portal>
+            <sys_portal action="INSERT_OR_UPDATE">
+                <dropzone>dropzone2</dropzone>
+                <offset>1</offset>
+                <page display_value="PA New Tab 1">deb36c524fa8d3c08c81efd18110c755</page>
+                <summary/>
+                <sys_created_by>aleck.lin</sys_created_by>
+                <sys_created_on>2018-03-02 08:10:49</sys_created_on>
+                <sys_id>65f8fe164fe017c08c81efd18110c781</sys_id>
+                <sys_mod_count>0</sys_mod_count>
+                <sys_updated_by>aleck.lin</sys_updated_by>
+                <sys_updated_on>2018-03-02 08:10:49</sys_updated_on>
+                <related_items_node>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>help_text_window</name>
+                        <portal_section display_value="Created 2018-03-02 00:10:49">65f8fe164fe017c08c81efd18110c781</portal_section>
+                        <sys_created_by>aleck.lin</sys_created_by>
+                        <sys_created_on>2018-03-02 08:10:49</sys_created_on>
+                        <sys_id>61f8fe164fe017c08c81efd18110c782</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>aleck.lin</sys_updated_by>
+                        <sys_updated_on>2018-03-02 08:10:49</sys_updated_on>
+                        <value>report_widget_description</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>can_subscribe</name>
+                        <portal_section display_value="Created 2018-03-02 00:10:49">65f8fe164fe017c08c81efd18110c781</portal_section>
+                        <sys_created_by>aleck.lin</sys_created_by>
+                        <sys_created_on>2018-03-02 08:10:49</sys_created_on>
+                        <sys_id>65f8fe164fe017c08c81efd18110c782</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>aleck.lin</sys_updated_by>
+                        <sys_updated_on>2018-03-02 08:10:49</sys_updated_on>
+                        <value>true</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>report_type</name>
+                        <portal_section display_value="Created 2018-03-02 00:10:49">65f8fe164fe017c08c81efd18110c781</portal_section>
+                        <sys_created_by>aleck.lin</sys_created_by>
+                        <sys_created_on>2018-03-02 08:10:49</sys_created_on>
+                        <sys_id>69f8fe164fe017c08c81efd18110c782</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>aleck.lin</sys_updated_by>
+                        <sys_updated_on>2018-03-02 08:10:49</sys_updated_on>
+                        <value>line</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>renderer</name>
+                        <portal_section display_value="Created 2018-03-02 00:10:49">65f8fe164fe017c08c81efd18110c781</portal_section>
+                        <sys_created_by>aleck.lin</sys_created_by>
+                        <sys_created_on>2018-03-02 08:10:49</sys_created_on>
+                        <sys_id>6df8fe164fe017c08c81efd18110c781</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>aleck.lin</sys_updated_by>
+                        <sys_updated_on>2018-03-02 08:10:49</sys_updated_on>
+                        <value>com.glide.ui.portal.RenderReport</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>title</name>
+                        <portal_section display_value="Created 2018-03-02 00:10:49">65f8fe164fe017c08c81efd18110c781</portal_section>
+                        <sys_created_by>aleck.lin</sys_created_by>
+                        <sys_created_on>2018-03-02 08:10:49</sys_created_on>
+                        <sys_id>6df8fe164fe017c08c81efd18110c782</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>aleck.lin</sys_updated_by>
+                        <sys_updated_on>2018-03-02 08:10:49</sys_updated_on>
+                        <value>Tesla Metric Outside Temperature Report</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>current_page</name>
+                        <portal_section display_value="Created 2018-03-02 00:10:49">65f8fe164fe017c08c81efd18110c781</portal_section>
+                        <sys_created_by>aleck.lin</sys_created_by>
+                        <sys_created_on>2018-03-02 08:10:49</sys_created_on>
+                        <sys_id>e1f8fe164fe017c08c81efd18110c783</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>aleck.lin</sys_updated_by>
+                        <sys_updated_on>2018-03-02 08:10:49</sys_updated_on>
+                        <value>deb36c524fa8d3c08c81efd18110c755</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>sys_id</name>
+                        <portal_section display_value="Created 2018-03-02 00:10:49">65f8fe164fe017c08c81efd18110c781</portal_section>
+                        <sys_created_by>aleck.lin</sys_created_by>
+                        <sys_created_on>2018-03-02 08:10:49</sys_created_on>
+                        <sys_id>e5f8fe164fe017c08c81efd18110c781</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>aleck.lin</sys_updated_by>
+                        <sys_updated_on>2018-03-02 08:10:49</sys_updated_on>
+                        <value>8d4772d24fe017c08c81efd18110c792</value>
+                    </sys_portal_preferences>
+                </related_items_node>
+            </sys_portal>
+            <sys_portal action="INSERT_OR_UPDATE">
+                <dropzone>dropzone2</dropzone>
+                <offset>0</offset>
+                <page display_value="PA New Tab 1">deb36c524fa8d3c08c81efd18110c755</page>
+                <summary/>
+                <sys_created_by>aleck.lin</sys_created_by>
+                <sys_created_on>2018-03-02 08:10:49</sys_created_on>
+                <sys_id>a1f8fe164fe017c08c81efd18110c77f</sys_id>
+                <sys_mod_count>0</sys_mod_count>
+                <sys_updated_by>aleck.lin</sys_updated_by>
+                <sys_updated_on>2018-03-02 08:10:49</sys_updated_on>
+                <related_items_node>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>current_page</name>
+                        <portal_section display_value="Created 2018-03-02 00:10:49">a1f8fe164fe017c08c81efd18110c77f</portal_section>
+                        <sys_created_by>aleck.lin</sys_created_by>
+                        <sys_created_on>2018-03-02 08:10:49</sys_created_on>
+                        <sys_id>21f8fe164fe017c08c81efd18110c781</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>aleck.lin</sys_updated_by>
+                        <sys_updated_on>2018-03-02 08:10:49</sys_updated_on>
+                        <value>deb36c524fa8d3c08c81efd18110c755</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>sys_id</name>
+                        <portal_section display_value="Created 2018-03-02 00:10:49">a1f8fe164fe017c08c81efd18110c77f</portal_section>
+                        <sys_created_by>aleck.lin</sys_created_by>
+                        <sys_created_on>2018-03-02 08:10:49</sys_created_on>
+                        <sys_id>25f8fe164fe017c08c81efd18110c77f</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>aleck.lin</sys_updated_by>
+                        <sys_updated_on>2018-03-02 08:10:49</sys_updated_on>
+                        <value>7167f2d24fe017c08c81efd18110c76b</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>can_subscribe</name>
+                        <portal_section display_value="Created 2018-03-02 00:10:49">a1f8fe164fe017c08c81efd18110c77f</portal_section>
+                        <sys_created_by>aleck.lin</sys_created_by>
+                        <sys_created_on>2018-03-02 08:10:49</sys_created_on>
+                        <sys_id>a1f8fe164fe017c08c81efd18110c780</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>aleck.lin</sys_updated_by>
+                        <sys_updated_on>2018-03-02 08:10:49</sys_updated_on>
+                        <value>true</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>report_type</name>
+                        <portal_section display_value="Created 2018-03-02 00:10:49">a1f8fe164fe017c08c81efd18110c77f</portal_section>
+                        <sys_created_by>aleck.lin</sys_created_by>
+                        <sys_created_on>2018-03-02 08:10:49</sys_created_on>
+                        <sys_id>a5f8fe164fe017c08c81efd18110c780</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>aleck.lin</sys_updated_by>
+                        <sys_updated_on>2018-03-02 08:10:49</sys_updated_on>
+                        <value>line</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>renderer</name>
+                        <portal_section display_value="Created 2018-03-02 00:10:49">a1f8fe164fe017c08c81efd18110c77f</portal_section>
+                        <sys_created_by>aleck.lin</sys_created_by>
+                        <sys_created_on>2018-03-02 08:10:49</sys_created_on>
+                        <sys_id>a9f8fe164fe017c08c81efd18110c77f</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>aleck.lin</sys_updated_by>
+                        <sys_updated_on>2018-03-02 08:10:49</sys_updated_on>
+                        <value>com.glide.ui.portal.RenderReport</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>title</name>
+                        <portal_section display_value="Created 2018-03-02 00:10:49">a1f8fe164fe017c08c81efd18110c77f</portal_section>
+                        <sys_created_by>aleck.lin</sys_created_by>
+                        <sys_created_on>2018-03-02 08:10:49</sys_created_on>
+                        <sys_id>a9f8fe164fe017c08c81efd18110c780</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>aleck.lin</sys_updated_by>
+                        <sys_updated_on>2018-03-02 08:10:49</sys_updated_on>
+                        <value>Tesla Metric Battery Level Report</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>help_text_window</name>
+                        <portal_section display_value="Created 2018-03-02 00:10:49">a1f8fe164fe017c08c81efd18110c77f</portal_section>
+                        <sys_created_by>aleck.lin</sys_created_by>
+                        <sys_created_on>2018-03-02 08:10:49</sys_created_on>
+                        <sys_id>adf8fe164fe017c08c81efd18110c77f</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>aleck.lin</sys_updated_by>
+                        <sys_updated_on>2018-03-02 08:10:49</sys_updated_on>
+                        <value>report_widget_description</value>
+                    </sys_portal_preferences>
+                </related_items_node>
+            </sys_portal>
+            <sys_portal action="INSERT_OR_UPDATE">
+                <dropzone>dropzone1</dropzone>
+                <offset>1</offset>
+                <page display_value="PA New Tab 1">deb36c524fa8d3c08c81efd18110c755</page>
+                <summary/>
+                <sys_created_by>aleck.lin</sys_created_by>
+                <sys_created_on>2018-03-02 08:10:49</sys_created_on>
+                <sys_id>ddf8fe164fe017c08c81efd18110c77c</sys_id>
+                <sys_mod_count>0</sys_mod_count>
+                <sys_updated_by>aleck.lin</sys_updated_by>
+                <sys_updated_on>2018-03-02 08:10:49</sys_updated_on>
+                <related_items_node>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>sys_id</name>
+                        <portal_section display_value="Created 2018-03-02 00:10:49">ddf8fe164fe017c08c81efd18110c77c</portal_section>
+                        <sys_created_by>aleck.lin</sys_created_by>
+                        <sys_created_on>2018-03-02 08:10:49</sys_created_on>
+                        <sys_id>51f8fe164fe017c08c81efd18110c77d</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>aleck.lin</sys_updated_by>
+                        <sys_updated_on>2018-03-02 08:10:49</sys_updated_on>
+                        <value>49b228124fa8d3c08c81efd18110c770</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>current_page</name>
+                        <portal_section display_value="Created 2018-03-02 00:10:49">ddf8fe164fe017c08c81efd18110c77c</portal_section>
+                        <sys_created_by>aleck.lin</sys_created_by>
+                        <sys_created_on>2018-03-02 08:10:49</sys_created_on>
+                        <sys_id>6df8fe164fe017c08c81efd18110c77e</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>aleck.lin</sys_updated_by>
+                        <sys_updated_on>2018-03-02 08:10:49</sys_updated_on>
+                        <value>deb36c524fa8d3c08c81efd18110c755</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>report_type</name>
+                        <portal_section display_value="Created 2018-03-02 00:10:49">ddf8fe164fe017c08c81efd18110c77c</portal_section>
+                        <sys_created_by>aleck.lin</sys_created_by>
+                        <sys_created_on>2018-03-02 08:10:49</sys_created_on>
+                        <sys_id>d1f8fe164fe017c08c81efd18110c77e</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>aleck.lin</sys_updated_by>
+                        <sys_updated_on>2018-03-02 08:10:49</sys_updated_on>
+                        <value>line</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>renderer</name>
+                        <portal_section display_value="Created 2018-03-02 00:10:49">ddf8fe164fe017c08c81efd18110c77c</portal_section>
+                        <sys_created_by>aleck.lin</sys_created_by>
+                        <sys_created_on>2018-03-02 08:10:49</sys_created_on>
+                        <sys_id>d5f8fe164fe017c08c81efd18110c77d</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>aleck.lin</sys_updated_by>
+                        <sys_updated_on>2018-03-02 08:10:49</sys_updated_on>
+                        <value>com.glide.ui.portal.RenderReport</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>title</name>
+                        <portal_section display_value="Created 2018-03-02 00:10:49">ddf8fe164fe017c08c81efd18110c77c</portal_section>
+                        <sys_created_by>aleck.lin</sys_created_by>
+                        <sys_created_on>2018-03-02 08:10:49</sys_created_on>
+                        <sys_id>d5f8fe164fe017c08c81efd18110c77e</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>aleck.lin</sys_updated_by>
+                        <sys_updated_on>2018-03-02 08:10:49</sys_updated_on>
+                        <value>Tesla Metric Inside Temperature Report</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>help_text_window</name>
+                        <portal_section display_value="Created 2018-03-02 00:10:49">ddf8fe164fe017c08c81efd18110c77c</portal_section>
+                        <sys_created_by>aleck.lin</sys_created_by>
+                        <sys_created_on>2018-03-02 08:10:49</sys_created_on>
+                        <sys_id>d9f8fe164fe017c08c81efd18110c77d</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>aleck.lin</sys_updated_by>
+                        <sys_updated_on>2018-03-02 08:10:49</sys_updated_on>
+                        <value>report_widget_description</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>can_subscribe</name>
+                        <portal_section display_value="Created 2018-03-02 00:10:49">ddf8fe164fe017c08c81efd18110c77c</portal_section>
+                        <sys_created_by>aleck.lin</sys_created_by>
+                        <sys_created_on>2018-03-02 08:10:49</sys_created_on>
+                        <sys_id>ddf8fe164fe017c08c81efd18110c77d</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>aleck.lin</sys_updated_by>
+                        <sys_updated_on>2018-03-02 08:10:49</sys_updated_on>
+                        <value>true</value>
+                    </sys_portal_preferences>
+                </related_items_node>
+            </sys_portal>
+        </related_items_node>
+    </sys_portal_page>
+</record_update>

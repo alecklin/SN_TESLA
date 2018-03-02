@@ -48,7 +48,7 @@ Created by = aleck.lin</description>
         <role_override>false</role_override>
         <roles>x_snc_tesla.user</roles>
         <score_periods>-1</score_periods>
-        <scores_modified_at>2018-03-01 05:00:04</scores_modified_at>
+        <scores_modified_at>2018-03-02 05:00:02</scores_modified_at>
         <script display_value="Tesla.Get Outside Temperature">dacd8d9f0f009740f6998bbce1050e9b</script>
         <scripted>true</scripted>
         <show_delta>true</show_delta>

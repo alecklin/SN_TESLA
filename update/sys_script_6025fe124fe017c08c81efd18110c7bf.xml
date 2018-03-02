@@ -12,16 +12,17 @@
         <advanced>true</advanced>
         <change_fields>false</change_fields>
         <client_callable>false</client_callable>
-        <collection>x_snc_tesla_driving_and_position</collection>
+        <collection>x_snc_tesla_climate_setting</collection>
         <condition/>
         <description/>
         <execute_function>false</execute_function>
-        <filter_condition table="x_snc_tesla_driving_and_position">shift_stateVALCHANGES^EQ<item endquery="false" field="shift_state" goto="false" newquery="false" operator="VALCHANGES" or="false" value=""/>
+        <filter_condition table="x_snc_tesla_climate_setting">is_auto_conditioning_onVALCHANGES^ORsmart_preconditioningVALCHANGES^EQ<item endquery="false" field="is_auto_conditioning_on" goto="false" newquery="false" operator="VALCHANGES" or="false" value=""/>
+            <item endquery="false" field="smart_preconditioning" goto="false" newquery="false" operator="VALCHANGES" or="true" value=""/>
             <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
         </filter_condition>
         <is_rest>false</is_rest>
         <message/>
-        <name>Send notification when updated  (Tesla)</name>
+        <name>Send notification when updated (Tesla)</name>
         <order>100</order>
         <priority>100</priority>
         <rest_method/>
@@ -33,34 +34,36 @@
         <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
 
 	// Add your code here
-	if (current.shift_state.changes())
-		sendNotification("shift_state", "Gear Shift");
-
+	if (current.is_auto_conditioning_on.changes())
+		sendNotification("is_auto_conditioning_on");		
+	
+	if (current.smart_preconditioning.changes())
+		sendNotification("smart_preconditioning");		
 	
 	function sendNotification(column, label) {
 		x_snc_tesla.TelsaPushMessageTemplate.sendNotification(current, column, label);
-	}
+	}		
 
 })(current, previous);]]></script>
         <sys_class_name>sys_script</sys_class_name>
         <sys_created_by>aleck.lin</sys_created_by>
-        <sys_created_on>2018-03-01 04:23:28</sys_created_on>
+        <sys_created_on>2018-03-02 07:57:15</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
-        <sys_id>efbab0c64fe893c08c81efd18110c7d9</sys_id>
-        <sys_mod_count>4</sys_mod_count>
-        <sys_name>Send notification when updated  (Tesla)</sys_name>
+        <sys_id>6025fe124fe017c08c81efd18110c7bf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Send notification when updated (Tesla)</sys_name>
         <sys_overrides/>
         <sys_package display_value="Tesla" source="x_snc_tesla">7441c3a64f5a4f002f9ae4928110c771</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Tesla">7441c3a64f5a4f002f9ae4928110c771</sys_scope>
-        <sys_update_name>sys_script_efbab0c64fe893c08c81efd18110c7d9</sys_update_name>
+        <sys_update_name>sys_script_6025fe124fe017c08c81efd18110c7bf</sys_update_name>
         <sys_updated_by>aleck.lin</sys_updated_by>
-        <sys_updated_on>2018-03-02 07:47:43</sys_updated_on>
+        <sys_updated_on>2018-03-02 07:57:15</sys_updated_on>
         <template/>
         <when>after</when>
     </sys_script>
-    <sys_translated_text action="delete_multiple" query="documentkey=efbab0c64fe893c08c81efd18110c7d9"/>
+    <sys_translated_text action="delete_multiple" query="documentkey=6025fe124fe017c08c81efd18110c7bf"/>
 </record_update>

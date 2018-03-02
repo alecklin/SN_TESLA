@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <database>
-    <element extends="cmdb_ci" label="Automobile" max_length="40" name="x_snc_tesla_automobile" sizeclass="1" type="collection"/>
+    <element extends="cmdb_ci" label="Automobile" max_length="40" name="x_snc_tesla_automobile" sizeclass="3" type="collection"/>
 </database>

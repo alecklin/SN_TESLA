@@ -4,7 +4,7 @@
         <abort_action>false</abort_action>
         <access>package_private</access>
         <action_delete>false</action_delete>
-        <action_insert>false</action_insert>
+        <action_insert>true</action_insert>
         <action_query>false</action_query>
         <action_update>true</action_update>
         <active>true</active>
@@ -12,16 +12,17 @@
         <advanced>true</advanced>
         <change_fields>false</change_fields>
         <client_callable>false</client_callable>
-        <collection>x_snc_tesla_driving_and_position</collection>
+        <collection>x_snc_tesla_tesla_vehicle</collection>
         <condition/>
         <description/>
         <execute_function>false</execute_function>
-        <filter_condition table="x_snc_tesla_driving_and_position">shift_stateVALCHANGES^EQ<item endquery="false" field="shift_state" goto="false" newquery="false" operator="VALCHANGES" or="false" value=""/>
+        <filter_condition table="x_snc_tesla_tesla_vehicle">ownerVALCHANGES^ownerISNOTEMPTY^EQ<item endquery="false" field="owner" goto="false" newquery="false" operator="VALCHANGES" or="false" value=""/>
+            <item endquery="false" field="owner" goto="false" newquery="false" operator="ISNOTEMPTY" or="false" value=""/>
             <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
         </filter_condition>
         <is_rest>false</is_rest>
         <message/>
-        <name>Send notification when updated  (Tesla)</name>
+        <name>Set Automobile Assigned to</name>
         <order>100</order>
         <priority>100</priority>
         <rest_method/>
@@ -33,34 +34,31 @@
         <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
 
 	// Add your code here
-	if (current.shift_state.changes())
-		sendNotification("shift_state", "Gear Shift");
-
-	
-	function sendNotification(column, label) {
-		x_snc_tesla.TelsaPushMessageTemplate.sendNotification(current, column, label);
-	}
+	var gr = new GlideRecord("x_snc_tesla_automobile");
+	gr.get(current.automobile);
+	gr.assigned_to = current.owner.user_name;
+	gr.update();
 
 })(current, previous);]]></script>
         <sys_class_name>sys_script</sys_class_name>
         <sys_created_by>aleck.lin</sys_created_by>
-        <sys_created_on>2018-03-01 04:23:28</sys_created_on>
+        <sys_created_on>2018-03-01 17:46:46</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
-        <sys_id>efbab0c64fe893c08c81efd18110c7d9</sys_id>
-        <sys_mod_count>4</sys_mod_count>
-        <sys_name>Send notification when updated  (Tesla)</sys_name>
+        <sys_id>3cc2ff024fe4d3c08c81efd18110c703</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_name>Set Automobile Assigned to</sys_name>
         <sys_overrides/>
         <sys_package display_value="Tesla" source="x_snc_tesla">7441c3a64f5a4f002f9ae4928110c771</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Tesla">7441c3a64f5a4f002f9ae4928110c771</sys_scope>
-        <sys_update_name>sys_script_efbab0c64fe893c08c81efd18110c7d9</sys_update_name>
+        <sys_update_name>sys_script_3cc2ff024fe4d3c08c81efd18110c703</sys_update_name>
         <sys_updated_by>aleck.lin</sys_updated_by>
-        <sys_updated_on>2018-03-02 07:47:43</sys_updated_on>
+        <sys_updated_on>2018-03-01 21:09:45</sys_updated_on>
         <template/>
         <when>after</when>
     </sys_script>
-    <sys_translated_text action="delete_multiple" query="documentkey=efbab0c64fe893c08c81efd18110c7d9"/>
+    <sys_translated_text action="delete_multiple" query="documentkey=3cc2ff024fe4d3c08c81efd18110c703"/>
 </record_update>
