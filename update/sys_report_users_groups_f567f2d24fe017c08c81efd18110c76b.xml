@@ -2,7 +2,7 @@
 <record_update table="sys_report_users_groups">
     <sys_report_users_groups action="INSERT_OR_UPDATE">
         <group_id/>
-        <report_id display_value="Tesla Metric Battery Level Report">7167f2d24fe017c08c81efd18110c76b</report_id>
+        <report_id display_value="Battery Level (Percentage)">7167f2d24fe017c08c81efd18110c76b</report_id>
         <sys_class_name>sys_report_users_groups</sys_class_name>
         <sys_created_by>aleck.lin</sys_created_by>
         <sys_created_on>2018-03-02 08:04:01</sys_created_on>
