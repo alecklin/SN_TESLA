@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function($scope, $location, $rootScope, spUtil, $interpolate) {
+	/* widget controller */
+	var c = this;
+	c.data.isValid = true;
+	//console.log(c.data.table);
+	//console.log(c.data.field_list);
+	
+	$scope.$on('vehicleListSelected', function (event, data) {
+		c.server.get({vehicleId: data.vehicleId, table: data.table})
+		  .then(function(response) {
+			
+			//alert("vehicleId is " + vehicleId + "table is " + table);
+			//alert("vehicleId is " + data.vehicleId + "table is " + data.table);			
+			
+		//	alert(" response is " + response.data.table + " "  + response.data.vehicleId )
+			
+			
+			//console.log(data + '-> ' + response.data.alertData);
+			c.data.vehicleData = response.data.vehicleData;
+			c.data.vehicleId = response.data.vehicleId;
+			c.data.table = response.data.table;
+		});
+  });
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css/>
+        <data_table>sp_instance_table</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list>table,field_list</field_list>
+        <has_preview>true</has_preview>
+        <id>tesla-info-details</id>
+        <internal>false</internal>
+        <link/>
+        <name>Tesla Info Detail Display</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  //data.table = data.table || options.table;
+	//data.field_list = data.field_list || options.field_list || 'shift_state';
+	//data.vehicleId = "7491d88213609b80ab3bb8b12244b0fe";
+	//var fields = data.field_list.split(',');
+	
+	if (input) {
+		
+		var table = data.table || input.table;
+		if (!table)
+			table = "x_snc_tesla_charging_state";
+		
+		var vehicleId = data.vehicleId || input.vehicleId;
+		if (!vehicleId)
+			vehicleId = "7491d88213609b80ab3bb8b12244b0fe";
+		
+		loadEventDetails(table, vehicleId);
+	}
+	
+	function loadEventDetails(table, vehicleId) {
+		gs.info("table is " + table);
+		gs.info("vehicleId is " + vehicleId);		
+		
+		var vehicleData = [];
+		var gr = new GlideRecord(table);
+		if (gr.get("vehicle", vehicleId)) {
+			var fields = getFields(table);
+			
+			for (var i = 0; i < fields.length; i++) {
+				var field = fields[i];
+				var element = {};
+				element.label = getFieldLabel(table, field);
+				element.value = gr.getDisplayValue(field);
+				if (!gs.nil(element.value)) {
+					vehicleData.push(element);
+				}
+			}
+		}
+		data.vehicleId = vehicleId;
+		data.vehicleData = vehicleData;
+		
+	}
+	
+	function getFieldLabel(table, field) {
+		var gr = new GlideRecord('sys_documentation');
+		gr.addQuery('name', table);
+		gr.addQuery('element', field);
+		gr.query();
+		if (gr.next()) {
+			return gr.label + '';
+		}
+	}
+	
+	function getFields(table) {		
+		var fields = [];
+		
+		var gr = new GlideRecord('sys_documentation');
+		gr.addQuery('name', table);
+		gr.addNotNullQuery('element', table);		
+		gr.query();
+		while (gr.next()) {
+		  if (gr.element.indexOf("sys_") == 0)
+		    continue;
+			
+			var field =  gr.element + '';
+			if (!field)
+				continue;
+
+			fields.push(field);
+
+		}	
+		return fields;
+	}
+	
+	
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>aleck.lin</sys_created_by>
+        <sys_created_on>2018-03-11 18:32:02</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>097dd7994ffc5fc08c81efd18110c7d7</sys_id>
+        <sys_mod_count>61</sys_mod_count>
+        <sys_name>Tesla Info Detail Display</sys_name>
+        <sys_package display_value="Tesla" source="x_snc_tesla">7441c3a64f5a4f002f9ae4928110c771</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Tesla">7441c3a64f5a4f002f9ae4928110c771</sys_scope>
+        <sys_update_name>sp_widget_097dd7994ffc5fc08c81efd18110c7d7</sys_update_name>
+        <sys_updated_by>aleck.lin</sys_updated_by>
+        <sys_updated_on>2018-03-11 23:47:01</sys_updated_on>
+        <template><![CDATA[<div ng-if="c.data.isValid" class="panel panel-default b">
+  <div class="panel-heading">
+    <h4 class="panel-title">Vehicle Details</h4>
+  </div>
+  <div class="panel-body container-fluid form-horizontal">
+    	<div class="form-group" ng-repeat="element in c.data.vehicleData">
+        <label class="col-sm-4 control-label" for="{{element.label}}" >{{element.label}}</label>
+        <div class="col-sm-8 form-control-static" id="{{element.label}}">{{element.value}}</div>
+      </div>
+
+    <!--
+      <a ng-if="c.data.vehicleId != ''"
+         href="/x_snc_tesla_tesla_vehicle.do?sys_id={{c.data.vehicleId}}"
+         target="_blank">Open Detail ...</a>
+--> 
+  </div>
+</div>]]></template>
+    </sp_widget>
+</record_update>

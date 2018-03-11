@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function($scope, spUtil) {
+  /* widget controller */
+  var c = this;
+	
+	
+
+	
+}
+
+]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.panel-wrapper {
+	margin-bottom: 10px;
+}
+.panel-proper {
+	background-color: #fff;
+	border-radius: 5px;
+	transition: box-shadow 0.5s;
+	position: relative;
+}
+
+.header_img img{
+  max-height: 100px;
+  display:block;
+  margin:auto;
+}
+</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>tesla_icon</id>
+        <internal>false</internal>
+        <link/>
+        <name>Tesla Icon</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+
+	
+	
+
+	
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>aleck.lin</sys_created_by>
+        <sys_created_on>2018-03-11 17:05:20</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>4f990fd94fbc5fc08c81efd18110c7a2</sys_id>
+        <sys_mod_count>13</sys_mod_count>
+        <sys_name>Tesla Icon</sys_name>
+        <sys_package display_value="Tesla" source="x_snc_tesla">7441c3a64f5a4f002f9ae4928110c771</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Tesla">7441c3a64f5a4f002f9ae4928110c771</sys_scope>
+        <sys_update_name>sp_widget_4f990fd94fbc5fc08c81efd18110c7a2</sys_update_name>
+        <sys_updated_by>aleck.lin</sys_updated_by>
+        <sys_updated_on>2018-03-11 23:05:01</sys_updated_on>
+        <template><![CDATA[<div class="panel-wrapper" ng-class="{ 'expanded': c.expanded, 'recovered': (c.alert.state === 'Closed') }">
+	<div class="panel-proper">
+
+		 <div class="panel-body container-fluid form-horizontal">
+        <div class="header_img">
+    <!--
+          <img src="https://s.aolcdn.com/dims-global/dims3/GLOB/legacy_thumbnail/788x525/quality/85/https://s.aolcdn.com/commerce/autodata/images/USC70TSC024B021001.jpg"/>
+    -->
+          <img src="https://png.icons8.com/color/1600/tesla-logo.png"/>      
+        </div>    
+    </div>    
+    
+  </div><!-- pannel-proper -->
+</div> <!-- panel-wrapper --> ]]></template>
+    </sp_widget>
+</record_update>

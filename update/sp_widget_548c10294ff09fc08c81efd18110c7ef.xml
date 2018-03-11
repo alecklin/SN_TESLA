@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function($scope, spUtil) {
+  /* widget controller */
+  var c = this;
+	
+	
+	c.setValet = function (valet_state, vehicle) {
+		//alert(valet_state);
+		c.server.get({action: 'setValet', valetState: valet_state, vehicle: vehicle});
+		
+	}
+
+	c.setChargingReminderTime = function(chargingReminderTime, vehicleId) {
+		c.server.get({action: 'setChargingReminderTime', chargingReminderTime: chargingReminderTime, vehicleId: vehicleId});		
+	}
+		
+	
+	c.setEndChargingTime = function(endChargingTime, vehicleId) {
+		c.server.get({action: 'setEndChargingTime', endChargingTime: endChargingTime, vehicleId: vehicleId});		
+	}
+	
+	
+	
+}
+
+]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.panel-wrapper {
+	margin-bottom: 10px;
+}
+.panel-proper {
+	background-color: #fff;
+	border-radius: 5px;
+	transition: box-shadow 0.5s;
+	position: relative;
+}
+
+
+.preference {
+  margin:5px;
+}
+
+.preference label {
+  margin: 0 15px 0 0 ;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {display:none;}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>tesla_preferences</id>
+        <internal>false</internal>
+        <link/>
+        <name>Tesla Preferences</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+
+	
+	var vehicle_ids = getVehicles(); 
+	
+	var vehicles = {};
+
+	var vehiclePreferences = {};	
+	
+	for (var i=0; i<vehicle_ids.length; i++) {
+		var vehicle_id = vehicle_ids[i];
+		vehicles[vehicle_id] = {};
+		
+		/*
+		vehicleStates = getVehicleProps(vehicle_id, "x_snc_tesla_vehicle_state");	
+		vehicleDrivingPosition = getVehicleProps(vehicle_id, "x_snc_tesla_driving_and_position");	
+		vehicleChargingState = getVehicleProps(vehicle_id, "x_snc_tesla_charging_state");	
+		vehicleClimateSetting = getVehicleProps(vehicle_id, "x_snc_tesla_climate_setting");	
+		vehicleGuiSetting = getVehicleProps(vehicle_id, "x_snc_tesla_gui_setting");	
+		*/
+		
+		vehiclePreferences = getVehiclePreferences(vehicle_id);	
+	}
+	
+	data.vehicleId = vehicle_ids[0];
+	data.vehiclePreferences = vehiclePreferences;
+	
+	
+	function getVehicles() {
+		var vehicles = [];
+
+		var gr = new GlideRecord("x_snc_tesla_tesla_vehicle");
+		gr.addQuery("sys_created_by", gs.getUserName());
+		gr.query();
+		while (gr.next()) {
+			vehicles.push(gr.sys_id+'');				
+		}		
+		return vehicles;
+	}
+	
+	function getVehiclePreferences(vehicleId) {
+			var prefs = {};
+		
+			var grtv = new GlideRecord("x_snc_tesla_tesla_vehicle");
+			grtv.get(vehicleId);
+
+			var gr = new GlideRecord("x_snc_tesla_tesla_preference");
+			gr.addQuery("vehicle", vehicleId);
+			gr.addQuery("user", grtv.owner);		
+			gr.query();				
+			while (gr.next()) {
+				prefs[gr.name] = gr.value + '';				
+			}
+			
+			return prefs;
+	}	
+	
+	function getVehicleProps(vehicleId, tableName) {
+		var obj = {};
+		gr = new GlideRecord(tableName);
+		gr.addQuery("vehicle", vehicleId);
+		gr.query();
+		if (gr.next()) {
+			var columns = getTableAttrigbutes(tableName);
+			for (var i=0; i<columns.length; i++) {
+				var column = columns[i];
+				var clabel = ''; 
+				var cname = '';				
+				for (var prop in column) {
+					cname = prop;
+					clabel = column[prop];					
+				}
+				
+				var value = gr[cname]+'';
+				
+				//Convert booleans properly
+				if (value == "true")
+				  value = true;
+				else if (value == "false")
+					value = false;
+				
+				// Set up the label and value
+				//obj[cname] = {value:clabel};
+				obj[cname] = value;
+			}
+		}					
+		
+		return obj;
+	}
+	
+	
+	function getTableAttrigbutes(tableName) {
+		var columns = [];
+		var gr = new GlideRecord("sys_dictionary");
+		gr.addQuery("name", tableName);
+		gr.query();
+		while (gr.next()){
+			var cname = gr.element + '';
+			var label = gr.column_label + '';
+			
+			if (cname.startsWith("sys_") || gs.nil(cname))
+				continue;
+			
+			var obj = {};
+			obj[cname] = label;
+			
+			columns.push(obj);
+		}
+		
+		return columns;		
+	}
+	
+	/********************************************************
+	* Process client calls
+	*********************************************************/
+	
+	
+	if (input) {
+		if (input.action == "setValet") {
+			setValet(input.valetState, input.vehicle);
+		}
+
+		if (input.action == "setChargingReminderTime") {
+			setChargingReminderTime(input.chargingReminderTime, input.vehicleId);
+		}		
+		
+		if (input.action == "setEndChargingTime") {
+			setEndChargingTime(input.endChargingTime, input.vehicleId);
+		}
+		
+	}	
+	
+	function setChargingReminderTime(chargingReminderTime, vehicleId) {
+		setPreference("charging_start_time", chargingReminderTime, vehicleId)	
+	}	
+	
+	function setEndChargingTime(endChargingTime, vehicleId) {
+		setPreference("end_charging_time", endChargingTime, vehicleId)	
+	}
+	
+	function setValet(valetState, vehicle) {		
+		setPreference("car.valet_mode", valetState, vehicle);		
+	}
+	
+	function setPreference(prefName, value, vehicle) {
+		var grtv = new GlideRecord("x_snc_tesla_tesla_vehicle");
+		grtv.get(vehicle);
+		
+		var gr = new GlideRecord("x_snc_tesla_tesla_preference");
+		gr.addQuery("vehicle", vehicle);
+		gr.addQuery("user", grtv.owner);		
+		gr.addQuery("name", prefName);
+		gr.query();
+		if (gr.next()) {
+			gr.value = value;
+			gr.update();
+		} else {
+			gr.initialize();
+			gr.vehicle = vehicle;
+			gr.name = prefName;
+			gr.value = value;
+			gr.user = grtv.owner;
+			gr.insert();						
+		}
+		
+		return gr;
+	}
+	
+	
+
+	
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>aleck.lin</sys_created_by>
+        <sys_created_on>2018-03-11 23:07:31</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>548c10294ff09fc08c81efd18110c7ef</sys_id>
+        <sys_mod_count>30</sys_mod_count>
+        <sys_name>Tesla Preferences</sys_name>
+        <sys_package display_value="Tesla" source="x_snc_tesla">7441c3a64f5a4f002f9ae4928110c771</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Tesla">7441c3a64f5a4f002f9ae4928110c771</sys_scope>
+        <sys_update_name>sp_widget_548c10294ff09fc08c81efd18110c7ef</sys_update_name>
+        <sys_updated_by>aleck.lin</sys_updated_by>
+        <sys_updated_on>2018-03-11 23:38:02</sys_updated_on>
+        <template><![CDATA[<div class="panel-wrapper" ng-class="{ 'expanded': c.expanded, 'recovered': (c.alert.state === 'Closed') }">
+	<div class="panel-proper">
+
+	<div class="panel panel-default b">
+  	<div class="panel-heading">
+    	<h4 class="panel-title">Preferences & Settings</h4>
+	  </div>
+
+	  <div class="panel-body container-fluid form-horizontal">    
+         
+
+      <div class="preference">
+        <label>Charge Reminder Time</label>
+        <input ng-model="c.data.charging_reminder" ng-value="c.data.vehiclePreferences.charging_start_time">
+        <input type="submit" ng-click="c.setChargingReminderTime(c.data.charging_reminder, c.data.vehicleId)" />
+      </div>
+
+
+      <div class="preference">
+        <label>Charge End Time</label>
+        <input ng-model="c.data.end_charging_time" ng-value="c.data.vehiclePreferences.end_charging_time">      
+        <input type="submit" ng-click="c.setEndChargingTime(c.data.end_charging_time, c.data.vehicleId)" />
+      </div>
+
+      <!--
+      <div>
+        Charging Schedule      
+        <br/>
+        Starting Time: {{ c.data.vehicleChargingState.scheduled_charging_start_time}}
+        <br/>
+        Set Charging Start Time
+        <br/>
+        Set Charging End Time
+      </div>
+			-->
+
+    </div> <!-- panel-body container-fluid form-horizontal --> 
+	</div> <!-- panel panel-default b -->    
+        
+    
+    
+  </div><!-- pannel-proper -->
+</div> <!-- panel-wrapper --> ]]></template>
+    </sp_widget>
+</record_update>

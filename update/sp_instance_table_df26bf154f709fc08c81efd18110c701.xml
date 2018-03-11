@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sp_instance_table">
+    <sp_instance_table action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <display_field/>
+        <field_list>shift_state,speed,power</field_list>
+        <filter/>
+        <glyph/>
+        <id/>
+        <maximum_entries>5</maximum_entries>
+        <order>1</order>
+        <order_by/>
+        <order_direction>asc</order_direction>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="2">b6d3ef154f309fc08c81efd18110c7a8</sp_column>
+        <sp_page/>
+        <sp_widget display_value="Tesla Info Detail Display">097dd7994ffc5fc08c81efd18110c7d7</sp_widget>
+        <sys_class_name>sp_instance_table</sys_class_name>
+        <sys_created_by>aleck.lin</sys_created_by>
+        <sys_created_on>2018-03-11 20:20:04</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>df26bf154f709fc08c81efd18110c701</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Tesla" source="x_snc_tesla">7441c3a64f5a4f002f9ae4928110c771</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Tesla">7441c3a64f5a4f002f9ae4928110c771</sys_scope>
+        <sys_update_name>sp_instance_table_df26bf154f709fc08c81efd18110c701</sys_update_name>
+        <sys_updated_by>aleck.lin</sys_updated_by>
+        <sys_updated_on>2018-03-11 20:20:46</sys_updated_on>
+        <table>x_snc_tesla_driving_and_position</table>
+        <title/>
+        <url/>
+        <widget_parameters/>
+    </sp_instance_table>
+</record_update>
