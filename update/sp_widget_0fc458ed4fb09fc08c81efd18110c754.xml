@@ -159,6 +159,7 @@ input:checked + .slider:before {
 	
 	var vehicles = {};
 	
+	var vehicleTesla = {};
 	var vehicleStates = {};
 	var vehicleDrivingPosition = {};
 	var vehicleChargingState = {};
@@ -169,6 +170,11 @@ input:checked + .slider:before {
 		var vehicle_id = vehicle_ids[i];
 		vehicles[vehicle_id] = {};
 		
+		vehicleTesla = getVehicleProps(vehicle_id, "x_snc_tesla_tesla_vehicle");	
+gs.info("vehicle_id is " + vehicle_id);
+		gs.info(JSON.stringify(vehicleTesla));
+		
+		
 		vehicleStates = getVehicleProps(vehicle_id, "x_snc_tesla_vehicle_state");	
 		vehicleDrivingPosition = getVehicleProps(vehicle_id, "x_snc_tesla_driving_and_position");	
 		vehicleChargingState = getVehicleProps(vehicle_id, "x_snc_tesla_charging_state");	
@@ -176,6 +182,7 @@ input:checked + .slider:before {
 		vehicleGuiSetting = getVehicleProps(vehicle_id, "x_snc_tesla_gui_setting");	
 	}
 	
+	data.vehicleTesla = vehicleTesla;
 	data.vehicleStates = vehicleStates;
 	data.vehicleDrivingPosition = vehicleDrivingPosition;
 	data.vehicleChargingState = vehicleChargingState;
@@ -200,30 +207,38 @@ input:checked + .slider:before {
 		gr = new GlideRecord(tableName);
 		gr.addQuery("vehicle", vehicleId);
 		gr.query();
-		if (gr.next()) {
-			var columns = getTableAttrigbutes(tableName);
-			for (var i=0; i<columns.length; i++) {
-				var column = columns[i];
-				var clabel = ''; 
-				var cname = '';				
-				for (var prop in column) {
-					cname = prop;
-					clabel = column[prop];					
-				}
-				
-				var value = gr[cname]+'';
-				
-				//Convert booleans properly
-				if (value == "true")
-				  value = true;
-				else if (value == "false")
-					value = false;
-				
-				// Set up the label and value
-				//obj[cname] = {value:clabel};
-				obj[cname] = value;
+		
+		if (!gr.next()) {
+			gr.initialize()
+			gr.addQuery("sys_id", vehicleId);
+			gr.query();
+			if (!gr.next()) //If it still fails, then get out of here
+				return;
+		}	
+			
+		var columns = getTableAttrigbutes(tableName);
+		for (var i=0; i<columns.length; i++) {
+			var column = columns[i];
+			var clabel = ''; 
+			var cname = '';				
+			for (var prop in column) {
+				cname = prop;
+				clabel = column[prop];					
 			}
-		}					
+
+			var value = _processValue(vehicleId, cname, gr[cname]+'');
+
+			//Convert booleans properly
+			if (value == "true")
+				value = true;
+			else if (value == "false")
+				value = false;
+
+			// Set up the label and value
+			//obj[cname] = {value:clabel};
+			obj[cname] = value;
+		}
+						
 		
 		return obj;
 	}
@@ -249,6 +264,17 @@ input:checked + .slider:before {
 		
 		return columns;		
 	}
+	
+	/*
+	*  Process special values
+	*/
+	function _processValue(vehicleId, name, value) {
+		if (name == "inside_temp" || name == "outside_temp" || name == "driver_temp_setting" || name == "passenger_temp_setting")
+			return new TeslaUtils().getTemperature(value, vehicleId);
+			
+		return value;			
+	}
+	
 	
 	/********************************************************
 	* Process client calls
@@ -302,7 +328,7 @@ input:checked + .slider:before {
         <sys_created_on>2018-03-11 22:33:50</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>0fc458ed4fb09fc08c81efd18110c754</sys_id>
-        <sys_mod_count>12</sys_mod_count>
+        <sys_mod_count>35</sys_mod_count>
         <sys_name>Tesla Basic Info Display</sys_name>
         <sys_package display_value="Tesla" source="x_snc_tesla">7441c3a64f5a4f002f9ae4928110c771</sys_package>
         <sys_policy/>
@@ -310,7 +336,7 @@ input:checked + .slider:before {
         <sys_scope display_value="Tesla">7441c3a64f5a4f002f9ae4928110c771</sys_scope>
         <sys_update_name>sp_widget_0fc458ed4fb09fc08c81efd18110c754</sys_update_name>
         <sys_updated_by>aleck.lin</sys_updated_by>
-        <sys_updated_on>2018-03-11 22:58:56</sys_updated_on>
+        <sys_updated_on>2018-06-24 19:26:17</sys_updated_on>
         <template><![CDATA[<div class="panel-wrapper" ng-class="{ 'expanded': c.expanded, 'recovered': (c.alert.state === 'Closed') }">
 	<div class="panel-proper">
 
@@ -321,6 +347,9 @@ input:checked + .slider:before {
 
 	  <div class="panel-body container-fluid form-horizontal">    
       <div class="columnDisplay">    
+        <span>
+          State: {{ c.data.vehicleTesla.state }}
+        </span>              
         <span>
           Mileage: {{ c.data.vehicleStates.odometer }}
         </span>      
@@ -338,9 +367,6 @@ input:checked + .slider:before {
         <span>
           Battery Level: {{ c.data.vehicleChargingState.battery_level }}%
         </span>
-        <span>
-          Version: {{ c.data.vehicleStates.car_version }}
-        </span>
       </div> <!-- columnDisplay -->     
       <div class="columnDisplay">
         <span>
@@ -354,7 +380,10 @@ input:checked + .slider:before {
         </span>
         <span>
           Passenger temp setting: {{ c.data.vehicleClimateSetting.passenger_temp_setting}}
-        </span>         
+        </span>
+        <span>
+          Version: {{ c.data.vehicleStates.car_version }}
+        </span>        
     	</div> <!-- columnDisplay -->
     </div> <!-- panel-body container-fluid form-horizontal --> 
  </div> <!-- panel panel-default b -->

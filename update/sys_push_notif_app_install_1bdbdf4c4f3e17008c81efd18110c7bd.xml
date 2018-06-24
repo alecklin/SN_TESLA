@@ -2,13 +2,13 @@
 <record_update table="sys_push_notif_app_install">
     <sys_push_notif_app_install action="INSERT_OR_UPDATE">
         <active>true</active>
-        <last_registered_on>2018-04-13 03:53:48</last_registered_on>
+        <last_registered_on>2018-06-23 19:19:44</last_registered_on>
         <sys_class_name>sys_push_notif_app_install</sys_class_name>
         <sys_created_by>aleck.lin</sys_created_by>
-        <sys_created_on>2018-02-27 21:23:10</sys_created_on>
+        <sys_created_on>2018-06-15 07:18:16</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
-        <sys_id>ba8192a513205b80ab3bb8b12244b073</sys_id>
-        <sys_mod_count>47</sys_mod_count>
+        <sys_id>1bdbdf4c4f3e17008c81efd18110c7bd</sys_id>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name>7e79195b790f971faffd8004e10e568ee3d75f251e8ef32b003930fd4a459538</sys_name>
         <sys_package display_value="Tesla" source="x_snc_tesla">7441c3a64f5a4f002f9ae4928110c771</sys_package>
         <sys_policy/>
@@ -16,9 +16,9 @@
         <sys_push_platform_id display_value="Apple">20e71f30ff0002009738ffffffffff6b</sys_push_platform_id>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Tesla">7441c3a64f5a4f002f9ae4928110c771</sys_scope>
-        <sys_update_name>sys_push_notif_app_install_ba8192a513205b80ab3bb8b12244b073</sys_update_name>
+        <sys_update_name>sys_push_notif_app_install_1bdbdf4c4f3e17008c81efd18110c7bd</sys_update_name>
         <sys_updated_by>aleck.lin</sys_updated_by>
-        <sys_updated_on>2018-04-13 03:53:48</sys_updated_on>
+        <sys_updated_on>2018-06-23 19:19:44</sys_updated_on>
         <sys_user_id display_value="Aleck Lin">6882267413331200ab3bb8b12244b059</sys_user_id>
         <token>7e79195b790f971faffd8004e10e568ee3d75f251e8ef32b003930fd4a459538</token>
     </sys_push_notif_app_install>

@@ -94,6 +94,7 @@
         <x>20</x>
         <y>20</y>
     </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=0c69d8754f6853c08c81efd18110c79e"/>
     <wf_condition action="INSERT_OR_UPDATE">
         <activity display_value="Begin">0c69d8754f6853c08c81efd18110c79e</activity>
         <condition>true</condition>
@@ -143,6 +144,7 @@
         <x>1264</x>
         <y>699</y>
     </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=d469d8754f6853c08c81efd18110c7a2"/>
     <wf_activity action="INSERT_OR_UPDATE">
         <activity_definition display_value="Get Charge State">ae2bf7e34f6283402f9ae4928110c78c</activity_definition>
         <activity_definition_updated>false</activity_definition_updated>
@@ -171,6 +173,7 @@
         <x>273</x>
         <y>199</y>
     </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=d069d8754f6853c08c81efd18110c7a3"/>
     <wf_condition action="INSERT_OR_UPDATE">
         <activity display_value="Get Charging State">d069d8754f6853c08c81efd18110c7a3</activity>
         <condition/>
@@ -241,6 +244,7 @@
         <x>277</x>
         <y>332</y>
     </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=c06918754f6853c08c81efd18110c772"/>
     <wf_condition action="INSERT_OR_UPDATE">
         <activity display_value="Get Climate Settings">c06918754f6853c08c81efd18110c772</activity>
         <condition/>
@@ -311,6 +315,7 @@
         <x>275</x>
         <y>56</y>
     </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=486918754f6853c08c81efd18110c773"/>
     <wf_condition action="INSERT_OR_UPDATE">
         <activity display_value="Get driving and position">486918754f6853c08c81efd18110c773</activity>
         <condition/>
@@ -381,6 +386,7 @@
         <x>244</x>
         <y>593</y>
     </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=d869d8754f6853c08c81efd18110c7a0"/>
     <wf_condition action="INSERT_OR_UPDATE">
         <activity display_value="Get GUI Setting">d869d8754f6853c08c81efd18110c7a0</activity>
         <condition/>
@@ -451,6 +457,7 @@
         <x>13</x>
         <y>653</y>
     </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=1069d8754f6853c08c81efd18110c7a5"/>
     <wf_condition action="INSERT_OR_UPDATE">
         <activity display_value="Get token">1069d8754f6853c08c81efd18110c7a5</activity>
         <condition/>
@@ -521,6 +528,7 @@
         <x>261</x>
         <y>458</y>
     </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=9869d8754f6853c08c81efd18110c79f"/>
     <wf_condition action="INSERT_OR_UPDATE">
         <activity display_value="Get Vehicle State">9869d8754f6853c08c81efd18110c79f</activity>
         <condition/>
@@ -591,6 +599,21 @@
         <x>1027</x>
         <y>551</y>
     </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=5c69d8754f6853c08c81efd18110c7a6"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>5c69d8754f6853c08c81efd18110c7a6</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>aleck.lin</sys_created_by>
+        <sys_created_on>2018-02-28 07:16:38</sys_created_on>
+        <sys_id>5069d8754f6853c08c81efd18110c7a7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>aleck.lin</sys_updated_by>
+        <sys_updated_on>2018-02-28 07:16:38</sys_updated_on>
+        <value>gs.eventQueue('x_snc_tesla.Tesla_Discovery.Complete', '', '', '');</value>
+        <variable display_value="">c35ddef20a0a0ba96248a7090eccd518</variable>
+    </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
         <document_key>5c69d8754f6853c08c81efd18110c7a6</document_key>
@@ -654,6 +677,7 @@
         <x>727</x>
         <y>183</y>
     </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=5c69d8754f6853c08c81efd18110c7a7"/>
     <wf_condition action="INSERT_OR_UPDATE">
         <activity display_value="Update Charging State">5c69d8754f6853c08c81efd18110c7a7</activity>
         <condition/>
@@ -724,6 +748,7 @@
         <x>744</x>
         <y>309</y>
     </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=d069d8754f6853c08c81efd18110c7a4"/>
     <wf_condition action="INSERT_OR_UPDATE">
         <activity display_value="Update Climate Settings">d069d8754f6853c08c81efd18110c7a4</activity>
         <condition/>
@@ -794,6 +819,7 @@
         <x>719</x>
         <y>42</y>
     </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=1069d8754f6853c08c81efd18110c7a6"/>
     <wf_condition action="INSERT_OR_UPDATE">
         <activity display_value="Update driving and position">1069d8754f6853c08c81efd18110c7a6</activity>
         <condition/>
@@ -864,6 +890,7 @@
         <x>738</x>
         <y>575</y>
     </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=0869d8754f6853c08c81efd18110c79d"/>
     <wf_condition action="INSERT_OR_UPDATE">
         <activity display_value="Update GUI Setting">0869d8754f6853c08c81efd18110c79d</activity>
         <condition/>
@@ -934,6 +961,7 @@
         <x>759</x>
         <y>435</y>
     </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=d869d8754f6853c08c81efd18110c7a1"/>
     <wf_condition action="INSERT_OR_UPDATE">
         <activity display_value="Update Vehicle State">d869d8754f6853c08c81efd18110c7a1</activity>
         <condition/>
