@@ -22,7 +22,9 @@
 		c.server.get({action: 'setEndChargingTime', endChargingTime: endChargingTime, vehicleId: vehicleId});		
 	}
 	
-	
+	c.setMetricTracking = function(metricTracking, vehicleId) {
+		c.server.get({action: 'setMetricTracking', metricTracking: metricTracking, vehicleId: vehicleId});		
+	}
 	
 }
 
@@ -250,6 +252,10 @@ input:checked + .slider:before {
 			setEndChargingTime(input.endChargingTime, input.vehicleId);
 		}
 		
+		if (input.action == "setMetricTracking") {
+			setMetricTracking(input.metricTracking, input.vehicleId);
+		}
+		
 	}	
 	
 	function setChargingReminderTime(chargingReminderTime, vehicleId) {
@@ -259,6 +265,10 @@ input:checked + .slider:before {
 	function setEndChargingTime(endChargingTime, vehicleId) {
 		setPreference("end_charging_time", endChargingTime, vehicleId)	
 	}
+	
+	function setMetricTracking(metricTracking, vehicle) {		
+		setPreference("enable_metric_tracking", metricTracking, vehicle);		
+	}	
 	
 	function setValet(valetState, vehicle) {		
 		setPreference("car.valet_mode", valetState, vehicle);		
@@ -298,7 +308,7 @@ input:checked + .slider:before {
         <sys_created_on>2018-03-11 23:07:31</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>548c10294ff09fc08c81efd18110c7ef</sys_id>
-        <sys_mod_count>30</sys_mod_count>
+        <sys_mod_count>35</sys_mod_count>
         <sys_name>Tesla Preferences</sys_name>
         <sys_package display_value="Tesla" source="x_snc_tesla">7441c3a64f5a4f002f9ae4928110c771</sys_package>
         <sys_policy/>
@@ -306,7 +316,7 @@ input:checked + .slider:before {
         <sys_scope display_value="Tesla">7441c3a64f5a4f002f9ae4928110c771</sys_scope>
         <sys_update_name>sp_widget_548c10294ff09fc08c81efd18110c7ef</sys_update_name>
         <sys_updated_by>aleck.lin</sys_updated_by>
-        <sys_updated_on>2018-03-11 23:38:02</sys_updated_on>
+        <sys_updated_on>2018-06-24 22:53:35</sys_updated_on>
         <template><![CDATA[<div class="panel-wrapper" ng-class="{ 'expanded': c.expanded, 'recovered': (c.alert.state === 'Closed') }">
 	<div class="panel-proper">
 
@@ -330,6 +340,13 @@ input:checked + .slider:before {
         <input ng-model="c.data.end_charging_time" ng-value="c.data.vehiclePreferences.end_charging_time">      
         <input type="submit" ng-click="c.setEndChargingTime(c.data.end_charging_time, c.data.vehicleId)" />
       </div>
+      
+
+      <div class="preference">
+        <label>Enable Metric Tracking</label>
+        <input type="checkbox" ng-model="c.data.enable_metric_tracking" ng-checked="c.data.vehiclePreferences.enable_metric_tracking"      
+        ng-click="c.setMetricTracking(c.data.enable_metric_tracking, c.data.vehicleId)" />
+      </div>      
 
       <!--
       <div>
